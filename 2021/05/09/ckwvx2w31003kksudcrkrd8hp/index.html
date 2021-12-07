@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/header.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/header.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/header.png">
+  <link rel="mask-icon" href="/images/header.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CRoboto+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css" integrity="sha256-no0c5ccDODBwp+9hSmV5VvPpKwHCpbVzXHexIkupM6U=" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js" integrity="sha256-a5YRB27CcBwBFcT5EF/f3E4vzIqyHrSR878nseNYw64=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;lanhuakai.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:true,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:true,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:true,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:false,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script>
+<meta name="description" content="使用hexo而不使用jekyll在github上搭blog最大的问题就是，每次提交都需要先hexo g，然后再push生成的文件们，这样哪怕是改一个小的地方都需要重新编译全部blog，想想都蛋疼（虽然我还没有多少文章），所以决定使用Travis来自动持续集成提交到github以后的操作 网上一搜有很多的教程，看了好多然后东拼西凑才最终成功，遂决定记录下来最终成功的这个方法，以免忘记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Travis自动部署hexo到github">
+<meta property="og:url" content="http://lanhuakai.github.io/2021/05/09/ckwvx2w31003kksudcrkrd8hp/index.html">
+<meta property="og:site_name" content="兰花开">
+<meta property="og:description" content="使用hexo而不使用jekyll在github上搭blog最大的问题就是，每次提交都需要先hexo g，然后再push生成的文件们，这样哪怕是改一个小的地方都需要重新编译全部blog，想想都蛋疼（虽然我还没有多少文章），所以决定使用Travis来自动持续集成提交到github以后的操作 网上一搜有很多的教程，看了好多然后东拼西凑才最终成功，遂决定记录下来最终成功的这个方法，以免忘记">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://segmentfault.com/img/remote/1460000009054998?w=350&h=416">
+<meta property="og:image" content="https://segmentfault.com/img/remote/1460000009054999?w=350&h=450">
+<meta property="og:image" content="https://segmentfault.com/img/remote/1460000009055000?w=350&h=598">
+<meta property="og:image" content="https://segmentfault.com/img/remote/1460000009055001?w=486&h=200">
+<meta property="og:image" content="https://segmentfault.com/img/remote/1460000009055043?w=350&h=254">
+<meta property="og:image" content="https://segmentfault.com/img/remote/1460000009055003?w=1460&h=114">
+<meta property="og:image" content="https://segmentfault.com/img/remote/1460000009055004?w=1376&h=1282">
+<meta property="og:image" content="https://segmentfault.com/img/remote/1460000009055005?w=1452&h=290">
+<meta property="og:image" content="https://segmentfault.com/img/remote/1460000009059851?w=1900&h=294">
+<meta property="og:image" content="https://segmentfault.com/img/remote/1460000009055020?w=2558&h=1232">
+<meta property="og:image" content="https://segmentfault.com/img/remote/1460000009055021?w=1808&h=382">
+<meta property="article:published_time" content="2021-05-09T08:16:38.000Z">
+<meta property="article:modified_time" content="2021-05-09T09:00:33.724Z">
+<meta property="article:tag" content="交易, 期货, 炒单, 短线">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://segmentfault.com/img/remote/1460000009054998?w=350&h=416">
+
+
+<link rel="canonical" href="http://lanhuakai.github.io/2021/05/09/ckwvx2w31003kksudcrkrd8hp/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;lanhuakai.github.io&#x2F;2021&#x2F;05&#x2F;09&#x2F;ckwvx2w31003kksudcrkrd8hp&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;09&#x2F;ckwvx2w31003kksudcrkrd8hp&#x2F;&quot;,&quot;title&quot;:&quot;使用Travis自动部署hexo到github&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>使用Travis自动部署hexo到github | 兰花开</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">兰花开</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">与尔清香</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">26</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">62</span></a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于我</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Github"><span class="nav-number">1.</span> <span class="nav-text">Github</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Travis"><span class="nav-number">2.</span> <span class="nav-text">Travis</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Terminal"><span class="nav-number">3.</span> <span class="nav-text">Terminal</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">4.</span> <span class="nav-text">服务器</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name"></p>
+  <div class="site-description" itemprop="description">一只勤奋的搬砖小交易员</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">26</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xhbmh1YWthaQ==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lanhuakai"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmxhbmh1YWthaV9naXRAMTYzLmNvbQ==" title="E-Mail → mailto:lanhuakai_git@163.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS95b3VybmFtZQ==" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;yourname"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      常用链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="/www.baidu.com" title="www.baidu.com">python中文</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://lanhuakai.github.io/2021/05/09/ckwvx2w31003kksudcrkrd8hp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="一只勤奋的搬砖小交易员">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="兰花开">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          使用Travis自动部署hexo到github
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-05-09 16:16:38" itemprop="dateCreated datePublished" datetime="2021-05-09T16:16:38+08:00">2021-05-09</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>使用<code>hexo</code>而不使用<code>jekyll</code>在github上搭blog最大的问题就是，每次提交都需要先<code>hexo g</code>，然后再<code>push</code>生成的文件们，这样哪怕是改一个小的地方都需要重新编译全部blog，想想都蛋疼（虽然我还没有多少文章），所以决定使用<span class="exturl" data-url="aHR0cHM6Ly90cmF2aXMtY2kub3JnLw==">Travis<i class="fa fa-external-link-alt"></i></span>来自动持续集成提交到github以后的操作</p>
+<p>网上一搜有很多的教程，看了好多然后东拼西凑才最终成功，遂决定记录下来最终成功的这个方法，以免忘记</p>
+<span id="more"></span>
+
+<p>本文中实现的最终效果是：</p>
+<ul>
+<li>写完blog后，直接<code>push</code>到github的<code>source</code>分支，其它的就可以不用管了</li>
+<li>由于我的<code>.travis.yml</code>配置文件里设置监听的就是<code>source</code>分支，所以会触发<code>webhook</code></li>
+<li><code>Travis</code>则会将该项目<code>clone</code>过去，然后按照<code>.travis.yml</code>的设置执行接下来的命令</li>
+<li>执行完成后，再将编译好的文件们发送到自己的服务器，顺便<code>push</code>回<code>master</code>分支上来</li>
+<li>这样就可以在<span class="exturl" data-url="aHR0cDovL2Jsb2cuZ29kaTEzLmNvbS8=">blog.godi13.com<i class="fa fa-external-link-alt"></i></span>和<span class="exturl" data-url="aHR0cDovL2dvZGkxMy5naXRodWIuaW8v">Godi13.github.io<i class="fa fa-external-link-alt"></i></span>上都访问blog了</li>
+</ul>
+<h1 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h1><p>首先，按规定名称<code>XXXXX.github.io</code>，其中<code>XXXXX</code>为你的用户名，如下图中的<code>Godi13.github.io</code>创建项目</p>
+<p><img src="https://segmentfault.com/img/remote/1460000009054998?w=350&h=416" alt="创建github项目"></p>
+<p>为了使<code>travis</code>能够将编译好的文件们<code>push</code>回咱们的github，我们需要生成<code>token</code>，步骤如下：</p>
+<ol>
+<li>点击右上方头像，然后点<code>setting</code></li>
+</ol>
+<p><img src="https://segmentfault.com/img/remote/1460000009054999?w=350&h=450" alt="img"></p>
+<ol start="2">
+<li>点击<code>Personal access tokens</code></li>
+</ol>
+<p><img src="https://segmentfault.com/img/remote/1460000009055000?w=350&h=598" alt="img"></p>
+<ol start="3">
+<li>点击<code>Generate new token</code></li>
+</ol>
+<p><img src="https://segmentfault.com/img/remote/1460000009055001?w=486&h=200" alt="img"></p>
+<ol start="4">
+<li>为<code>token</code>起一个名字，勾选<code>repo</code>，然后点击生成</li>
+</ol>
+<p><img src="https://segmentfault.com/img/remote/1460000009055043?w=350&h=254" alt="img"></p>
+<div class="tip">生成token以后，一定要复制好，因为只显示一次，如果丢失只能再次生成了</div>
+
+<p><img src="https://segmentfault.com/img/remote/1460000009055003?w=1460&h=114" alt="img"></p>
+<h1 id="Travis"><a href="#Travis" class="headerlink" title="Travis"></a>Travis</h1><ol>
+<li>使用<code>github</code>帐号登录<span class="exturl" data-url="aHR0cHM6Ly90cmF2aXMtY2kub3JnLw==">Travis<i class="fa fa-external-link-alt"></i></span>，右上方按钮点击同步项目，下方打开需要集成的项目，最后点击齿轮进入项目配置页面</li>
+</ol>
+<p><img src="https://segmentfault.com/img/remote/1460000009055004?w=1376&h=1282" alt="在travis同步"></p>
+<ol start="2">
+<li>打开<code>Build only if .travis.yml is present</code>，右下角的那个其实也可以关了，然后往下移动页面到环境变量</li>
+</ol>
+<p><img src="https://segmentfault.com/img/remote/1460000009055005?w=1452&h=290" alt="img"></p>
+<ol start="3">
+<li>在这里我将变量名称名为<code>REPO_TOKEN</code>，放上<code>token</code>，点击<code>Add</code>按钮</li>
+</ol>
+<p><img src="https://segmentfault.com/img/remote/1460000009059851?w=1900&h=294" alt="img"></p>
+<h1 id="Terminal"><a href="#Terminal" class="headerlink" title="Terminal"></a>Terminal</h1><p>回到终端，进入<code>blog</code>所在的文件夹下，新建<code>.travis.yml</code>文件，并添加以下内容</p>
+<blockquote>
+<p>为方便起见，这个文件直接在github的仓库里新建，并把下内容更新提交进去就好。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"># 使用语言</span><br><span class="line">language: node_js</span><br><span class="line"># node版本</span><br><span class="line">node_js:  14.16.0</span><br><span class="line"># 设置只监听哪个分支</span><br><span class="line">branches: </span><br><span class="line">  only:</span><br><span class="line">  - master</span><br><span class="line"># 缓存，可以节省集成的时间，这里我用了yarn，如果不用可以删除</span><br><span class="line">cache:</span><br><span class="line">  directories:</span><br><span class="line">    - node_modules</span><br><span class="line"># 需要执行的脚本</span><br><span class="line">script:</span><br><span class="line">  - yarn build</span><br><span class="line">before_install:</span><br><span class="line">- git config --global user.name &quot;lanhuakai&quot;</span><br><span class="line">- git config --global user.email &quot;zhaozhou_1991@163.com&quot;</span><br><span class="line"># 由于使用了yarn，所以需要下载，如不用yarn这两行可以删除</span><br><span class="line">- curl -o- -L https://yarnpkg.com/install.sh | bash</span><br><span class="line">- export PATH=$HOME/.yarn/bin:$PATH</span><br><span class="line">- npm install -g hexo-cli</span><br><span class="line">install:</span><br><span class="line"># 不用yarn的话这里改成 npm i 即可</span><br><span class="line">- npm i</span><br><span class="line">script:</span><br><span class="line">- hexo clean</span><br><span class="line">- hexo generate</span><br><span class="line">after_success:</span><br><span class="line">- cd ./public</span><br><span class="line">- git init</span><br><span class="line">- git add --all .</span><br><span class="line">- git commit -m &quot;Travis CI Auto Builder&quot;</span><br><span class="line"># 这里的 REPO_TOKEN 即之前在 travis 项目的环境变量里添加的</span><br><span class="line">- git push --quiet --force https://$REPO_TOKEN@github.com/lanhuakai/lanhuakai.github.io.git</span><br><span class="line">  master</span><br></pre></td></tr></table></figure>
+
+<p>然后，准备<code>push</code>该项目到github，看下是否成功，如果是新项目可参照下面的git指令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line"># 添加自己的项目</span><br><span class="line">git remote add origin git@github.com:Godi13/Godi13.github.io.git</span><br><span class="line"># 新建并切换分支</span><br><span class="line">git checkout --orphan source</span><br><span class="line">git add -A</span><br><span class="line">git commit -m &quot;Travis CI&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>关于 <code>--orphan</code> 请参考 <span class="exturl" data-url="aHR0cHM6Ly9paG93ZXIudHcvYmxvZy9hcmNoaXZlcy81Njkx">如何建立一個沒有 Parent 的獨立 Git branch<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<p>如最终成功则会看到</p>
+<p><img src="https://segmentfault.com/img/remote/1460000009055020?w=2558&h=1232" alt="img"></p>
+<p>到这里关于hexo和github的事情就先吿一段落，接下来就是服务器与tarvis</p>
+<h1 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h1><p>按照上面<code>.tarvis.yml</code>的设置，其实我只需要在<code>after_success</code>这个生命周期中，把<code>public</code>文件夹下的所有文件传送到服务器指定的路径即可，接下来就是解决如何让<code>tarvis</code>往我的服务器传东西的问题了</p>
+<p>在此之前，你需要将本机生成的密钥传到服务器上</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa # 然后一路回车即可</span><br><span class="line"># ssh-copy-id 可能需要另行安装</span><br><span class="line"># 如果ssh默认端口是22，则不需要 -p</span><br><span class="line">ssh-copy-id &lt;登录部署服务器用户名&gt;@&lt;部署服务器地址&gt; -p &lt;部署服务器ssh端口&gt;</span><br><span class="line">ssh &lt;登录部署服务器用户名&gt;@&lt;部署服务器地址&gt; -p &lt;部署服务器ssh端口&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如果登录服务器成功，接下来需要安装<code>travis</code>命令行工具</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 安装travis命令行工具，如无法使用gem指令须先安装ruby</span><br><span class="line">gem install travis</span><br><span class="line"># --auto自动登录github帐号</span><br><span class="line">travis login --auto</span><br><span class="line"># 此处的--add参数表示自动添加脚本到.travis.yml文件中</span><br><span class="line">travis encrypt-file ~/.ssh/id_rsa --add</span><br><span class="line"># 这个命令会自动把 id_rsa 加密传送到 .git 指定的仓库对应的 travis 中去</span><br></pre></td></tr></table></figure>
+
+<p>执行完以后会发现在<code>travis</code>网站项目里面的环境变量里多了两个参数</p>
+<p><img src="https://segmentfault.com/img/remote/1460000009055021?w=1808&h=382" alt="img"></p>
+<p>并且在<code>.travis.yml</code>里的<code>before_install</code>周期中多了下面这2行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- openssl aes-256-cbc -K $encrypted_97d432d3ed20_key -iv $encrypted_97d432d3ed20_iv</span><br><span class="line">  -in id_rsa.enc -out ~\/.ssh/id_rsa -d</span><br></pre></td></tr></table></figure>
+
+<p>默认生成的命令可能会在<code>/</code>前面带转义符<code>\</code>，我们不需要这些转义符，手动删掉所有的转义符，否则可能在后面引发莫名的错误</p>
+<p>之后为了保证命令的顺利运行，我们还需要正确地设置权限和认证</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">before_install</span><br><span class="line">- openssl aes-256-cbc -K $encrypted_97d432d3ed20_key -iv $encrypted_97d432d3ed20_iv</span><br><span class="line">  -in id_rsa.enc -out ~/.ssh/id_rsa -d</span><br><span class="line">- chmod 600 ~/.ssh/id_rsa</span><br><span class="line">- echo -e &quot;Host 主机IP地址\n\tStrictHostKeyChecking no\n&quot; &gt;&gt; ~/.ssh/config</span><br></pre></td></tr></table></figure>
+
+<p>最后，就是在<code>after_success</code>周期中，添加上传服务器的指令即可，在这里要注意，如果没有<code>stricthostkeychecking=no</code>参数，将构建失败，详细原因请参考<span class="exturl" data-url="aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXE4NDI3MDAzL2FydGljbGUvZGV0YWlscy82NDkyMTIzOA==">通过travis部署代码到远程服务器<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 由于我修改了默认的port，所以在这里也进行了加密处理</span><br><span class="line">- scp -o stricthostkeychecking=no -P $PORT -r public/* 用户@域名:/路径</span><br></pre></td></tr></table></figure>
+
+<p>但使用<code>scp</code>有很多问题，所以后来我决定改用<code>rsync</code>命令，缺点是端口号就不能用travis环境来加密了，如果哪个朋友有更好的方案希望能告诉我</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># public 后面加上/即可将该目录下的文件都传送到服务器了</span><br><span class="line">- rsync -rv --delete -e &#x27;ssh -o stricthostkeychecking=no -p 端口号&#x27; public/ 用户@域名:/路径</span><br></pre></td></tr></table></figure>
+
+<p>最后在这里放上我最终的<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0dvZGkxMy9Hb2RpMTMuZ2l0aHViLmlvL2Jsb2Ivc291cmNlLy50cmF2aXMueW1s">.travis.yml<i class="fa fa-external-link-alt"></i></span>配置参数，希望本文对大家能有所帮助，如果觉得不错记得点赞~ 如果能告诉我为什么觉得我写的还不错就更好了，我就知道该怎么再接再厉了，谢谢大家的支持~~~~</p>
+<hr>
+<p>参考</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWM0NDExRzdjZz9wPTEy">视频<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cDovL21hY2t4aW4uY29tL25hdi5odG1s">连接诶<i class="fa fa-external-link-alt"></i></span></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/05/09/ckwvx2w3l004tksudchd752n6/" rel="prev" title="交易的进阶到底是靠“内求”还是“高手指点”？">
+                  <i class="fa fa-chevron-left"></i> 交易的进阶到底是靠“内求”还是“高手指点”？
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/05/10/ckwvx2w2c001iksud1utccgy1/" rel="next" title="N0.10">
+                  N0.10 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">兰花开</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script class="next-config" data-name="nprogress" type="application/json">{&quot;enable&quot;:true,&quot;spinner&quot;:false}</script>
+  <script src="/js/third-party/nprogress.js"></script>
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.1.0/dist/quicklink.umd.js" integrity="sha256-KK3rvmDcW72MSl9jzzNZWlQjZNrRzAuGhAQ+0SFOg7Q=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{&quot;enable&quot;:true,&quot;home&quot;:true,&quot;archive&quot;:false,&quot;delay&quot;:true,&quot;timeout&quot;:3000,&quot;priority&quot;:true,&quot;ignores&quot;:null,&quot;url&quot;:&quot;http:&#x2F;&#x2F;lanhuakai.github.io&#x2F;2021&#x2F;05&#x2F;09&#x2F;ckwvx2w31003kksudcrkrd8hp&#x2F;&quot;}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+
+</body>
+</html>
