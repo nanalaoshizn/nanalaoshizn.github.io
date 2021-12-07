@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/header.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/header.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/header.png">
+  <link rel="mask-icon" href="/images/header.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CRoboto+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css" integrity="sha256-no0c5ccDODBwp+9hSmV5VvPpKwHCpbVzXHexIkupM6U=" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js" integrity="sha256-a5YRB27CcBwBFcT5EF/f3E4vzIqyHrSR878nseNYw64=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;lanhuakai.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:true,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:true,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:true,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:false,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script>
+<meta name="description" content="本文详细说明了在python中使用lambda函数的原因极其便捷性和一定的限制性。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="细说Python的lambda函数">
+<meta property="og:url" content="http://lanhuakai.github.io/2021/05/08/cksmzweew000x1ore9wt0hf3l/index.html">
+<meta property="og:site_name" content="兰花开">
+<meta property="og:description" content="本文详细说明了在python中使用lambda函数的原因极其便捷性和一定的限制性。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-05-07T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-05-10T10:23:35.911Z">
+<meta property="article:tag" content="lambda">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://lanhuakai.github.io/2021/05/08/cksmzweew000x1ore9wt0hf3l/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;lanhuakai.github.io&#x2F;2021&#x2F;05&#x2F;08&#x2F;cksmzweew000x1ore9wt0hf3l&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;08&#x2F;cksmzweew000x1ore9wt0hf3l&#x2F;&quot;,&quot;title&quot;:&quot;细说Python的lambda函数&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>细说Python的lambda函数 | 兰花开</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">兰花开</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">与尔清香</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">26</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">59</span></a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于我</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python%E7%9A%84lambda%E5%87%BD%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">Python的lambda函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8lambda%E5%87%BD%E6%95%B0%EF%BC%9F"><span class="nav-number">1.1.</span> <span class="nav-text">1.为什么要用lambda函数？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-lambad%E5%87%BD%E6%95%B0%E7%9A%84%E7%94%A8%E6%B3%95%E4%B8%8A%E9%9D%A2%E4%B9%9F%E8%AE%B2%E5%88%B0%E4%BA%86%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0%E7%9A%84%E4%BC%98%E7%82%B9%EF%BC%8C%E9%82%A3%E5%AE%83%E5%88%B0%E5%BA%95%E6%9C%89%E5%93%AA%E4%BA%9B%E7%94%A8%E5%A4%84%E5%91%A2%EF%BC%9F"><span class="nav-number">1.2.</span> <span class="nav-text">2.lambad函数的用法上面也讲到了匿名函数的优点，那它到底有哪些用处呢？</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name"></p>
+  <div class="site-description" itemprop="description">一只勤奋的搬砖小交易员</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">59</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">26</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xhbmh1YWthaQ==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lanhuakai"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmxhbmh1YWthaV9naXRAMTYzLmNvbQ==" title="E-Mail → mailto:lanhuakai_git@163.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS95b3VybmFtZQ==" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;yourname"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      常用链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="/www.baidu.com" title="www.baidu.com">python中文</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://lanhuakai.github.io/2021/05/08/cksmzweew000x1ore9wt0hf3l/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="一只勤奋的搬砖小交易员">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="兰花开">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          细说Python的lambda函数
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-05-08 00:00:00" itemprop="dateCreated datePublished" datetime="2021-05-08T00:00:00+08:00">2021-05-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>本文详细说明了在python中使用lambda函数的原因极其便捷性和一定的限制性。</p>
+<span id="more"></span>
+
+<h2 id="Python的lambda函数"><a href="#Python的lambda函数" class="headerlink" title="Python的lambda函数"></a>Python的lambda函数</h2><h3 id="1-为什么要用lambda函数？"><a href="#1-为什么要用lambda函数？" class="headerlink" title="1.为什么要用lambda函数？"></a><strong>1.为什么要用lambda函数？</strong></h3><p>先举一个例子：将一个列表里的每个元素都平方。</p>
+<p>先用def来定义函数，代码如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def sq(x):</span><br><span class="line">    return x*x</span><br><span class="line"></span><br><span class="line">map(sq,[y for y in range(10)])</span><br></pre></td></tr></table></figure>
+
+<p>再用lambda函数来编写代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">map(lambda x: x*x,[y for y in range(10)])</span><br></pre></td></tr></table></figure>
+
+<p>从这个简单的例子，我们可以看出，用lambda函数首先减少了代码的冗余，其次，用lambda函数，不用费神地去命名一个函数的名字，可以快速的实现某项功能，最后，lambda函数使代码的可读性更强，程序看起来更加简洁。</p>
+<p>从上面这个简单的例子，也可以看出来lambda函数的语法是唯一的，其形式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lambda argument_list:expersion</span><br></pre></td></tr></table></figure>
+
+<p>语法中的argument_list是参数列表，它的结构与Python中函数(function)的参数列表是一样的，例如</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a,b</span><br><span class="line">a=1,b=2</span><br><span class="line">*args</span><br><span class="line">**kwargs</span><br><span class="line">a,b=1,*args</span><br><span class="line">空</span><br><span class="line">....</span><br></pre></td></tr></table></figure>
+
+<p>语法中的expression是一个关于参数的表达式，表达式中出现的参数需要在argument_list中有定义，并且表达式只能是单行的。比如以下的一些合法的表达式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">None</span><br><span class="line">a+b</span><br><span class="line">sum(a)</span><br><span class="line">1 if a &gt;10 else 0</span><br><span class="line">......</span><br></pre></td></tr></table></figure>
+
+<p>除了上面提到的lambda函数的优点外，我看有的文章说用lambda函数会提高效率，那究竟是不是呢？我们写一段代码来验证一下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">import time</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 测试的Def函数</span><br><span class="line">def square1(n):</span><br><span class="line">    return n ** 2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 测试的Lambda函数</span><br><span class="line">square2 = lambda n: n ** 2</span><br><span class="line"></span><br><span class="line">print(time.time())</span><br><span class="line"></span><br><span class="line"># 使用Def函数</span><br><span class="line">i = 0</span><br><span class="line">while i &lt; 1000000000:</span><br><span class="line">    square1(100)</span><br><span class="line">    i += 1</span><br><span class="line"></span><br><span class="line">print(time.time())</span><br><span class="line"></span><br><span class="line"># 使用lambda函数</span><br><span class="line">i = 0</span><br><span class="line">while i &lt; 1000000000:</span><br><span class="line">    square2(100)</span><br><span class="line">    i += 1</span><br><span class="line"></span><br><span class="line">print(time.time())</span><br><span class="line"></span><br><span class="line">1413272496.27</span><br><span class="line">1413272703.05 (Def   函数:207s)</span><br><span class="line">1413272904.49 (Lambda函数:201s)</span><br></pre></td></tr></table></figure>
+
+<p>从上面可以看出，两种的所需的时间差不多，效率丝毫不受影响。</p>
+<h3 id="2-lambad函数的用法上面也讲到了匿名函数的优点，那它到底有哪些用处呢？"><a href="#2-lambad函数的用法上面也讲到了匿名函数的优点，那它到底有哪些用处呢？" class="headerlink" title="2.lambad函数的用法上面也讲到了匿名函数的优点，那它到底有哪些用处呢？"></a>2.lambad函数的用法上面也讲到了匿名函数的优点，那它到底有哪些用处呢？</h3><p>（1）直接赋给一个变量，然后再像一般函数那样调用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">c=lambda x,y,z:x*y*z</span><br><span class="line">c(2,3,4)</span><br><span class="line"></span><br><span class="line">24</span><br></pre></td></tr></table></figure>
+
+<p>当然，也可以在函数后面直接传递实参</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(lambda x:x**2)(3)</span><br><span class="line">9</span><br></pre></td></tr></table></figure>
+
+<p>（2）将lambda函数作为参数传递给其他函数比如说结合map、filter、sorted、reduce等一些Python内置函数使用，下面举例说明。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fliter(lambda x:x%3==0,[1,2,3,4,5,6])</span><br><span class="line"></span><br><span class="line">[3,6]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">squares = map(lambda x:x**2,range(5)</span><br><span class="line">print(lsit(squares))</span><br><span class="line">[0,1,4,9,16]</span><br></pre></td></tr></table></figure>
+
+<p>与sorted函数结合使用，比如：创建由元组构成的列表：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a=[(&#x27;b&#x27;,3),(&#x27;a&#x27;,2),(&#x27;d&#x27;,4),(&#x27;c&#x27;,1)]</span><br></pre></td></tr></table></figure>
+
+<p>按照第一个元素排序</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sorted(a,key=lambda x:x[0])</span><br><span class="line">[(&#x27;a&#x27;,2),(&#x27;b&#x27;,3),(&#x27;c&#x27;,1),(&#x27;d&#x27;,4)]</span><br></pre></td></tr></table></figure>
+
+<p>按照第二个元素排序</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sorted(a,key=lambda x:x[1])</span><br><span class="line">[(&#x27;c&#x27;,1),(&#x27;a&#x27;,2),(&#x27;b&#x27;,3),(&#x27;d&#x27;,4)]</span><br></pre></td></tr></table></figure>
+
+<p>与reduce函数结合使用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from functools import reduce</span><br><span class="line">print(reduce(lambda a,b:&#x27;&#123;&#125;,&#123;&#125;&#x27;.format(a,b),[1,2,3,4,5,6,7,8,9]))</span><br><span class="line"></span><br><span class="line">1,2,3,4,5,6,7,8,9</span><br></pre></td></tr></table></figure>
+
+<p>（3）嵌套使用将lambda函数嵌套到普通函数中，lambda函数本身做为return的值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def increment(n):</span><br><span class="line">    return lambda x:x+n</span><br><span class="line"></span><br><span class="line">f=increment(4)</span><br><span class="line">f(2)</span><br><span class="line">6</span><br></pre></td></tr></table></figure>
+
+<p>（4）字符串联合，有默认值，也可以用x=(lambda…)这种格式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x=(lambda x=&#x27;Boo&#x27;,y=&#x27;Too&#x27;,z=&#x27;Z00&#x27;：x+y+z)</span><br><span class="line">print(x(&#x27;Foo&#x27;))</span><br><span class="line"></span><br><span class="line">&#x27;FooTooZoo&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>（5）在tkinter中定义内联的callback函数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line">from tkinter import Button,mainloop</span><br><span class="line"></span><br><span class="line">x=Button(text=&#x27;Press me&#x27;,command=(lambda :sys.stdout.write(&#x27;Hello,World\n&#x27;)))</span><br><span class="line">x.pack()</span><br><span class="line">x.mainloop()</span><br></pre></td></tr></table></figure>
+
+<p>这段代码还是挺有意思的，希望小伙伴们可以复制粘贴运行一下哈。（6）判断字符串是否以某个字母开头有</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Names = [&#x27;Anne&#x27;, &#x27;Amy&#x27;, &#x27;Bob&#x27;, &#x27;David&#x27;, &#x27;Carrie&#x27;, &#x27;Barbara&#x27;, &#x27;Zach&#x27;]</span><br><span class="line">B_Name= filter(lambda x: x.startswith(&#x27;B&#x27;),Names)</span><br><span class="line">print(B_Name)</span><br><span class="line"></span><br><span class="line">[&#x27;Bob&#x27;, &#x27;Barbara&#x27;]</span><br></pre></td></tr></table></figure>
+
+<p>（7）求两个列表元素的和</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = [1,2,3,4]</span><br><span class="line">b = [5,6,7,8]</span><br><span class="line">print(list(map(lambda x,y:x+y, a,b)))</span><br><span class="line"></span><br><span class="line">[6,8,10,12]</span><br></pre></td></tr></table></figure>
+
+<p>（8）求字符串每个单词的长度</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sentence = &quot;Welcome To Beijing!&quot;</span><br><span class="line">words = sentence.split()</span><br><span class="line">lengths  = map(lambda x:len(x),words)</span><br><span class="line">print(list(lengths))</span><br><span class="line">[7,2,8]</span><br></pre></td></tr></table></figure>
+
+<p><strong>总结</strong></p>
+<p>对于lambda函数的使用在Python社区一直存在争议，支持一方认为lambad函数的使用，使得Python代码更加紧凑，更加Pythonic；反对方则认为Python的lambda函数限制多多，最严重的当属于它只能由一条表达式组成，用多了以后反而使得程序看起来不那么清晰。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/lambda/" rel="tag"><i class="fa fa-tag"></i> lambda</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/04/27/cksmzweg100441ore0q329kds/" rel="prev" title="文华财经设置">
+                  <i class="fa fa-chevron-left"></i> 文华财经设置
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/05/08/cksmzwef9001w1oreby3n1zqs/" rel="next" title="NO.0----始">
+                  NO.0----始 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">兰花开</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script class="next-config" data-name="nprogress" type="application/json">{&quot;enable&quot;:true,&quot;spinner&quot;:false}</script>
+  <script src="/js/third-party/nprogress.js"></script>
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.1.0/dist/quicklink.umd.js" integrity="sha256-KK3rvmDcW72MSl9jzzNZWlQjZNrRzAuGhAQ+0SFOg7Q=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{&quot;enable&quot;:true,&quot;home&quot;:true,&quot;archive&quot;:false,&quot;delay&quot;:true,&quot;timeout&quot;:3000,&quot;priority&quot;:true,&quot;ignores&quot;:null,&quot;url&quot;:&quot;http:&#x2F;&#x2F;lanhuakai.github.io&#x2F;2021&#x2F;05&#x2F;08&#x2F;cksmzweew000x1ore9wt0hf3l&#x2F;&quot;}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+
+</body>
+</html>
