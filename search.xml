@@ -3385,4 +3385,14 @@
         <tag>生活</tag>
       </tags>
   </entry>
+  <entry>
+    <title>文华财经公式——多头排列和空头排列</title>
+    <url>/2021/12/11/ckx0oszu800005cudfa3nglvl/</url>
+    <content><![CDATA[<p>MA5:MA(CLOSE,5);<br>MA10:MA(CLOSE,10);<br>MA20:MA(CLOSE,20);<br>//MA4:MA(CLOSE,N4);<br>//MA5:MA(CLOSE,N5);<br>//MA6:MA(CLOSE,N6);</p>
+<p>//价格多头排列，5周期10周期线用红色填充<br>FILLRGN(MA10&gt;MA20&amp;&amp;MA5&gt;MA10,MA5,MA10,COLORRED);<br>//空头<br>FILLRGN(MA10&lt;MA20&amp;&amp;MA5&lt;MA10,MA5,MA10, COLORGREEN);</p>
+<span id="more"></span>]]></content>
+      <tags>
+        <tag>文华财经公式</tag>
+      </tags>
+  </entry>
 </search>
