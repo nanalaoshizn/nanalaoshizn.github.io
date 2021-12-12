@@ -1,18 +1,249 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>python中文指南</title>
-    <url>/2021/03/28/ckx1rbfu10001d0ud3ct0duu5/</url>
-    <content><![CDATA[<h1 id="Python中文指南"><a href="#Python中文指南" class="headerlink" title="Python中文指南"></a>Python中文指南</h1><p><a href="http://python.iswbm.com/en/latest/">http://python.iswbm.com/en/latest/</a></p>
-<h1 id="PyCharm-中文指南"><a href="#PyCharm-中文指南" class="headerlink" title="PyCharm 中文指南"></a>PyCharm 中文指南</h1><p><a href="http://pycharm.iswbm.com/zh_CN/latest/">http://pycharm.iswbm.com/zh_CN/latest/</a></p>
+    <title>弹力带训练</title>
+    <url>/2021/12/11/ckx3aptui0001toud62443nfi/</url>
+    <content><![CDATA[<h2 id="弹力带背部训练"><a href="#弹力带背部训练" class="headerlink" title="弹力带背部训练"></a>弹力带背部训练</h2><h3 id="动作一"><a href="#动作一" class="headerlink" title="动作一"></a>动作一</h3><p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img/image-20211211232411212.png" alt="image-20211211232411212"></p>
+<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img/image-20211211232419852.png" alt="image-20211211232419852"></p>
+<span id="more"></span>
+
+<h3 id="动作二"><a href="#动作二" class="headerlink" title="动作二"></a>动作二</h3><p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img/image-20211211232525612.png" alt="image-20211211232525612"></p>
+<h3 id="动作三"><a href="#动作三" class="headerlink" title="动作三"></a>动作三</h3><p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img/image-20211211232609677.png" alt="image-20211211232609677"></p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>健身</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文华财经公式——多头排列和空头排列</title>
+    <url>/2021/12/11/ckx3aptum0003toud6bpx6ru7/</url>
+    <content><![CDATA[<p>MA5:MA(CLOSE,5);<br>MA10:MA(CLOSE,10);<br>MA20:MA(CLOSE,20);<br>//MA4:MA(CLOSE,N4);<br>//MA5:MA(CLOSE,N5);<br>//MA6:MA(CLOSE,N6);</p>
+<p>//价格多头排列，5周期10周期线用红色填充<br>FILLRGN(MA10&gt;MA20&amp;&amp;MA5&gt;MA10,MA5,MA10,COLORRED);<br>//空头<br>FILLRGN(MA10&lt;MA20&amp;&amp;MA5&lt;MA10,MA5,MA10, COLORGREEN);</p>
+<p>双均线交叉变色</p>
+<p>MA5:MA(C,5);<br>MA15:MA(C,15);<br>DRAWCOLORLINE(MA5&gt;MA15,MA5,COLORMAGENTA,COLORGREEN);<br>DRAWCOLORLINE(MA5&gt;MA15,MA15,COLORMAGENTA,COLORGREEN);</p>
+<span id="more"></span>]]></content>
+      <tags>
+        <tag>文华财经公式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo部署到github</title>
+    <url>/2021/05/09/ckx3aptur0007toudhs3d1zrf/</url>
+    <content><![CDATA[<p>本文是转载自别人的详细教程：</p>
+<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p>首先下载稳定版</p>
+<p><a href="https://link.zhihu.com/?target=https://nodejs.org/dist/v9.11.1/node-v9.11.1-x64.msi">Node.jsnodejs.org</a></p>
+<p>我这里给的是64位的。</p>
+<p>安装选项全部默认，一路点击<code>Next</code>。</p>
+<p>最后安装好之后，按<code>Win+R</code>打开命令提示符，输入<code>node -v</code>和<code>npm -v</code>，如果出现版本号，那么就安装成功了。</p>
+<span id="more"></span>
+
+<h2 id="添加国内镜像源"><a href="#添加国内镜像源" class="headerlink" title="添加国内镜像源"></a>添加国内镜像源</h2><p>如果没有梯子的话，可以使用阿里的国内镜像进行加速。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>为了把本地的网页文件上传到github上面去，我们需要用到分布式版本控制工具————Git</p>
+<p><a href="https://link.zhihu.com/?target=https://git-scm.com/download/win">Git - Downloading Packagegit-scm.com</a></p>
+<p>安装选项还是全部默认，只不过最后一步添加路径时选择<code>Use Git from the Windows Command Prompt</code>，这样我们就可以直接在命令提示符里打开git了。</p>
+<p>安装完成后在命令提示符中输入<code>git --version</code>验证是否安装成功。</p>
+<h2 id="注册Github账号"><a href="#注册Github账号" class="headerlink" title="注册Github账号"></a>注册Github账号</h2><p>接下来就去注册一个github账号，用来存放我们的网站。大多数小伙伴应该都有了吧，作为一个合格的程序猿（媛）还是要有一个的。</p>
+<p>新建一个项目，如下所示：</p>
+<p><img src="https://pic1.zhimg.com/80/v2-4270b2eec17601922d98aa03ea2c79cc_720w.jpg" alt="img"></p>
+<p>然后如下图所示，输入自己的项目名字，后面一定要加<code>.github.io</code>后缀，README初始化也要勾上。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-d2b3b1ca2bd72e9f221c33c3890e6c32_720w.jpg" alt="img"></p>
+<p>然后项目就建成了，点击<code>Settings</code>，向下拉到最后有个<code>GitHub Pages</code>，点击<code>Choose a theme</code>选择一个主题。然后等一会儿，再回到<code>GitHub Pages</code>，会变成下面这样：</p>
+<p><img src="https://pic3.zhimg.com/80/v2-281f7ca404cbb2b769f09c34794ac5b6_720w.jpg" alt="img"></p>
+<p>点击那个链接，就会出现自己的网页啦，效果如下：</p>
+<p><img src="https://pic1.zhimg.com/80/v2-3a0e46d3a6fa7e5ac9f585158cb76a88_720w.jpg" alt="img"></p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>在合适的地方新建一个文件夹，用来存放自己的博客文件，比如我的博客文件都存放在<code>D:\study\program\blog</code>目录下。</p>
+<p>在该目录下右键点击<code>Git Bash Here</code>，打开git的控制台窗口，以后我们所有的操作都在git控制台进行，就不要用Windows自带的控制台了。</p>
+<p>定位到该目录下，输入<code>npm i hexo-cli -g</code>安装Hexo。会有几个报错，无视它就行。</p>
+<p>安装完后输入<code>hexo -v</code>验证是否安装成功。</p>
+<p>然后就要初始化我们的网站，输入<code>hexo init</code>初始化文件夹，接着输入<code>npm install</code>安装必备的组件。</p>
+<p>这样本地的网站配置也弄好啦，输入<code>hexo g</code>生成静态网页，然后输入<code>hexo s</code>打开本地服务器，然后浏览器打开<a href="https://link.zhihu.com/?target=http://localhost:4000/">http://localhost:4000/</a>，就可以看到我们的博客啦，效果如下：</p>
+<p><img src="https://pic4.zhimg.com/80/v2-7461124ec772f6fe453d07554cb11363_720w.jpg" alt="img"></p>
+<p>按<code>ctrl+c</code>关闭本地服务器。</p>
+<h2 id="连接Github与本地"><a href="#连接Github与本地" class="headerlink" title="连接Github与本地"></a>连接Github与本地</h2><p>首先右键打开git bash，然后输入下面命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;godweiyang&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;792321264@qq.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>用户名和邮箱根据你注册github的信息自行修改。</p>
+<p>然后生成密钥SSH key：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;792321264@qq.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>打开<a href="https://link.zhihu.com/?target=http://github.com/">github</a>，在头像下面点击<code>settings</code>，再点击<code>SSH and GPG keys</code>，新建一个SSH，名字随便。</p>
+<p>git bash中输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+
+<p>将输出的内容复制到框中，点击确定保存。</p>
+<p>输入<code>ssh -T git@github.com</code>，如果如下图所示，出现你的用户名，那就成功了。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-d2681a4830e54238450b6dc2a57d0c55_720w.jpg" alt="img"></p>
+<p>打开博客根目录下的<code>_config.yml</code>文件，这是博客的配置文件，在这里你可以修改与博客相关的各种信息。</p>
+<p>修改最后一行的配置：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: https://github.com/godweiyang/godweiyang.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>repository修改为你自己的github项目地址。</p>
+<h2 id="写文章、发布文章"><a href="#写文章、发布文章" class="headerlink" title="写文章、发布文章"></a>写文章、发布文章</h2><p>首先在博客根目录下右键打开git bash，安装一个扩展<code>npm i hexo-deployer-git</code>。</p>
+<p>然后输入<code>hexo new post &quot;article title&quot;</code>，新建一篇文章。</p>
+<p>然后打开<code>D:\study\program\blog\source\_posts</code>的目录，可以发现下面多了一个文件夹和一个<code>.md</code>文件，一个用来存放你的图片等数据，另一个就是你的文章文件啦。</p>
+<p>编写完markdown文件后，根目录下输入<code>hexo g</code>生成静态网页，然后输入<code>hexo s</code>可以本地预览效果，最后输入<code>hexo d</code>上传到github上。这时打开你的github.io主页就能看到发布的文章啦。</p>
+<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p>现在默认的域名还是<code>xxx.github.io</code>，是不是很没有牌面？想不想也像我一样弄一个专属域名呢，首先你得购买一个域名，xx云都能买，看你个人喜好了。</p>
+<p>以我的百度云为例，如下图所示，添加两条解析记录：</p>
+<p><img src="https://pic4.zhimg.com/80/v2-e11377329d5cef129c0aefd10eaa1607_720w.jpg" alt="img"></p>
+<p>然后打开你的github博客项目，点击<code>settings</code>，拉到下面<code>Custom domain</code>处，填上你自己的域名，保存：</p>
+<p><img src="https://pic4.zhimg.com/80/v2-8125794bbf0055917b820178489c7b0f_720w.jpg" alt="img"></p>
+<p>这时候你的项目根目录应该会出现一个名为<code>CNAME</code>的文件了。如果没有的话，打开你本地博客<code>/source</code>目录，我的是<code>D:\study\program\blog\source</code>，新建<code>CNAME</code>文件，注意没有后缀。然后在里面写上你的域名，保存。最后运行<code>hexo g</code>、<code>hexo d</code>上传到github。</p>
+<h2 id="备份博客源文件"><a href="#备份博客源文件" class="headerlink" title="备份博客源文件"></a>备份博客源文件</h2><p>有时候我们想换一台电脑继续写博客，这时候就可以将博客目录下的所有源文件都上传到github上面。</p>
+<p>首先在github博客仓库下新建一个分支<code>hexo</code>，然后<code>git clone</code>到本地，把<code>.git</code>文件夹拿出来，放在博客根目录下。</p>
+<p>然后<code>git branch -b hexo</code>切换到<code>hexo</code>分支，然后<code>git add .</code>，然后<code>git commit -m &quot;xxx&quot;</code>，最后<code>git push origin hexo</code>提交就行了。</p>
+<p>当然我新建了一个仓库存放了源文件，具体效果可以看我的博客源文件仓库：</p>
+<p>大家也可以先用下文hexo安装方法安装完hexo，然后直接<code>git clone git@github.com:godweiyang/hexo-matery-modified.git</code>克隆我的所有源文件，然后这是我修改完的基本没bug的定制化的博客，就可以直接拿来用啦。</p>
+<p><strong>我这个源文件和原来的主题没有什么区别，只是我把插件都安装完了，有些小bug也修复了，所以拿来就能直接用，方便大家。</strong></p>
+<h2 id="博客源代码下载"><a href="#博客源代码下载" class="headerlink" title="博客源代码下载"></a>博客源代码下载</h2><p>如果大家不想这么麻烦的装一堆东西，然后还要自己修改bug，那么只需要做好上面的准备工作，然后下载我的源代码，改改个人配置就行了。</p>
+<p>大家可以直接下载下来使用，修改个人配置信息即可，当然环境要先搭好。</p>
+<p><strong>如果大家下载好了源代码，就可以直接使用了，基本可以跳过文章后面的部分了！喜欢的记得star并fork哦！</strong></p>
+<h2 id="个性化设置（matery主题）"><a href="#个性化设置（matery主题）" class="headerlink" title="个性化设置（matery主题）"></a>个性化设置（matery主题）</h2><p>下面的个性化设置主要针对的是<code>matery</code>主题，如果你想用我现在博客这个主题，可以直接看这个章节。</p>
+<p><strong>更换主题</strong></p>
+<p>这两天花时间将我的博客换了一个主题，现在这个主题看着更加的炫（zhuang）酷（bi），并且响应式更友好，点起来就很舒服，功能也多很多。<a href="https://link.zhihu.com/?target=https://github.com/blinkfox/hexo-theme-matery">https://link.zhihu.com/?target=https%3A//github.com/blinkfox/hexo-theme-matery</a>)</p>
+<p>它的文档写得也非常的详细，还有中英文两个版本，作者回复也很及时。效果图如下，可以看出非常合我的口味</p>
+<p>但是我自己使用起来还是遇到了好几个问题，经过两天的不懈摸鱼，终于基本解决了，这里分享一下。</p>
+<p>首先先按照文档教程安装一遍主题，然后是可以正常打开的，如果你是一般使用的话，基本没啥问题了。但是我是重度强迫症，一点小毛病就看着难受，下面列举一下我遇到的问题以及解决方法。</p>
+<p><strong>文章头设置</strong></p>
+<p>首先为了新建文章方便，建议将<code>/scaffolds/post.md</code>修改为如下代码：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">top: <span class="literal">false</span></span><br><span class="line">cover: <span class="literal">false</span></span><br><span class="line">password:</span><br><span class="line">toc: <span class="literal">true</span></span><br><span class="line">mathjax: <span class="literal">true</span></span><br><span class="line">summary:</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>这样新建文章后不用你自己补充了，修改信息就行。</p>
+<p><strong>添加404页面</strong></p>
+<p>原来的主题没有404页面，加一个也不是什么难事。首先在<code>/source/</code>目录下新建一个<code>404.md</code>，内容如下：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: <span class="number">404</span></span><br><span class="line">date: <span class="number">2019</span><span class="number">-07</span><span class="number">-19</span> <span class="number">16</span>:<span class="number">41</span>:<span class="number">10</span></span><br><span class="line">type: <span class="string">&quot;404&quot;</span></span><br><span class="line">layout: <span class="string">&quot;404&quot;</span></span><br><span class="line">description: <span class="string">&quot;你来到了没有知识的荒原 :(&quot;</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>然后在<code>/themes/matery/layout/</code>目录下新建一个<code>404.ejs</code>文件，内容如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">    <span class="comment">/* don&#x27;t remove. */</span></span></span><br><span class="line"><span class="css">    <span class="selector-class">.about-cover</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">75vh</span>;</span></span><br><span class="line"><span class="css">    &#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bg-cover pd-header about-cover&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col s10 offset-s1 m8 offset-m2 l8 offset-l2&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;brand&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;title center-align&quot;</span>&gt;</span></span><br><span class="line">                        404</span><br><span class="line">                    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;description center-align&quot;</span>&gt;</span></span><br><span class="line">                        &lt;%= page.description %&gt;</span><br><span class="line">                    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="comment">// 每天切换 banner 图.  Switch banner image every day.</span></span></span><br><span class="line"><span class="javascript">    $(<span class="string">&#x27;.bg-cover&#x27;</span>).css(<span class="string">&#x27;background-image&#x27;</span>, <span class="string">&#x27;url(/medias/banner/&#x27;</span> + <span class="keyword">new</span> <span class="built_in">Date</span>().getDay() + <span class="string">&#x27;.jpg)&#x27;</span>);</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>“关于”页面增加简历（可选）</strong></p>
+<p>修改<code>/themes/matery/layout/about.ejs</code>，找到<code>&lt;div class=&quot;card&quot;&gt;</code>标签，然后找到它对应的<code>&lt;/div&gt;</code>标签，接在后面新增一个card，语句如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card-content&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card-content article-card-content&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;title center-align&quot;</span> <span class="attr">data-aos</span>=<span class="string">&quot;zoom-in-up&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-address-book&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span>&lt;%- __(&#x27;myCV&#x27;) %&gt;</span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;articleContent&quot;</span> <span class="attr">data-aos</span>=<span class="string">&quot;fade-up&quot;</span>&gt;</span></span><br><span class="line">                    &lt;%- page.content %&gt;</span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这样就会多出一张card，然后可以在<code>/source/about/index.md</code>下面写上你的简历了，当然这里的位置随你自己设置，你也可以把简历作为第一个card。</p>
+<p><strong>解决mathjax与代码高亮的冲突</strong></p>
+<p>如果你按照教程安装了代码高亮插件<code>hexo-prism-plugin</code>，单独使用是没有问题的，但如果你又使用了mathjax，并且按照网上教程，安装<code>kramed</code>插件并修改了js文件里的正则表达式（为了解决markdown和mathjax的语法冲突），好了，那你的代码就无法高亮了。解决方法很简单，别用<code>kramed</code>插件了，还用原来自带的<code>marked</code>插件，直接改它的正则表达式就行了，改法如下：</p>
+<p>打开<code>D:\study\program\blog\node_modules\marked\lib\marked.js</code> <code>escape:</code>处替换成：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">escape: /^\\([`*\[\]()#$+\-.!_&gt;])/,</span><br></pre></td></tr></table></figure>
+
+<p><code>em:</code>处替换成：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span><br></pre></td></tr></table></figure>
+
+<p>这时在文章里写数学公式基本没有问题了，但是要注意： <strong>数学公式中如果出现了连续两个{，中间一定要加空格！</strong></p>
+<p><strong>增加建站时间</strong></p>
+<p>修改<code>/themes/matery/layout/_partial/footer.ejs</code>文件，在最后加上</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script language=javascript&gt;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">siteTime</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">window</span>.setTimeout(<span class="string">&quot;siteTime()&quot;</span>, <span class="number">1000</span>);</span><br><span class="line">        <span class="keyword">var</span> seconds = <span class="number">1000</span>;</span><br><span class="line">        <span class="keyword">var</span> minutes = seconds * <span class="number">60</span>;</span><br><span class="line">        <span class="keyword">var</span> hours = minutes * <span class="number">60</span>;</span><br><span class="line">        <span class="keyword">var</span> days = hours * <span class="number">24</span>;</span><br><span class="line">        <span class="keyword">var</span> years = days * <span class="number">365</span>;</span><br><span class="line">        <span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">        <span class="keyword">var</span> todayYear = today.getFullYear();</span><br><span class="line">        <span class="keyword">var</span> todayMonth = today.getMonth() + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">var</span> todayDate = today.getDate();</span><br><span class="line">        <span class="keyword">var</span> todayHour = today.getHours();</span><br><span class="line">        <span class="keyword">var</span> todayMinute = today.getMinutes();</span><br><span class="line">        <span class="keyword">var</span> todaySecond = today.getSeconds();</span><br><span class="line">        <span class="comment">/* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)</span></span><br><span class="line"><span class="comment">        year - 作为date对象的年份，为4位年份值</span></span><br><span class="line"><span class="comment">        month - 0-11之间的整数，做为date对象的月份</span></span><br><span class="line"><span class="comment">        day - 1-31之间的整数，做为date对象的天数</span></span><br><span class="line"><span class="comment">        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数</span></span><br><span class="line"><span class="comment">        minutes - 0-59之间的整数，做为date对象的分钟数</span></span><br><span class="line"><span class="comment">        seconds - 0-59之间的整数，做为date对象的秒数</span></span><br><span class="line"><span class="comment">        microseconds - 0-999之间的整数，做为date对象的毫秒数 */</span></span><br><span class="line">        <span class="keyword">var</span> t1 = <span class="built_in">Date</span>.UTC(<span class="number">2017</span>, <span class="number">09</span>, <span class="number">11</span>, <span class="number">00</span>, <span class="number">00</span>, <span class="number">00</span>); <span class="comment">//北京时间2018-2-13 00:00:00</span></span><br><span class="line">        <span class="keyword">var</span> t2 = <span class="built_in">Date</span>.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);</span><br><span class="line">        <span class="keyword">var</span> diff = t2 - t1;</span><br><span class="line">        <span class="keyword">var</span> diffYears = <span class="built_in">Math</span>.floor(diff / years);</span><br><span class="line">        <span class="keyword">var</span> diffDays = <span class="built_in">Math</span>.floor((diff / days) - diffYears * <span class="number">365</span>);</span><br><span class="line">        <span class="keyword">var</span> diffHours = <span class="built_in">Math</span>.floor((diff - (diffYears * <span class="number">365</span> + diffDays) * days) / hours);</span><br><span class="line">        <span class="keyword">var</span> diffMinutes = <span class="built_in">Math</span>.floor((diff - (diffYears * <span class="number">365</span> + diffDays) * days - diffHours * hours) / minutes);</span><br><span class="line">        <span class="keyword">var</span> diffSeconds = <span class="built_in">Math</span>.floor((diff - (diffYears * <span class="number">365</span> + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);</span><br><span class="line">        <span class="built_in">document</span>.getElementById(<span class="string">&quot;sitetime&quot;</span>).innerHTML = <span class="string">&quot;本站已运行 &quot;</span> +diffYears+<span class="string">&quot; 年 &quot;</span>+diffDays + <span class="string">&quot; 天 &quot;</span> + diffHours + <span class="string">&quot; 小时 &quot;</span> + diffMinutes + <span class="string">&quot; 分钟 &quot;</span> + diffSeconds + <span class="string">&quot; 秒&quot;</span>;</span><br><span class="line">    &#125;<span class="comment">/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/</span></span><br><span class="line">    siteTime();</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>然后在合适的地方（比如copyright声明后面）加上下面的代码就行了：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;sitetime&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>修改不蒜子初始化计数</strong></p>
+<p>因为不蒜子至今未开放注册，所以没办法在官网修改初始化，只能自己动手了。和上一条一样，在<code>/themes/matery/layout/_partial/footer.ejs</code>文件最后加上：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    $(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> int = <span class="built_in">setInterval</span>(fixCount, <span class="number">50</span>);  <span class="comment">// 50ms周期检测函数</span></span><br><span class="line">        <span class="keyword">var</span> pvcountOffset = <span class="number">80000</span>;  <span class="comment">// 初始化首次数据</span></span><br><span class="line">        <span class="keyword">var</span> uvcountOffset = <span class="number">20000</span>;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">fixCount</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">document</span>.getElementById(<span class="string">&quot;busuanzi_container_site_pv&quot;</span>).style.display != <span class="string">&quot;none&quot;</span>) &#123;</span><br><span class="line">                $(<span class="string">&quot;#busuanzi_value_site_pv&quot;</span>).html(<span class="built_in">parseInt</span>($(<span class="string">&quot;#busuanzi_value_site_pv&quot;</span>).html()) + pvcountOffset);</span><br><span class="line">                <span class="built_in">clearInterval</span>(int);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> ($(<span class="string">&quot;#busuanzi_container_site_pv&quot;</span>).css(<span class="string">&quot;display&quot;</span>) != <span class="string">&quot;none&quot;</span>) &#123;</span><br><span class="line">                $(<span class="string">&quot;#busuanzi_value_site_uv&quot;</span>).html(<span class="built_in">parseInt</span>($(<span class="string">&quot;#busuanzi_value_site_uv&quot;</span>).html()) + uvcountOffset); <span class="comment">// 加上初始数据 </span></span><br><span class="line">                <span class="built_in">clearInterval</span>(int); <span class="comment">// 停止检测</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>然后把上面几行有段代码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;% if (theme.busuanziStatistics &amp;&amp; theme.busuanziStatistics.totalTraffic) &#123; %&gt;</span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_container_site_pv&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-heart-o&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">        本站总访问量 <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_value_site_pv&quot;</span> <span class="attr">class</span>=<span class="string">&quot;white-color&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line">&lt;% if (theme.busuanziStatistics &amp;&amp; theme.busuanziStatistics.totalNumberOfvisitors) &#123; %&gt;</span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_container_site_uv&quot;</span>&gt;</span></span><br><span class="line">        人次,<span class="symbol">&amp;nbsp;</span>访客数 <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_value_site_uv&quot;</span> <span class="attr">class</span>=<span class="string">&quot;white-color&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span> 人.</span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+
+<p>修改为：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;% if (theme.busuanziStatistics &amp;&amp; theme.busuanziStatistics.totalTraffic) &#123; %&gt;</span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_container_site_pv&quot;</span> <span class="attr">style</span>=<span class="string">&#x27;display:none&#x27;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-heart-o&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">        本站总访问量 <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_value_site_pv&quot;</span> <span class="attr">class</span>=<span class="string">&quot;white-color&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line">&lt;% if (theme.busuanziStatistics &amp;&amp; theme.busuanziStatistics.totalNumberOfvisitors) &#123; %&gt;</span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_container_site_uv&quot;</span> <span class="attr">style</span>=<span class="string">&#x27;display:none&#x27;</span>&gt;</span></span><br><span class="line">        人次,<span class="symbol">&amp;nbsp;</span>访客数 <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_value_site_uv&quot;</span> <span class="attr">class</span>=<span class="string">&quot;white-color&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span> 人.</span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+
+<p>其实就是增加了两个<code>style=&#39;display:none&#39;</code>而已。</p>
+<p><strong>添加动漫人物</strong></p>
+<p>其实三步就行了，不用像网上有些教程那么复杂。</p>
+<p><strong>第一步：</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+
+<p><strong>第二步：</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install live2d-widget-model-shizuku</span><br></pre></td></tr></table></figure>
+
+<p><strong>第三步：</strong> 在根目录配置文件中添加如下代码：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: <span class="literal">true</span></span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw/</span><br><span class="line">  pluginJsPath: lib/</span><br><span class="line">  pluginModelPath: assets/</span><br><span class="line">  tagMode: <span class="literal">false</span></span><br><span class="line">  log: <span class="literal">false</span></span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-shizuku</span><br><span class="line">  display:</span><br><span class="line">    position: right</span><br><span class="line">    width: <span class="number">150</span></span><br><span class="line">    height: <span class="number">300</span></span><br><span class="line">  mobile:</span><br><span class="line">    show: <span class="literal">true</span></span><br><span class="line">  react:</span><br><span class="line">    opacity: <span class="number">0.7</span></span><br></pre></td></tr></table></figure>
+
+<p>然后<code>hexo g</code>再<code>hexo s</code>就能预览出效果了，但是有个注意的地方，我发现<strong>这个动漫人物最好不要和不蒜子同时使用</strong>，不然不蒜子会显示不出来。</p>
+<p><strong>图片添加水印</strong></p>
+<p>为了防止别人抄袭你文章，可以把所有的图片都加上水印，方法很简单。</p>
+<p>首先在博客根目录下新建一个<code>watermark.py</code>，代码如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> glob</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> ImageDraw</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> ImageFont</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">watermark</span>(<span class="params">post_name</span>):</span></span><br><span class="line">    <span class="keyword">if</span> post_name == <span class="string">&#x27;all&#x27;</span>:</span><br><span class="line">        post_name = <span class="string">&#x27;*&#x27;</span></span><br><span class="line">    dir_name = <span class="string">&#x27;source/_posts/&#x27;</span> + post_name + <span class="string">&#x27;/*&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> files <span class="keyword">in</span> glob.glob(dir_name):</span><br><span class="line">        im = Image.<span class="built_in">open</span>(files)</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(im.getbands()) &lt; <span class="number">3</span>:</span><br><span class="line">            im = im.convert(<span class="string">&#x27;RGB&#x27;</span>)</span><br><span class="line">            <span class="built_in">print</span>(files)</span><br><span class="line">        font = ImageFont.truetype(<span class="string">&#x27;STSONG.TTF&#x27;</span>, <span class="built_in">max</span>(<span class="number">30</span>, <span class="built_in">int</span>(im.size[<span class="number">1</span>] / <span class="number">20</span>)))</span><br><span class="line">        draw = ImageDraw.Draw(im)</span><br><span class="line">        draw.text((im.size[<span class="number">0</span>] / <span class="number">2</span>, im.size[<span class="number">1</span>] / <span class="number">2</span>),</span><br><span class="line">                  <span class="string">u&#x27;@yourname&#x27;</span>, fill=(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>), font=font)</span><br><span class="line">        im.save(files)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(sys.argv) == <span class="number">2</span>:</span><br><span class="line">        watermark(sys.argv[<span class="number">1</span>])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;[usage] &lt;input&gt;&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>字体也放根目录下，自己找字体。然后每次写完一篇文章可以运行<code>python3 watermark.py postname</code>添加水印，如果第一次运行要给所有文章添加水印，可以运行<code>python3 watermark.py all</code>。</p>
+<p><strong>添加网易云音乐BGM</strong></p>
+<p>写文章的时候，想插入一段BGM怎么办？</p>
+<p>首先打开网易云网页版，找到想听的歌曲，然后点击生成外链：</p>
+<p><img src="https://pic1.zhimg.com/80/v2-f0b4d14ccf55209a67c0e059ef72ff2c_720w.jpg" alt="img"></p>
+<p>复制如下代码：</p>
+<p><img src="https://pic3.zhimg.com/80/v2-caa9bfc14aca0213ebba87eae226c76a_720w.jpg" alt="img"></p>
+<p>粘贴到文章里就行了，为了美观，设置一下居中，具体代码如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">align</span>=<span class="string">&quot;middle&quot;</span>&gt;</span>这里粘贴刚刚复制的代码<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>添加百度统计和谷歌统计代码</strong></p>
+<p>打开<code>themes/matery/layout/_partial/head.ejs</code>，修改下面两行：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;baidu-site-verification&quot;</span> <span class="attr">content</span>=<span class="string">&quot;fmlEuI34ir&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;google-site-verification&quot;</span> <span class="attr">content</span>=<span class="string">&quot;yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>其中<code>content</code>内容改成你自己的就行了。</p>
+<p><strong>修复代码块行号不显示bug</strong></p>
+<p>修改<code>themes/matery/source/css/matery.css</code>第95行左右的<code>pre</code>和<code>code</code>两段改为如下代码：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">pre &#123;</span><br><span class="line">    <span class="comment">/* padding: 1.5rem !important; */</span></span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">1.5rem</span> <span class="number">1.5rem</span> <span class="number">1.5rem</span> <span class="number">3.3rem</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">1rem</span> <span class="number">0</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#272822</span>;</span><br><span class="line">    <span class="attribute">overflow</span>: auto;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">0.35rem</span>;</span><br><span class="line">    <span class="attribute">tab-size</span>: <span class="number">4</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">code</span> &#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">1px</span> <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">font-family</span>: Inconsolata, Monaco, Consolas, <span class="string">&#x27;Courier New&#x27;</span>, Courier, monospace;</span><br><span class="line">    <span class="comment">/* font-size: 0.91rem; */</span></span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#e96900</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#f8f8f8</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">2px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后在根目录的<code>_config.yml</code>中设置<code>prism_plugin.line_number</code>为<code>true</code>。</p>
+<p><strong>优化文章url路径</strong></p>
+<p>有教程认为，将博客目录结构改为如下，就能减少层级，有利于搜索引擎的SEO。其实不然，网站内容的层级是按照从首页开始点击几次能到达你的文章来算的，所以你改不改都是两层就到达了，不在首页的也可以通过<code>index-archives-post</code>到达，跟文章url长度没有任何关系，所以如下操作作废，你想改也行，不改也行。但是建议已经建站一段时间的同学千万别改，不然会产生很多死链，并且评论issue全部会清空，很麻烦。</p>
+<p><del>seo搜索引擎优化认为，网站的最佳结构是用户从首页点击三次就可以到达任何一个页面，但是我们使用hexo编译的站点打开文章的url是：<code>sitename/year/mounth/day/title</code>四层的结构，这样的url结构很不利于seo，爬虫就会经常爬不到我们的文章，于是，我们可以将url直接改成<code>sitename/title</code>的形式，并且title最好是用英文，在根目录的<code>_config.yml</code>文件下修改permalink如下：</del></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># permalink: :year/:month/:day/:title/</span><br><span class="line">permalink: :title/</span><br></pre></td></tr></table></figure>
+
+<h2 id="常见问题及解答（FAQ）"><a href="#常见问题及解答（FAQ）" class="headerlink" title="常见问题及解答（FAQ）"></a><strong>常见问题及解答（FAQ）</strong></h2><p>这个章节主要更新许多同学在搭建博客的过程中咨询我的一些问题。</p>
+<p><strong>为什么本地生成完ssh key之后没有.ssh文件夹？</strong></p>
+<p>这是我没有想到会遇到的问题，但是很多人还是遇到了，主要问题就是在输入完<code>ssh-keygen -t rsa -C &quot;792321264@qq.com&quot;</code>之后，很多同学没有按照提示继续输入，而是就这么结束了，然后报错了也没有发现。正确做法是按照提示，一路按回车就行了。</p>
+<p><strong>为什么代码块显示有问题？</strong></p>
+<p>代码要显示正确，要注意以下几个点： 根目录<code>_config.yml</code>文件下的<code>highlight</code>中的<code>line_number</code>要设置为<code>false</code>，因为暂时行号暂时有bug，还没有修复。 不要按照网上教程安装<code>kramed</code>插件，已经装了的卸载掉。 * 修改<code>node_modules/marked/lib/marked.js</code>文件中的<code>escape</code>和<code>em</code>两行（在538行左右），改成下面：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">escape: /^\\([`*\[\]()#$+\-.!_&gt;])/,</span><br><span class="line">em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span><br></pre></td></tr></table></figure>
+
+<p><strong>为什么博客本地预览没问题，push到github上就显示不正常？</strong></p>
+<p>这个问题可能原因有很多，我暂时列举遇到的情况： * github博客的仓库名称一定要和你的github名字完全一样，比如你github名字叫<code>abc</code>，那么仓库名字一定要是<code>abc.github.io</code>。这是大多数人会犯的错误，会导致显示不正常。</p>
+<p><strong>更换主题之后，配置文件是修改根目录下的还是主题目录下的？</strong></p>
+<p>这个其实都要修改，一般也不会出现重复的属性。具体使用哪个，要看主题的源代码，如果是<code>config.xxx</code>那就是用的根目录配置文件，如果是<code>theme.xxx</code>那就用的是主题目录的配置文件。</p>
+<p><strong>在哪建立github分支？</strong></p>
+<p>点击仓库的<code>settings-branches</code>，右边点击<code>add new branch</code>即可。</p>
+<h2 id="个性化设置（beantech主题，已停更）"><a href="#个性化设置（beantech主题，已停更）" class="headerlink" title="个性化设置（beantech主题，已停更）"></a>个性化设置（beantech主题，已停更）</h2><p><strong>下面的个性化设置主要针对的是我之前使用的<code>beantech</code>主题，当然如果你想用我现在博客这个主题，可以不看这部分。这部分已经停止更新，今后我只会更新<code>matery</code>主题的各种配置。</strong></p>
+<p><strong>更换主题</strong></p>
+<p>网上大多数主题都是github排名第一的<code>Next</code>主题，但是我个人不是很喜欢，我更喜欢<code>beantech</code>主题，地址在<a href="https://link.zhihu.com/?target=https://github.com/YenYuHsuan/hexo-theme-beantech">传送门</a>。</p>
+<p>首先要注意的是，<strong>这个github项目不仅包含了主题文件，还包含了hexo的各种文件</strong>。</p>
+<p>所以首先下载下来这个项目，然后推荐将下图所有文件全部替换你原本博客根目录下的文件：</p>
+<p><img src="https://pic3.zhimg.com/80/v2-c40a774df6d3f46f6e93728a03d9734a_720w.jpg" alt="img"></p>
+<p>当然一般的主题和这个主题有点不一样，只含有主题文件夹，所以把整个文件夹丢到<code>theme</code>下就行了。</p>
+<p>然后运行<code>hexo clean</code>清空所有生成的网页缓存，<code>hexo g</code>、<code>hexo d</code>。这时候新的主题网页就生成好了，博客根目录的情况应该大致如下：</p>
+<p><img src="https://pic1.zhimg.com/80/v2-ad0c8f12a14a883e35f166a193d2e3d8_720w.jpg" alt="img"></p>
+<p><strong>博客目录构成介绍</strong></p>
+<p>从上图可以看出，博客的目录结构如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- node_modules</span><br><span class="line">- public</span><br><span class="line">- scaffolds</span><br><span class="line">- source</span><br><span class="line">    - _posts</span><br><span class="line">    - about</span><br><span class="line">    - archive</span><br><span class="line">    - img</span><br><span class="line">    - tags</span><br><span class="line">- themes</span><br></pre></td></tr></table></figure>
+
+<p><code>node_modules</code>是node.js各种库的目录，<code>public</code>是生成的网页文件目录，<code>scaffolds</code>里面就三个文件，存储着新文章和新页面的初始设置，<code>source</code>是我们最常用到的一个目录，里面存放着文章、各类页面、图像等文件，<code>themes</code>存放着主题文件，一般也用不到。</p>
+<p>我们平时写文章只需要关注<code>source/_posts</code>这个文件夹就行了。</p>
+<p>网站图片都保存在<code>D:\study\program\blog\source\img</code>目录下，可以修改成自己的图片。</p>
+<p><strong>修复文档分类bug</strong></p>
+<p>这个主题文档分类功能有个bug，一直没有得到解决，直到最近，我才发现是源文件的单词拼错了。。。</p>
+<p>打开<code>D:\study\program\blog\scaffolds\post.md</code>，单词<code>catagories</code>改为<code>categories</code>。</p>
+<p><strong>添加畅言评论插件</strong></p>
+<p>主题自带了多说评论插件，但是多说已经关闭了，所以我换成了畅言评论插件。</p>
+<p>首先你得注册一个畅言账号，</p>
+<p><a href="https://link.zhihu.com/?target=http://changyan.kuaizhan.com/">云评论 - 专业的社会化评论系统changyan.kuaizhan.com</a></p>
+<p>然后打开如下页面，复制该段代码：</p>
+<p><img src="https://pic3.zhimg.com/80/v2-6d7e684dc9967595521840684f2ea0da_720w.jpg" alt="img"></p>
+<p>打开<code>D:\study\program\blog\themes\beantech\layout\post.ejs</code>，将代码粘贴到如下位置：</p>
+<p><img src="https://pic4.zhimg.com/80/v2-f30b0d3f2251801204f414c6ec9ab383_720w.jpg" alt="img"></p>
+<p>然后重新生成一下网页，可以看到效果图如下：</p>
 ]]></content>
       <tags>
-        <tag>python中文指南</tag>
+        <tag>hexo</tag>
+        <tag>github</tag>
       </tags>
   </entry>
   <entry>
     <title>03序列</title>
-    <url>/2021/05/08/ckx1rbfu60003d0udhwaz96w8/</url>
+    <url>/2021/05/08/ckx3aptut0009toud7j98bz6n/</url>
     <content><![CDATA[<h1 id="列表List"><a href="#列表List" class="headerlink" title="列表List"></a>列表List</h1><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="range"><a href="#range" class="headerlink" title="range()"></a>range()</h3><p>可创建一个整数列表，一般用在 for 循环中。</p>
 <p>返回：返回的是一个可迭代对象（类型是对象），而不是列表类型， 所以打印的时候不会打印列表，<span id="more"></span></p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">range</span>(start, stop,[step])</span><br></pre></td></tr></table></figure>
@@ -263,31 +494,8 @@
       </tags>
   </entry>
   <entry>
-    <title>文华财经公式——多头排列和空头排列</title>
-    <url>/2021/12/11/ckx1rbfu90006d0udhd62behe/</url>
-    <content><![CDATA[<p>MA5:MA(CLOSE,5);<br>MA10:MA(CLOSE,10);<br>MA20:MA(CLOSE,20);<br>//MA4:MA(CLOSE,N4);<br>//MA5:MA(CLOSE,N5);<br>//MA6:MA(CLOSE,N6);</p>
-<p>//价格多头排列，5周期10周期线用红色填充<br>FILLRGN(MA10&gt;MA20&amp;&amp;MA5&gt;MA10,MA5,MA10,COLORRED);<br>//空头<br>FILLRGN(MA10&lt;MA20&amp;&amp;MA5&lt;MA10,MA5,MA10, COLORGREEN);</p>
-<p>双均线交叉变色</p>
-<p>MA5:MA(C,5);<br>MA15:MA(C,15);<br>DRAWCOLORLINE(MA5&gt;MA15,MA5,COLORMAGENTA,COLORGREEN);<br>DRAWCOLORLINE(MA5&gt;MA15,MA15,COLORMAGENTA,COLORGREEN);</p>
-<span id="more"></span>]]></content>
-      <tags>
-        <tag>文华财经公式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>pycharm主题配置</title>
-    <url>/2021/03/29/ckx1rbfuc0009d0ud8h5p2pbr/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210330215553.png" alt="image-20210330215553470"></p>
-<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210330215659.png" alt="image-20210330215659136"></p>
-<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210330215722.png" alt="image-20210330215722154"></p>
-]]></content>
-      <tags>
-        <tag>pycharm</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>pycharm快捷键</title>
-    <url>/2021/03/29/ckx1rbfue000bd0ud5u58cymh/</url>
+    <url>/2021/03/29/ckx3aptuu000btoudhbe0ei93/</url>
     <content><![CDATA[<p><strong>最重要的快捷键</strong></p>
 <ol>
 <li>ctrl+shift+A:万能命令行</li>
@@ -410,220 +618,19 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo部署到github</title>
-    <url>/2021/05/09/ckx1rbfuf000fd0ud68fq5jzw/</url>
-    <content><![CDATA[<p>本文是转载自别人的详细教程：</p>
-<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p>首先下载稳定版</p>
-<p><a href="https://link.zhihu.com/?target=https://nodejs.org/dist/v9.11.1/node-v9.11.1-x64.msi">Node.jsnodejs.org</a></p>
-<p>我这里给的是64位的。</p>
-<p>安装选项全部默认，一路点击<code>Next</code>。</p>
-<p>最后安装好之后，按<code>Win+R</code>打开命令提示符，输入<code>node -v</code>和<code>npm -v</code>，如果出现版本号，那么就安装成功了。</p>
-<span id="more"></span>
-
-<h2 id="添加国内镜像源"><a href="#添加国内镜像源" class="headerlink" title="添加国内镜像源"></a>添加国内镜像源</h2><p>如果没有梯子的话，可以使用阿里的国内镜像进行加速。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>为了把本地的网页文件上传到github上面去，我们需要用到分布式版本控制工具————Git</p>
-<p><a href="https://link.zhihu.com/?target=https://git-scm.com/download/win">Git - Downloading Packagegit-scm.com</a></p>
-<p>安装选项还是全部默认，只不过最后一步添加路径时选择<code>Use Git from the Windows Command Prompt</code>，这样我们就可以直接在命令提示符里打开git了。</p>
-<p>安装完成后在命令提示符中输入<code>git --version</code>验证是否安装成功。</p>
-<h2 id="注册Github账号"><a href="#注册Github账号" class="headerlink" title="注册Github账号"></a>注册Github账号</h2><p>接下来就去注册一个github账号，用来存放我们的网站。大多数小伙伴应该都有了吧，作为一个合格的程序猿（媛）还是要有一个的。</p>
-<p>新建一个项目，如下所示：</p>
-<p><img src="https://pic1.zhimg.com/80/v2-4270b2eec17601922d98aa03ea2c79cc_720w.jpg" alt="img"></p>
-<p>然后如下图所示，输入自己的项目名字，后面一定要加<code>.github.io</code>后缀，README初始化也要勾上。</p>
-<p><img src="https://pic3.zhimg.com/80/v2-d2b3b1ca2bd72e9f221c33c3890e6c32_720w.jpg" alt="img"></p>
-<p>然后项目就建成了，点击<code>Settings</code>，向下拉到最后有个<code>GitHub Pages</code>，点击<code>Choose a theme</code>选择一个主题。然后等一会儿，再回到<code>GitHub Pages</code>，会变成下面这样：</p>
-<p><img src="https://pic3.zhimg.com/80/v2-281f7ca404cbb2b769f09c34794ac5b6_720w.jpg" alt="img"></p>
-<p>点击那个链接，就会出现自己的网页啦，效果如下：</p>
-<p><img src="https://pic1.zhimg.com/80/v2-3a0e46d3a6fa7e5ac9f585158cb76a88_720w.jpg" alt="img"></p>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>在合适的地方新建一个文件夹，用来存放自己的博客文件，比如我的博客文件都存放在<code>D:\study\program\blog</code>目录下。</p>
-<p>在该目录下右键点击<code>Git Bash Here</code>，打开git的控制台窗口，以后我们所有的操作都在git控制台进行，就不要用Windows自带的控制台了。</p>
-<p>定位到该目录下，输入<code>npm i hexo-cli -g</code>安装Hexo。会有几个报错，无视它就行。</p>
-<p>安装完后输入<code>hexo -v</code>验证是否安装成功。</p>
-<p>然后就要初始化我们的网站，输入<code>hexo init</code>初始化文件夹，接着输入<code>npm install</code>安装必备的组件。</p>
-<p>这样本地的网站配置也弄好啦，输入<code>hexo g</code>生成静态网页，然后输入<code>hexo s</code>打开本地服务器，然后浏览器打开<a href="https://link.zhihu.com/?target=http://localhost:4000/">http://localhost:4000/</a>，就可以看到我们的博客啦，效果如下：</p>
-<p><img src="https://pic4.zhimg.com/80/v2-7461124ec772f6fe453d07554cb11363_720w.jpg" alt="img"></p>
-<p>按<code>ctrl+c</code>关闭本地服务器。</p>
-<h2 id="连接Github与本地"><a href="#连接Github与本地" class="headerlink" title="连接Github与本地"></a>连接Github与本地</h2><p>首先右键打开git bash，然后输入下面命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;godweiyang&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;792321264@qq.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>用户名和邮箱根据你注册github的信息自行修改。</p>
-<p>然后生成密钥SSH key：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;792321264@qq.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>打开<a href="https://link.zhihu.com/?target=http://github.com/">github</a>，在头像下面点击<code>settings</code>，再点击<code>SSH and GPG keys</code>，新建一个SSH，名字随便。</p>
-<p>git bash中输入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-
-<p>将输出的内容复制到框中，点击确定保存。</p>
-<p>输入<code>ssh -T git@github.com</code>，如果如下图所示，出现你的用户名，那就成功了。</p>
-<p><img src="https://pic2.zhimg.com/80/v2-d2681a4830e54238450b6dc2a57d0c55_720w.jpg" alt="img"></p>
-<p>打开博客根目录下的<code>_config.yml</code>文件，这是博客的配置文件，在这里你可以修改与博客相关的各种信息。</p>
-<p>修改最后一行的配置：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: https://github.com/godweiyang/godweiyang.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<p>repository修改为你自己的github项目地址。</p>
-<h2 id="写文章、发布文章"><a href="#写文章、发布文章" class="headerlink" title="写文章、发布文章"></a>写文章、发布文章</h2><p>首先在博客根目录下右键打开git bash，安装一个扩展<code>npm i hexo-deployer-git</code>。</p>
-<p>然后输入<code>hexo new post &quot;article title&quot;</code>，新建一篇文章。</p>
-<p>然后打开<code>D:\study\program\blog\source\_posts</code>的目录，可以发现下面多了一个文件夹和一个<code>.md</code>文件，一个用来存放你的图片等数据，另一个就是你的文章文件啦。</p>
-<p>编写完markdown文件后，根目录下输入<code>hexo g</code>生成静态网页，然后输入<code>hexo s</code>可以本地预览效果，最后输入<code>hexo d</code>上传到github上。这时打开你的github.io主页就能看到发布的文章啦。</p>
-<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p>现在默认的域名还是<code>xxx.github.io</code>，是不是很没有牌面？想不想也像我一样弄一个专属域名呢，首先你得购买一个域名，xx云都能买，看你个人喜好了。</p>
-<p>以我的百度云为例，如下图所示，添加两条解析记录：</p>
-<p><img src="https://pic4.zhimg.com/80/v2-e11377329d5cef129c0aefd10eaa1607_720w.jpg" alt="img"></p>
-<p>然后打开你的github博客项目，点击<code>settings</code>，拉到下面<code>Custom domain</code>处，填上你自己的域名，保存：</p>
-<p><img src="https://pic4.zhimg.com/80/v2-8125794bbf0055917b820178489c7b0f_720w.jpg" alt="img"></p>
-<p>这时候你的项目根目录应该会出现一个名为<code>CNAME</code>的文件了。如果没有的话，打开你本地博客<code>/source</code>目录，我的是<code>D:\study\program\blog\source</code>，新建<code>CNAME</code>文件，注意没有后缀。然后在里面写上你的域名，保存。最后运行<code>hexo g</code>、<code>hexo d</code>上传到github。</p>
-<h2 id="备份博客源文件"><a href="#备份博客源文件" class="headerlink" title="备份博客源文件"></a>备份博客源文件</h2><p>有时候我们想换一台电脑继续写博客，这时候就可以将博客目录下的所有源文件都上传到github上面。</p>
-<p>首先在github博客仓库下新建一个分支<code>hexo</code>，然后<code>git clone</code>到本地，把<code>.git</code>文件夹拿出来，放在博客根目录下。</p>
-<p>然后<code>git branch -b hexo</code>切换到<code>hexo</code>分支，然后<code>git add .</code>，然后<code>git commit -m &quot;xxx&quot;</code>，最后<code>git push origin hexo</code>提交就行了。</p>
-<p>当然我新建了一个仓库存放了源文件，具体效果可以看我的博客源文件仓库：</p>
-<p>大家也可以先用下文hexo安装方法安装完hexo，然后直接<code>git clone git@github.com:godweiyang/hexo-matery-modified.git</code>克隆我的所有源文件，然后这是我修改完的基本没bug的定制化的博客，就可以直接拿来用啦。</p>
-<p><strong>我这个源文件和原来的主题没有什么区别，只是我把插件都安装完了，有些小bug也修复了，所以拿来就能直接用，方便大家。</strong></p>
-<h2 id="博客源代码下载"><a href="#博客源代码下载" class="headerlink" title="博客源代码下载"></a>博客源代码下载</h2><p>如果大家不想这么麻烦的装一堆东西，然后还要自己修改bug，那么只需要做好上面的准备工作，然后下载我的源代码，改改个人配置就行了。</p>
-<p>大家可以直接下载下来使用，修改个人配置信息即可，当然环境要先搭好。</p>
-<p><strong>如果大家下载好了源代码，就可以直接使用了，基本可以跳过文章后面的部分了！喜欢的记得star并fork哦！</strong></p>
-<h2 id="个性化设置（matery主题）"><a href="#个性化设置（matery主题）" class="headerlink" title="个性化设置（matery主题）"></a>个性化设置（matery主题）</h2><p>下面的个性化设置主要针对的是<code>matery</code>主题，如果你想用我现在博客这个主题，可以直接看这个章节。</p>
-<p><strong>更换主题</strong></p>
-<p>这两天花时间将我的博客换了一个主题，现在这个主题看着更加的炫（zhuang）酷（bi），并且响应式更友好，点起来就很舒服，功能也多很多。<a href="https://link.zhihu.com/?target=https://github.com/blinkfox/hexo-theme-matery">https://link.zhihu.com/?target=https%3A//github.com/blinkfox/hexo-theme-matery</a>)</p>
-<p>它的文档写得也非常的详细，还有中英文两个版本，作者回复也很及时。效果图如下，可以看出非常合我的口味</p>
-<p>但是我自己使用起来还是遇到了好几个问题，经过两天的不懈摸鱼，终于基本解决了，这里分享一下。</p>
-<p>首先先按照文档教程安装一遍主题，然后是可以正常打开的，如果你是一般使用的话，基本没啥问题了。但是我是重度强迫症，一点小毛病就看着难受，下面列举一下我遇到的问题以及解决方法。</p>
-<p><strong>文章头设置</strong></p>
-<p>首先为了新建文章方便，建议将<code>/scaffolds/post.md</code>修改为如下代码：</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">top: <span class="literal">false</span></span><br><span class="line">cover: <span class="literal">false</span></span><br><span class="line">password:</span><br><span class="line">toc: <span class="literal">true</span></span><br><span class="line">mathjax: <span class="literal">true</span></span><br><span class="line">summary:</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<p>这样新建文章后不用你自己补充了，修改信息就行。</p>
-<p><strong>添加404页面</strong></p>
-<p>原来的主题没有404页面，加一个也不是什么难事。首先在<code>/source/</code>目录下新建一个<code>404.md</code>，内容如下：</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: <span class="number">404</span></span><br><span class="line">date: <span class="number">2019</span><span class="number">-07</span><span class="number">-19</span> <span class="number">16</span>:<span class="number">41</span>:<span class="number">10</span></span><br><span class="line">type: <span class="string">&quot;404&quot;</span></span><br><span class="line">layout: <span class="string">&quot;404&quot;</span></span><br><span class="line">description: <span class="string">&quot;你来到了没有知识的荒原 :(&quot;</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<p>然后在<code>/themes/matery/layout/</code>目录下新建一个<code>404.ejs</code>文件，内容如下：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">    <span class="comment">/* don&#x27;t remove. */</span></span></span><br><span class="line"><span class="css">    <span class="selector-class">.about-cover</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">75vh</span>;</span></span><br><span class="line"><span class="css">    &#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bg-cover pd-header about-cover&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col s10 offset-s1 m8 offset-m2 l8 offset-l2&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;brand&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;title center-align&quot;</span>&gt;</span></span><br><span class="line">                        404</span><br><span class="line">                    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;description center-align&quot;</span>&gt;</span></span><br><span class="line">                        &lt;%= page.description %&gt;</span><br><span class="line">                    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="comment">// 每天切换 banner 图.  Switch banner image every day.</span></span></span><br><span class="line"><span class="javascript">    $(<span class="string">&#x27;.bg-cover&#x27;</span>).css(<span class="string">&#x27;background-image&#x27;</span>, <span class="string">&#x27;url(/medias/banner/&#x27;</span> + <span class="keyword">new</span> <span class="built_in">Date</span>().getDay() + <span class="string">&#x27;.jpg)&#x27;</span>);</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>“关于”页面增加简历（可选）</strong></p>
-<p>修改<code>/themes/matery/layout/about.ejs</code>，找到<code>&lt;div class=&quot;card&quot;&gt;</code>标签，然后找到它对应的<code>&lt;/div&gt;</code>标签，接在后面新增一个card，语句如下：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card-content&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card-content article-card-content&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;title center-align&quot;</span> <span class="attr">data-aos</span>=<span class="string">&quot;zoom-in-up&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-address-book&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span>&lt;%- __(&#x27;myCV&#x27;) %&gt;</span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;articleContent&quot;</span> <span class="attr">data-aos</span>=<span class="string">&quot;fade-up&quot;</span>&gt;</span></span><br><span class="line">                    &lt;%- page.content %&gt;</span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>这样就会多出一张card，然后可以在<code>/source/about/index.md</code>下面写上你的简历了，当然这里的位置随你自己设置，你也可以把简历作为第一个card。</p>
-<p><strong>解决mathjax与代码高亮的冲突</strong></p>
-<p>如果你按照教程安装了代码高亮插件<code>hexo-prism-plugin</code>，单独使用是没有问题的，但如果你又使用了mathjax，并且按照网上教程，安装<code>kramed</code>插件并修改了js文件里的正则表达式（为了解决markdown和mathjax的语法冲突），好了，那你的代码就无法高亮了。解决方法很简单，别用<code>kramed</code>插件了，还用原来自带的<code>marked</code>插件，直接改它的正则表达式就行了，改法如下：</p>
-<p>打开<code>D:\study\program\blog\node_modules\marked\lib\marked.js</code> <code>escape:</code>处替换成：</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">escape: /^\\([`*\[\]()#$+\-.!_&gt;])/,</span><br></pre></td></tr></table></figure>
-
-<p><code>em:</code>处替换成：</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span><br></pre></td></tr></table></figure>
-
-<p>这时在文章里写数学公式基本没有问题了，但是要注意： <strong>数学公式中如果出现了连续两个{，中间一定要加空格！</strong></p>
-<p><strong>增加建站时间</strong></p>
-<p>修改<code>/themes/matery/layout/_partial/footer.ejs</code>文件，在最后加上</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script language=javascript&gt;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">siteTime</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">window</span>.setTimeout(<span class="string">&quot;siteTime()&quot;</span>, <span class="number">1000</span>);</span><br><span class="line">        <span class="keyword">var</span> seconds = <span class="number">1000</span>;</span><br><span class="line">        <span class="keyword">var</span> minutes = seconds * <span class="number">60</span>;</span><br><span class="line">        <span class="keyword">var</span> hours = minutes * <span class="number">60</span>;</span><br><span class="line">        <span class="keyword">var</span> days = hours * <span class="number">24</span>;</span><br><span class="line">        <span class="keyword">var</span> years = days * <span class="number">365</span>;</span><br><span class="line">        <span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">        <span class="keyword">var</span> todayYear = today.getFullYear();</span><br><span class="line">        <span class="keyword">var</span> todayMonth = today.getMonth() + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">var</span> todayDate = today.getDate();</span><br><span class="line">        <span class="keyword">var</span> todayHour = today.getHours();</span><br><span class="line">        <span class="keyword">var</span> todayMinute = today.getMinutes();</span><br><span class="line">        <span class="keyword">var</span> todaySecond = today.getSeconds();</span><br><span class="line">        <span class="comment">/* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)</span></span><br><span class="line"><span class="comment">        year - 作为date对象的年份，为4位年份值</span></span><br><span class="line"><span class="comment">        month - 0-11之间的整数，做为date对象的月份</span></span><br><span class="line"><span class="comment">        day - 1-31之间的整数，做为date对象的天数</span></span><br><span class="line"><span class="comment">        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数</span></span><br><span class="line"><span class="comment">        minutes - 0-59之间的整数，做为date对象的分钟数</span></span><br><span class="line"><span class="comment">        seconds - 0-59之间的整数，做为date对象的秒数</span></span><br><span class="line"><span class="comment">        microseconds - 0-999之间的整数，做为date对象的毫秒数 */</span></span><br><span class="line">        <span class="keyword">var</span> t1 = <span class="built_in">Date</span>.UTC(<span class="number">2017</span>, <span class="number">09</span>, <span class="number">11</span>, <span class="number">00</span>, <span class="number">00</span>, <span class="number">00</span>); <span class="comment">//北京时间2018-2-13 00:00:00</span></span><br><span class="line">        <span class="keyword">var</span> t2 = <span class="built_in">Date</span>.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);</span><br><span class="line">        <span class="keyword">var</span> diff = t2 - t1;</span><br><span class="line">        <span class="keyword">var</span> diffYears = <span class="built_in">Math</span>.floor(diff / years);</span><br><span class="line">        <span class="keyword">var</span> diffDays = <span class="built_in">Math</span>.floor((diff / days) - diffYears * <span class="number">365</span>);</span><br><span class="line">        <span class="keyword">var</span> diffHours = <span class="built_in">Math</span>.floor((diff - (diffYears * <span class="number">365</span> + diffDays) * days) / hours);</span><br><span class="line">        <span class="keyword">var</span> diffMinutes = <span class="built_in">Math</span>.floor((diff - (diffYears * <span class="number">365</span> + diffDays) * days - diffHours * hours) / minutes);</span><br><span class="line">        <span class="keyword">var</span> diffSeconds = <span class="built_in">Math</span>.floor((diff - (diffYears * <span class="number">365</span> + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);</span><br><span class="line">        <span class="built_in">document</span>.getElementById(<span class="string">&quot;sitetime&quot;</span>).innerHTML = <span class="string">&quot;本站已运行 &quot;</span> +diffYears+<span class="string">&quot; 年 &quot;</span>+diffDays + <span class="string">&quot; 天 &quot;</span> + diffHours + <span class="string">&quot; 小时 &quot;</span> + diffMinutes + <span class="string">&quot; 分钟 &quot;</span> + diffSeconds + <span class="string">&quot; 秒&quot;</span>;</span><br><span class="line">    &#125;<span class="comment">/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/</span></span><br><span class="line">    siteTime();</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<p>然后在合适的地方（比如copyright声明后面）加上下面的代码就行了：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;sitetime&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>修改不蒜子初始化计数</strong></p>
-<p>因为不蒜子至今未开放注册，所以没办法在官网修改初始化，只能自己动手了。和上一条一样，在<code>/themes/matery/layout/_partial/footer.ejs</code>文件最后加上：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    $(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> int = <span class="built_in">setInterval</span>(fixCount, <span class="number">50</span>);  <span class="comment">// 50ms周期检测函数</span></span><br><span class="line">        <span class="keyword">var</span> pvcountOffset = <span class="number">80000</span>;  <span class="comment">// 初始化首次数据</span></span><br><span class="line">        <span class="keyword">var</span> uvcountOffset = <span class="number">20000</span>;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">fixCount</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">document</span>.getElementById(<span class="string">&quot;busuanzi_container_site_pv&quot;</span>).style.display != <span class="string">&quot;none&quot;</span>) &#123;</span><br><span class="line">                $(<span class="string">&quot;#busuanzi_value_site_pv&quot;</span>).html(<span class="built_in">parseInt</span>($(<span class="string">&quot;#busuanzi_value_site_pv&quot;</span>).html()) + pvcountOffset);</span><br><span class="line">                <span class="built_in">clearInterval</span>(int);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> ($(<span class="string">&quot;#busuanzi_container_site_pv&quot;</span>).css(<span class="string">&quot;display&quot;</span>) != <span class="string">&quot;none&quot;</span>) &#123;</span><br><span class="line">                $(<span class="string">&quot;#busuanzi_value_site_uv&quot;</span>).html(<span class="built_in">parseInt</span>($(<span class="string">&quot;#busuanzi_value_site_uv&quot;</span>).html()) + uvcountOffset); <span class="comment">// 加上初始数据 </span></span><br><span class="line">                <span class="built_in">clearInterval</span>(int); <span class="comment">// 停止检测</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<p>然后把上面几行有段代码：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;% if (theme.busuanziStatistics &amp;&amp; theme.busuanziStatistics.totalTraffic) &#123; %&gt;</span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_container_site_pv&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-heart-o&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">        本站总访问量 <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_value_site_pv&quot;</span> <span class="attr">class</span>=<span class="string">&quot;white-color&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line">&lt;% if (theme.busuanziStatistics &amp;&amp; theme.busuanziStatistics.totalNumberOfvisitors) &#123; %&gt;</span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_container_site_uv&quot;</span>&gt;</span></span><br><span class="line">        人次,<span class="symbol">&amp;nbsp;</span>访客数 <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_value_site_uv&quot;</span> <span class="attr">class</span>=<span class="string">&quot;white-color&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span> 人.</span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
-
-<p>修改为：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;% if (theme.busuanziStatistics &amp;&amp; theme.busuanziStatistics.totalTraffic) &#123; %&gt;</span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_container_site_pv&quot;</span> <span class="attr">style</span>=<span class="string">&#x27;display:none&#x27;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-heart-o&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">        本站总访问量 <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_value_site_pv&quot;</span> <span class="attr">class</span>=<span class="string">&quot;white-color&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line">&lt;% if (theme.busuanziStatistics &amp;&amp; theme.busuanziStatistics.totalNumberOfvisitors) &#123; %&gt;</span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_container_site_uv&quot;</span> <span class="attr">style</span>=<span class="string">&#x27;display:none&#x27;</span>&gt;</span></span><br><span class="line">        人次,<span class="symbol">&amp;nbsp;</span>访客数 <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_value_site_uv&quot;</span> <span class="attr">class</span>=<span class="string">&quot;white-color&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span> 人.</span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
-
-<p>其实就是增加了两个<code>style=&#39;display:none&#39;</code>而已。</p>
-<p><strong>添加动漫人物</strong></p>
-<p>其实三步就行了，不用像网上有些教程那么复杂。</p>
-<p><strong>第一步：</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
-
-<p><strong>第二步：</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install live2d-widget-model-shizuku</span><br></pre></td></tr></table></figure>
-
-<p><strong>第三步：</strong> 在根目录配置文件中添加如下代码：</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: <span class="literal">true</span></span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw/</span><br><span class="line">  pluginJsPath: lib/</span><br><span class="line">  pluginModelPath: assets/</span><br><span class="line">  tagMode: <span class="literal">false</span></span><br><span class="line">  log: <span class="literal">false</span></span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-shizuku</span><br><span class="line">  display:</span><br><span class="line">    position: right</span><br><span class="line">    width: <span class="number">150</span></span><br><span class="line">    height: <span class="number">300</span></span><br><span class="line">  mobile:</span><br><span class="line">    show: <span class="literal">true</span></span><br><span class="line">  react:</span><br><span class="line">    opacity: <span class="number">0.7</span></span><br></pre></td></tr></table></figure>
-
-<p>然后<code>hexo g</code>再<code>hexo s</code>就能预览出效果了，但是有个注意的地方，我发现<strong>这个动漫人物最好不要和不蒜子同时使用</strong>，不然不蒜子会显示不出来。</p>
-<p><strong>图片添加水印</strong></p>
-<p>为了防止别人抄袭你文章，可以把所有的图片都加上水印，方法很简单。</p>
-<p>首先在博客根目录下新建一个<code>watermark.py</code>，代码如下：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> glob</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> ImageDraw</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> ImageFont</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">watermark</span>(<span class="params">post_name</span>):</span></span><br><span class="line">    <span class="keyword">if</span> post_name == <span class="string">&#x27;all&#x27;</span>:</span><br><span class="line">        post_name = <span class="string">&#x27;*&#x27;</span></span><br><span class="line">    dir_name = <span class="string">&#x27;source/_posts/&#x27;</span> + post_name + <span class="string">&#x27;/*&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> files <span class="keyword">in</span> glob.glob(dir_name):</span><br><span class="line">        im = Image.<span class="built_in">open</span>(files)</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(im.getbands()) &lt; <span class="number">3</span>:</span><br><span class="line">            im = im.convert(<span class="string">&#x27;RGB&#x27;</span>)</span><br><span class="line">            <span class="built_in">print</span>(files)</span><br><span class="line">        font = ImageFont.truetype(<span class="string">&#x27;STSONG.TTF&#x27;</span>, <span class="built_in">max</span>(<span class="number">30</span>, <span class="built_in">int</span>(im.size[<span class="number">1</span>] / <span class="number">20</span>)))</span><br><span class="line">        draw = ImageDraw.Draw(im)</span><br><span class="line">        draw.text((im.size[<span class="number">0</span>] / <span class="number">2</span>, im.size[<span class="number">1</span>] / <span class="number">2</span>),</span><br><span class="line">                  <span class="string">u&#x27;@yourname&#x27;</span>, fill=(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>), font=font)</span><br><span class="line">        im.save(files)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(sys.argv) == <span class="number">2</span>:</span><br><span class="line">        watermark(sys.argv[<span class="number">1</span>])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;[usage] &lt;input&gt;&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>字体也放根目录下，自己找字体。然后每次写完一篇文章可以运行<code>python3 watermark.py postname</code>添加水印，如果第一次运行要给所有文章添加水印，可以运行<code>python3 watermark.py all</code>。</p>
-<p><strong>添加网易云音乐BGM</strong></p>
-<p>写文章的时候，想插入一段BGM怎么办？</p>
-<p>首先打开网易云网页版，找到想听的歌曲，然后点击生成外链：</p>
-<p><img src="https://pic1.zhimg.com/80/v2-f0b4d14ccf55209a67c0e059ef72ff2c_720w.jpg" alt="img"></p>
-<p>复制如下代码：</p>
-<p><img src="https://pic3.zhimg.com/80/v2-caa9bfc14aca0213ebba87eae226c76a_720w.jpg" alt="img"></p>
-<p>粘贴到文章里就行了，为了美观，设置一下居中，具体代码如下：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">align</span>=<span class="string">&quot;middle&quot;</span>&gt;</span>这里粘贴刚刚复制的代码<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>添加百度统计和谷歌统计代码</strong></p>
-<p>打开<code>themes/matery/layout/_partial/head.ejs</code>，修改下面两行：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;baidu-site-verification&quot;</span> <span class="attr">content</span>=<span class="string">&quot;fmlEuI34ir&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;google-site-verification&quot;</span> <span class="attr">content</span>=<span class="string">&quot;yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>其中<code>content</code>内容改成你自己的就行了。</p>
-<p><strong>修复代码块行号不显示bug</strong></p>
-<p>修改<code>themes/matery/source/css/matery.css</code>第95行左右的<code>pre</code>和<code>code</code>两段改为如下代码：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">pre &#123;</span><br><span class="line">    <span class="comment">/* padding: 1.5rem !important; */</span></span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">1.5rem</span> <span class="number">1.5rem</span> <span class="number">1.5rem</span> <span class="number">3.3rem</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">1rem</span> <span class="number">0</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#272822</span>;</span><br><span class="line">    <span class="attribute">overflow</span>: auto;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">0.35rem</span>;</span><br><span class="line">    <span class="attribute">tab-size</span>: <span class="number">4</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">code</span> &#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">1px</span> <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">font-family</span>: Inconsolata, Monaco, Consolas, <span class="string">&#x27;Courier New&#x27;</span>, Courier, monospace;</span><br><span class="line">    <span class="comment">/* font-size: 0.91rem; */</span></span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#e96900</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#f8f8f8</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">2px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>然后在根目录的<code>_config.yml</code>中设置<code>prism_plugin.line_number</code>为<code>true</code>。</p>
-<p><strong>优化文章url路径</strong></p>
-<p>有教程认为，将博客目录结构改为如下，就能减少层级，有利于搜索引擎的SEO。其实不然，网站内容的层级是按照从首页开始点击几次能到达你的文章来算的，所以你改不改都是两层就到达了，不在首页的也可以通过<code>index-archives-post</code>到达，跟文章url长度没有任何关系，所以如下操作作废，你想改也行，不改也行。但是建议已经建站一段时间的同学千万别改，不然会产生很多死链，并且评论issue全部会清空，很麻烦。</p>
-<p><del>seo搜索引擎优化认为，网站的最佳结构是用户从首页点击三次就可以到达任何一个页面，但是我们使用hexo编译的站点打开文章的url是：<code>sitename/year/mounth/day/title</code>四层的结构，这样的url结构很不利于seo，爬虫就会经常爬不到我们的文章，于是，我们可以将url直接改成<code>sitename/title</code>的形式，并且title最好是用英文，在根目录的<code>_config.yml</code>文件下修改permalink如下：</del></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># permalink: :year/:month/:day/:title/</span><br><span class="line">permalink: :title/</span><br></pre></td></tr></table></figure>
-
-<h2 id="常见问题及解答（FAQ）"><a href="#常见问题及解答（FAQ）" class="headerlink" title="常见问题及解答（FAQ）"></a><strong>常见问题及解答（FAQ）</strong></h2><p>这个章节主要更新许多同学在搭建博客的过程中咨询我的一些问题。</p>
-<p><strong>为什么本地生成完ssh key之后没有.ssh文件夹？</strong></p>
-<p>这是我没有想到会遇到的问题，但是很多人还是遇到了，主要问题就是在输入完<code>ssh-keygen -t rsa -C &quot;792321264@qq.com&quot;</code>之后，很多同学没有按照提示继续输入，而是就这么结束了，然后报错了也没有发现。正确做法是按照提示，一路按回车就行了。</p>
-<p><strong>为什么代码块显示有问题？</strong></p>
-<p>代码要显示正确，要注意以下几个点： 根目录<code>_config.yml</code>文件下的<code>highlight</code>中的<code>line_number</code>要设置为<code>false</code>，因为暂时行号暂时有bug，还没有修复。 不要按照网上教程安装<code>kramed</code>插件，已经装了的卸载掉。 * 修改<code>node_modules/marked/lib/marked.js</code>文件中的<code>escape</code>和<code>em</code>两行（在538行左右），改成下面：</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">escape: /^\\([`*\[\]()#$+\-.!_&gt;])/,</span><br><span class="line">em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span><br></pre></td></tr></table></figure>
-
-<p><strong>为什么博客本地预览没问题，push到github上就显示不正常？</strong></p>
-<p>这个问题可能原因有很多，我暂时列举遇到的情况： * github博客的仓库名称一定要和你的github名字完全一样，比如你github名字叫<code>abc</code>，那么仓库名字一定要是<code>abc.github.io</code>。这是大多数人会犯的错误，会导致显示不正常。</p>
-<p><strong>更换主题之后，配置文件是修改根目录下的还是主题目录下的？</strong></p>
-<p>这个其实都要修改，一般也不会出现重复的属性。具体使用哪个，要看主题的源代码，如果是<code>config.xxx</code>那就是用的根目录配置文件，如果是<code>theme.xxx</code>那就用的是主题目录的配置文件。</p>
-<p><strong>在哪建立github分支？</strong></p>
-<p>点击仓库的<code>settings-branches</code>，右边点击<code>add new branch</code>即可。</p>
-<h2 id="个性化设置（beantech主题，已停更）"><a href="#个性化设置（beantech主题，已停更）" class="headerlink" title="个性化设置（beantech主题，已停更）"></a>个性化设置（beantech主题，已停更）</h2><p><strong>下面的个性化设置主要针对的是我之前使用的<code>beantech</code>主题，当然如果你想用我现在博客这个主题，可以不看这部分。这部分已经停止更新，今后我只会更新<code>matery</code>主题的各种配置。</strong></p>
-<p><strong>更换主题</strong></p>
-<p>网上大多数主题都是github排名第一的<code>Next</code>主题，但是我个人不是很喜欢，我更喜欢<code>beantech</code>主题，地址在<a href="https://link.zhihu.com/?target=https://github.com/YenYuHsuan/hexo-theme-beantech">传送门</a>。</p>
-<p>首先要注意的是，<strong>这个github项目不仅包含了主题文件，还包含了hexo的各种文件</strong>。</p>
-<p>所以首先下载下来这个项目，然后推荐将下图所有文件全部替换你原本博客根目录下的文件：</p>
-<p><img src="https://pic3.zhimg.com/80/v2-c40a774df6d3f46f6e93728a03d9734a_720w.jpg" alt="img"></p>
-<p>当然一般的主题和这个主题有点不一样，只含有主题文件夹，所以把整个文件夹丢到<code>theme</code>下就行了。</p>
-<p>然后运行<code>hexo clean</code>清空所有生成的网页缓存，<code>hexo g</code>、<code>hexo d</code>。这时候新的主题网页就生成好了，博客根目录的情况应该大致如下：</p>
-<p><img src="https://pic1.zhimg.com/80/v2-ad0c8f12a14a883e35f166a193d2e3d8_720w.jpg" alt="img"></p>
-<p><strong>博客目录构成介绍</strong></p>
-<p>从上图可以看出，博客的目录结构如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- node_modules</span><br><span class="line">- public</span><br><span class="line">- scaffolds</span><br><span class="line">- source</span><br><span class="line">    - _posts</span><br><span class="line">    - about</span><br><span class="line">    - archive</span><br><span class="line">    - img</span><br><span class="line">    - tags</span><br><span class="line">- themes</span><br></pre></td></tr></table></figure>
-
-<p><code>node_modules</code>是node.js各种库的目录，<code>public</code>是生成的网页文件目录，<code>scaffolds</code>里面就三个文件，存储着新文章和新页面的初始设置，<code>source</code>是我们最常用到的一个目录，里面存放着文章、各类页面、图像等文件，<code>themes</code>存放着主题文件，一般也用不到。</p>
-<p>我们平时写文章只需要关注<code>source/_posts</code>这个文件夹就行了。</p>
-<p>网站图片都保存在<code>D:\study\program\blog\source\img</code>目录下，可以修改成自己的图片。</p>
-<p><strong>修复文档分类bug</strong></p>
-<p>这个主题文档分类功能有个bug，一直没有得到解决，直到最近，我才发现是源文件的单词拼错了。。。</p>
-<p>打开<code>D:\study\program\blog\scaffolds\post.md</code>，单词<code>catagories</code>改为<code>categories</code>。</p>
-<p><strong>添加畅言评论插件</strong></p>
-<p>主题自带了多说评论插件，但是多说已经关闭了，所以我换成了畅言评论插件。</p>
-<p>首先你得注册一个畅言账号，</p>
-<p><a href="https://link.zhihu.com/?target=http://changyan.kuaizhan.com/">云评论 - 专业的社会化评论系统changyan.kuaizhan.com</a></p>
-<p>然后打开如下页面，复制该段代码：</p>
-<p><img src="https://pic3.zhimg.com/80/v2-6d7e684dc9967595521840684f2ea0da_720w.jpg" alt="img"></p>
-<p>打开<code>D:\study\program\blog\themes\beantech\layout\post.ejs</code>，将代码粘贴到如下位置：</p>
-<p><img src="https://pic4.zhimg.com/80/v2-f30b0d3f2251801204f414c6ec9ab383_720w.jpg" alt="img"></p>
-<p>然后重新生成一下网页，可以看到效果图如下：</p>
+    <title>pycharm主题配置</title>
+    <url>/2021/03/29/ckx3aptux000gtoudfrj19k10/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210330215553.png" alt="image-20210330215553470"></p>
+<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210330215659.png" alt="image-20210330215659136"></p>
+<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210330215722.png" alt="image-20210330215722154"></p>
 ]]></content>
       <tags>
-        <tag>hexo</tag>
-        <tag>github</tag>
+        <tag>pycharm</tag>
       </tags>
   </entry>
   <entry>
     <title>python中的序列</title>
-    <url>/2021/03/28/ckx1rbfui000gd0ud8yi52al9/</url>
+    <url>/2021/03/28/ckx3aptuz000htoud9vgu527n/</url>
     <content><![CDATA[<h1 id="列表List"><a href="#列表List" class="headerlink" title="列表List"></a>列表List</h1><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="range"><a href="#range" class="headerlink" title="range()"></a>range()</h3><p>可创建一个整数列表，一般用在 for 循环中。</p>
 <p>返回：返回的是一个可迭代对象（类型是对象），而不是列表类型， 所以打印的时候不会打印列表，<span id="more"></span></p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">range</span>(start, stop,[step])</span><br></pre></td></tr></table></figure>
@@ -868,27 +875,8 @@
       </tags>
   </entry>
   <entry>
-    <title>python内置函数next()</title>
-    <url>/2021/03/29/ckx1rbfuj000id0ud1hxj9t18/</url>
-    <content><![CDATA[<p>next（）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">def next(iterator, default=None): # real signature unknown; restored from __doc__</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    next(iterator[, default])</span><br><span class="line">    </span><br><span class="line">    Return the next item from the iterator. If default is given and the iterator</span><br><span class="line">    is exhausted, it is returned instead of raising StopIteration.</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    pass</span><br></pre></td></tr></table></figure>
-
-<p>next（）函数接收的是一个迭代器，return的是该迭代器的next item。<span id="more"></span></p>
-<blockquote>
-<p><strong>next()函数自动调用文件第一行并返回下一行</strong>。这句话的意思是说第一次调用next（）函数会直接把第一行拿出来赋给左边，同时返回到下一行。第二次调用就把第二行拿出来，同时返回到下一行。</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import csv</span><br><span class="line">filename = &#x27;sitka_weather_07-2014.csv&#x27;</span><br><span class="line">with open(filename) as f:</span><br><span class="line">    reader = csv.reader(f)</span><br><span class="line">    header_row = next(reader)</span><br><span class="line">    print(header_row)</span><br><span class="line">    a=next(reader)</span><br><span class="line">    print(a)</span><br><span class="line">    b=next(reader)</span><br><span class="line">    print(b)</span><br><span class="line">      </span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210324213851.png" alt="image-20210324213851075"></p>
-<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210324213901.png" alt="image-20210324213901001"></p>
-]]></content>
-      <tags>
-        <tag>python内置函数</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>typora常用快捷键收集</title>
-    <url>/2021/03/29/ckx1rbfuk000ld0ud3veg0h81/</url>
+    <url>/2021/03/29/ckx3aptv1000ktoud2s02bjvd/</url>
     <content><![CDATA[<h1 id="Typora常用的快捷键"><a href="#Typora常用的快捷键" class="headerlink" title="Typora常用的快捷键"></a>Typora常用的快捷键</h1><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>您可以使用快捷键快速插入或修改样式或执行Typora支持的其他操作。</p>
 <p>您可以在菜单栏的每个菜单项的右侧找到快捷键。<span id="more"></span></p>
 <h2 id="经常使用的快捷键"><a href="#经常使用的快捷键" class="headerlink" title="经常使用的快捷键"></a>经常使用的快捷键</h2><h3 id="自动完成"><a href="#自动完成" class="headerlink" title="自动完成"></a>自动完成</h3><p>在macOS上，您可以<code>Esc</code>按键打开内嵌数学的内联预览，表情符号的自动完成等。</p>
@@ -1289,8 +1277,65 @@
       </tags>
   </entry>
   <entry>
+    <title>python中文指南</title>
+    <url>/2021/03/28/ckx3aptv3000ntoudhpqz5iw9/</url>
+    <content><![CDATA[<h1 id="Python中文指南"><a href="#Python中文指南" class="headerlink" title="Python中文指南"></a>Python中文指南</h1><p><a href="http://python.iswbm.com/en/latest/">http://python.iswbm.com/en/latest/</a></p>
+<h1 id="PyCharm-中文指南"><a href="#PyCharm-中文指南" class="headerlink" title="PyCharm 中文指南"></a>PyCharm 中文指南</h1><p><a href="http://pycharm.iswbm.com/zh_CN/latest/">http://pycharm.iswbm.com/zh_CN/latest/</a></p>
+]]></content>
+      <tags>
+        <tag>python中文指南</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python内置函数next()</title>
+    <url>/2021/03/29/ckx3aptv4000ptoudc9dbaf2r/</url>
+    <content><![CDATA[<p>next（）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">def next(iterator, default=None): # real signature unknown; restored from __doc__</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    next(iterator[, default])</span><br><span class="line">    </span><br><span class="line">    Return the next item from the iterator. If default is given and the iterator</span><br><span class="line">    is exhausted, it is returned instead of raising StopIteration.</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    pass</span><br></pre></td></tr></table></figure>
+
+<p>next（）函数接收的是一个迭代器，return的是该迭代器的next item。<span id="more"></span></p>
+<blockquote>
+<p><strong>next()函数自动调用文件第一行并返回下一行</strong>。这句话的意思是说第一次调用next（）函数会直接把第一行拿出来赋给左边，同时返回到下一行。第二次调用就把第二行拿出来，同时返回到下一行。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import csv</span><br><span class="line">filename = &#x27;sitka_weather_07-2014.csv&#x27;</span><br><span class="line">with open(filename) as f:</span><br><span class="line">    reader = csv.reader(f)</span><br><span class="line">    header_row = next(reader)</span><br><span class="line">    print(header_row)</span><br><span class="line">    a=next(reader)</span><br><span class="line">    print(a)</span><br><span class="line">    b=next(reader)</span><br><span class="line">    print(b)</span><br><span class="line">      </span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210324213851.png" alt="image-20210324213851075"></p>
+<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210324213901.png" alt="image-20210324213901001"></p>
+]]></content>
+      <tags>
+        <tag>python内置函数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python内置函数enumerate</title>
+    <url>/2021/03/29/ckx3aptv5000rtoud8pvb1cov/</url>
+    <content><![CDATA[<p>enumerate()说明<br>enumerate()是python的内置函数<br>enumerate在字典上是枚举、列举的意思<br>对于一个可迭代的（iterable）/可遍历的对象（如列表、字符串），enumerate将其组成一个索引序列，利用<strong>它可以同时获得索引和值</strong><br>enumerate多用于在for循环中得到计数<span id="more"></span><br>例如对于一个seq，得到：</p>
+<p>(0, seq[0]), (1, seq[1]), (2, seq[2])</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(0, seq[0]), (1, seq[1]), (2, seq[2])</span><br></pre></td></tr></table></figure>
+
+<p>当尝试去打印enumerate(list)的时候，返回是一个enumerate对象</p>
+<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210324215209.png" alt="image-20210324215209069"></p>
+<p>enumerate()使用<br>如果对一个列表，既要遍历索引又要遍历元素时，首先可以这样写：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">list1 = [&quot;这&quot;, &quot;是&quot;, &quot;一个&quot;, &quot;测试&quot;]</span><br><span class="line">for i in range (len(list1)):</span><br><span class="line">    print i ,list1[i]</span><br></pre></td></tr></table></figure>
+
+<p>上述方法有些累赘，利用enumerate()会更加直接和优美：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">list1 = [&quot;这&quot;, &quot;是&quot;, &quot;一个&quot;, &quot;测试&quot;]</span><br><span class="line">for index, item in enumerate(list1):</span><br><span class="line">    print index, item</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">0 这</span><br><span class="line">1 是</span><br><span class="line">2 一个</span><br><span class="line">3 测试</span><br></pre></td></tr></table></figure>
+
+<p>enumerate还可以接收第二个参数，用于指定结果中索引起始值，如：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">list1 = [&quot;这&quot;, &quot;是&quot;, &quot;一个&quot;, &quot;测试&quot;]</span><br><span class="line">for index, item in enumerate(list1, 5):</span><br><span class="line">    print(index,item)</span><br><span class="line">    </span><br><span class="line">    输出</span><br><span class="line">5 这</span><br><span class="line">6 是</span><br><span class="line">7 一个</span><br><span class="line">8 测试</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+
+
+
+<p>count = len(open(filepath, ‘r’).readlines())<br>1<br>这种方法简单，但是可能比较慢，当文件比较大时甚至不能工作。</p>
+<p>可以利用enumerate()：</p>
+<p>count = 0<br>for index, line in enumerate(open(filepath,’r’))：<br>    count += 1<br>————————————————</p>
+]]></content>
+      <tags>
+        <tag>python内置函数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>利用国内镜像源安装——升级pygame</title>
-    <url>/2021/03/29/ckx1rbful000nd0ud7dcgcqh1/</url>
+    <url>/2021/03/29/ckx3aptv7000ttoud43wyam0w/</url>
     <content><![CDATA[<p>当下最快最便捷的安装方法：利用pip命令就可以直接安装。</p>
 <ul>
 <li><p>前提：首先确保你有pip。</p>
@@ -1330,65 +1375,8 @@
       </tags>
   </entry>
   <entry>
-    <title>python内置函数enumerate</title>
-    <url>/2021/03/29/ckx1rbfum000od0ud9wjm67zq/</url>
-    <content><![CDATA[<p>enumerate()说明<br>enumerate()是python的内置函数<br>enumerate在字典上是枚举、列举的意思<br>对于一个可迭代的（iterable）/可遍历的对象（如列表、字符串），enumerate将其组成一个索引序列，利用<strong>它可以同时获得索引和值</strong><br>enumerate多用于在for循环中得到计数<span id="more"></span><br>例如对于一个seq，得到：</p>
-<p>(0, seq[0]), (1, seq[1]), (2, seq[2])</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(0, seq[0]), (1, seq[1]), (2, seq[2])</span><br></pre></td></tr></table></figure>
-
-<p>当尝试去打印enumerate(list)的时候，返回是一个enumerate对象</p>
-<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210324215209.png" alt="image-20210324215209069"></p>
-<p>enumerate()使用<br>如果对一个列表，既要遍历索引又要遍历元素时，首先可以这样写：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">list1 = [&quot;这&quot;, &quot;是&quot;, &quot;一个&quot;, &quot;测试&quot;]</span><br><span class="line">for i in range (len(list1)):</span><br><span class="line">    print i ,list1[i]</span><br></pre></td></tr></table></figure>
-
-<p>上述方法有些累赘，利用enumerate()会更加直接和优美：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">list1 = [&quot;这&quot;, &quot;是&quot;, &quot;一个&quot;, &quot;测试&quot;]</span><br><span class="line">for index, item in enumerate(list1):</span><br><span class="line">    print index, item</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">0 这</span><br><span class="line">1 是</span><br><span class="line">2 一个</span><br><span class="line">3 测试</span><br></pre></td></tr></table></figure>
-
-<p>enumerate还可以接收第二个参数，用于指定结果中索引起始值，如：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">list1 = [&quot;这&quot;, &quot;是&quot;, &quot;一个&quot;, &quot;测试&quot;]</span><br><span class="line">for index, item in enumerate(list1, 5):</span><br><span class="line">    print(index,item)</span><br><span class="line">    </span><br><span class="line">    输出</span><br><span class="line">5 这</span><br><span class="line">6 是</span><br><span class="line">7 一个</span><br><span class="line">8 测试</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
-
-
-
-<p>count = len(open(filepath, ‘r’).readlines())<br>1<br>这种方法简单，但是可能比较慢，当文件比较大时甚至不能工作。</p>
-<p>可以利用enumerate()：</p>
-<p>count = 0<br>for index, line in enumerate(open(filepath,’r’))：<br>    count += 1<br>————————————————</p>
-]]></content>
-      <tags>
-        <tag>python内置函数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>彻底解决使用matplotlib绘图的时候图标上的中文显示不正常</title>
-    <url>/2021/05/08/ckx1rbfun000qd0udfavd7jvx/</url>
-    <content><![CDATA[<p>本文解决在使用matplotlib绘图的时候图标上的中文显示不正常的情况，彻底解决的。</p>
-<span id="more"></span>
-
-<h1 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h1><p>在使用matplotlib绘图的时候图标上的中文显示不正常</p>
-<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210324221647.png" alt="image-20210324221647496"></p>
-<h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p>没有给matplotlib指定一个它能知道的字体。matplotlib本身是支持中文的，只是都是以拼音标注的。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 查询当前系统所有字体</span><br><span class="line">from matplotlib.font_manager import FontManager</span><br><span class="line">import subprocess</span><br><span class="line"></span><br><span class="line">mpl_fonts = set(f.name for f in FontManager().ttflist)</span><br><span class="line"></span><br><span class="line">print(&#x27;all font list get from matplotlib.font_manager:&#x27;)</span><br><span class="line">for f in sorted(mpl_fonts):</span><br><span class="line">    print(&#x27;\t&#x27; + f)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210324221904.png" alt="image-20210324221904874"></p>
-<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>在开头加入两行代码</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import csv</span><br><span class="line">from matplotlib import pyplot as plt</span><br><span class="line"># 新加入的两行代码</span><br><span class="line">import matplotlib</span><br><span class="line">matplotlib.rc(&quot;font&quot;,family=&#x27;youyuan&#x27;)</span><br></pre></td></tr></table></figure>
-
-<p>再跑一遍：</p>
-<img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210324222103.png" alt="image-20210324222103306" style="zoom:50%;" />
-
-<p>发现了新问题，前边的办法可以解决中文的显示问题，但是在axis存在负值的时候，负号显示不出来。</p>
-<p>经过一番查询，目前较为好的解决办法是在文档前边加入这两句，同时解决这两个问题。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 中文和负号的正常显示</span><br><span class="line">plt.rcParams[&#x27;font.sans-serif&#x27;] = [u&#x27;SimHei&#x27;]</span><br><span class="line">plt.rcParams[&#x27;axes.unicode_minus&#x27;] = False</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>matplotlib</category>
-      </categories>
-      <tags>
-        <tag>plt</tag>
-        <tag>plt异常</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>细说Python的lambda函数</title>
-    <url>/2021/05/08/ckx1rbfuo000sd0udc579deuf/</url>
+    <url>/2021/05/08/ckx3aptvb000vtoudhvdld0pb/</url>
     <content><![CDATA[<p>本文详细说明了在python中使用lambda函数的原因极其便捷性和一定的限制性。</p>
 <span id="more"></span>
 
@@ -1463,28 +1451,47 @@
       </tags>
   </entry>
   <entry>
-    <title>Typora+PicGo+Github/Gitee搭建免费稳定的图床</title>
-    <url>/2021/03/29/ckx1rbfur000wd0ud454r2n6l/</url>
-    <content><![CDATA[<p>整个过程有点麻烦。参考这两个文章：</p>
-<ul>
-<li><a href="https://blog.csdn.net/m0_37903882/article/details/105417479">https://blog.csdn.net/m0_37903882/article/details/105417479</a></li>
-<li><a href="https://blog.csdn.net/qq_40683225/article/details/105124810?utm_term=picgo%E9%85%8D%E7%BD%AEgitee&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-1-105124810&amp;spm=3001.4430">https://blog.csdn.net/qq_40683225/article/details/105124810?utm_term=picgo%E9%85%8D%E7%BD%AEgitee&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-1-105124810&amp;spm=3001.4430</a></li>
-</ul>
-<p>使用：</p>
-<ul>
-<li>用截图工具如<code>QQ</code>的<code>Ctrl+ALT+A</code>快捷键对需要的区域截图，存储到剪贴板中，然后按下刚才在<code>picgo</code>设置好的上传快捷键<code>Ctrl+Shift+P</code>组合键上传到<code>Gitee</code>，会返回图片的上传地址到剪贴板中，最后在<code>typora</code>中<code>ctrl+v</code>粘贴。</li>
-<li>最简单的就是在设置好typora和pigo之后，直接截图往typora里甩就行了，本地直接拖就行了</li>
-</ul>
+    <title>彻底解决使用matplotlib绘图的时候图标上的中文显示不正常</title>
+    <url>/2021/05/08/ckx3aptvc000ytoud5cxi4r6h/</url>
+    <content><![CDATA[<p>本文解决在使用matplotlib绘图的时候图标上的中文显示不正常的情况，彻底解决的。</p>
+<span id="more"></span>
+
+<h1 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h1><p>在使用matplotlib绘图的时候图标上的中文显示不正常</p>
+<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210324221647.png" alt="image-20210324221647496"></p>
+<h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p>没有给matplotlib指定一个它能知道的字体。matplotlib本身是支持中文的，只是都是以拼音标注的。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 查询当前系统所有字体</span><br><span class="line">from matplotlib.font_manager import FontManager</span><br><span class="line">import subprocess</span><br><span class="line"></span><br><span class="line">mpl_fonts = set(f.name for f in FontManager().ttflist)</span><br><span class="line"></span><br><span class="line">print(&#x27;all font list get from matplotlib.font_manager:&#x27;)</span><br><span class="line">for f in sorted(mpl_fonts):</span><br><span class="line">    print(&#x27;\t&#x27; + f)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210324221904.png" alt="image-20210324221904874"></p>
+<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>在开头加入两行代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import csv</span><br><span class="line">from matplotlib import pyplot as plt</span><br><span class="line"># 新加入的两行代码</span><br><span class="line">import matplotlib</span><br><span class="line">matplotlib.rc(&quot;font&quot;,family=&#x27;youyuan&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p>再跑一遍：</p>
+<img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210324222103.png" alt="image-20210324222103306" style="zoom:50%;" />
+
+<p>发现了新问题，前边的办法可以解决中文的显示问题，但是在axis存在负值的时候，负号显示不出来。</p>
+<p>经过一番查询，目前较为好的解决办法是在文档前边加入这两句，同时解决这两个问题。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 中文和负号的正常显示</span><br><span class="line">plt.rcParams[&#x27;font.sans-serif&#x27;] = [u&#x27;SimHei&#x27;]</span><br><span class="line">plt.rcParams[&#x27;axes.unicode_minus&#x27;] = False</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>matplotlib</category>
+      </categories>
+      <tags>
+        <tag>plt</tag>
+        <tag>plt异常</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo常见报错</title>
+    <url>/2021/03/29/ckx3aptve0011toud7sez5ugn/</url>
+    <content><![CDATA[<p>本来想自己总结一下：结果发现大神总结的更全面，留存：</p>
+<p><a href="https://www.dazhuanlan.com/2020/01/06/5e12e0294f848/">https://www.dazhuanlan.com/2020/01/06/5e12e0294f848/</a></p>
 ]]></content>
       <tags>
-        <tag>typora</tag>
-        <tag>picgo</tag>
-        <tag>gitee</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
     <title>解决国内gitclone慢的问题</title>
-    <url>/2021/03/29/ckx1rbfut000zd0udhl47csby/</url>
+    <url>/2021/03/29/ckx3aptvf0012toudgk0q5ktq/</url>
     <content><![CDATA[<p>本文利用国内的克隆网站进行克隆加速</p>
 <span id="more"></span>
 
@@ -1510,34 +1517,28 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo常见报错</title>
-    <url>/2021/03/29/ckx1rbfut0011d0ud4ofq11m4/</url>
-    <content><![CDATA[<p>本来想自己总结一下：结果发现大神总结的更全面，留存：</p>
-<p><a href="https://www.dazhuanlan.com/2020/01/06/5e12e0294f848/">https://www.dazhuanlan.com/2020/01/06/5e12e0294f848/</a></p>
-]]></content>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>typora+picgo错误：上传图片失败。错误信息：Failed to fetchxt</title>
-    <url>/2021/03/29/ckx1rbfuw0014d0ud00tcckc1/</url>
-    <content><![CDATA[<p>错误提示如图：</p>
-<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//image-20210323144749430.png" alt="image-20210323144749430"></p>
-<p>经过几番上网查阅资料，原因确定为端口冲突导致。<span id="more"></span></p>
-<p>tpyora的端口是36677，这个貌似不能改，那就只能该picgo</p>
-<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//image-20210323144948450.png" alt="image-20210323144948450"></p>
-<p>接着，查看picGo的端口，这个是我已经改好的，出问题之前端口是36681。包括这个监听地址，也要保持和typora一致就好。</p>
-<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//image-20210323145050309.png" alt="image-20210323145050309"></p>
+    <title>Typora+PicGo+Github/Gitee搭建免费稳定的图床</title>
+    <url>/2021/03/29/ckx3aptvg0015toud437xcn0z/</url>
+    <content><![CDATA[<p>整个过程有点麻烦。参考这两个文章：</p>
+<ul>
+<li><a href="https://blog.csdn.net/m0_37903882/article/details/105417479">https://blog.csdn.net/m0_37903882/article/details/105417479</a></li>
+<li><a href="https://blog.csdn.net/qq_40683225/article/details/105124810?utm_term=picgo%E9%85%8D%E7%BD%AEgitee&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-1-105124810&amp;spm=3001.4430">https://blog.csdn.net/qq_40683225/article/details/105124810?utm_term=picgo%E9%85%8D%E7%BD%AEgitee&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-1-105124810&amp;spm=3001.4430</a></li>
+</ul>
+<p>使用：</p>
+<ul>
+<li>用截图工具如<code>QQ</code>的<code>Ctrl+ALT+A</code>快捷键对需要的区域截图，存储到剪贴板中，然后按下刚才在<code>picgo</code>设置好的上传快捷键<code>Ctrl+Shift+P</code>组合键上传到<code>Gitee</code>，会返回图片的上传地址到剪贴板中，最后在<code>typora</code>中<code>ctrl+v</code>粘贴。</li>
+<li>最简单的就是在设置好typora和pigo之后，直接截图往typora里甩就行了，本地直接拖就行了</li>
+</ul>
 ]]></content>
       <tags>
         <tag>typora</tag>
         <tag>picgo</tag>
+        <tag>gitee</tag>
       </tags>
   </entry>
   <entry>
     <title>解决国内gitclone慢的问题</title>
-    <url>/2021/03/29/ckx1rbfux0016d0udcrxoeijv/</url>
+    <url>/2021/03/29/ckx3aptvh0017toudagzg19ds/</url>
     <content><![CDATA[<h1 id="hexo换主题乱码问题的解决"><a href="#hexo换主题乱码问题的解决" class="headerlink" title="hexo换主题乱码问题的解决"></a>hexo换主题乱码问题的解决</h1><h2 id="问题的表现"><a href="#问题的表现" class="headerlink" title="问题的表现"></a>问题的表现</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% extends &#x27;_layout.swig&#x27; %&#125; &#123;% import &#x27;_macro/post.swig&#x27; as post_template %&#125;....................</span><br></pre></td></tr></table></figure>
 
 
@@ -1555,31 +1556,24 @@
       </tags>
   </entry>
   <entry>
-    <title>如何修改hexo中主题的css</title>
-    <url>/2021/03/29/ckx1rbfuy0019d0udh18b9lzx/</url>
-    <content><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><blockquote>
-<p>当我们需要对hexo的主题进行更深入的css和js修改的时候会发现一个优先级的问题，而且在浏览器中呈现的过程中这个优先级不好控制。本文解决这个问题</p>
-</blockquote>
-<p>最开始想到的解决办法是：</p>
-<p>既然主题是通过main.css导入各个分支的。（这个导入过程在浏览器那边显示的可能每次不一样）。那我直接在main.css最后加入修改的代码就可以保证我的代码最后执行覆盖前边的。结果还是想的太好而已。</p>
-<span id="more"></span>
-
-<h2 id="最后的解决办法"><a href="#最后的解决办法" class="headerlink" title="最后的解决办法"></a><strong>最后的解决办法</strong></h2><p>在相应的分支处，我们修改post的btn这个类的显示效果：</p>
-<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210329114021.png" alt="image-20210329114021231"></p>
-<p>具体做法：利用full x-path 把css保证传递到位，同时用  !important  给代码最高的优先权以保证优先执行。这个做法可能笨了一些，但是是有用的。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">body div main div div div section article div div div a &#123;</span><br><span class="line">  color: <span class="comment">#ff9a00 !important;</span></span><br><span class="line">  border-bottom: 2px solid <span class="comment">#ff9a00 !important;</span></span><br><span class="line">&#125;</span><br><span class="line">body div main div div div section article div div div &#123;</span><br><span class="line">  text-align: right !important;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="后扎"><a href="#后扎" class="headerlink" title="后扎"></a>后扎</h2><p>通过在电脑上设置可以搜索文件内文字之后，找到了真正的main.css</p>
-<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210329144017.png" alt="image-20210329144017894"></p>
-<p>也不对，前边那个是真的，这个是<code>hexo g</code>之后通过前边的形成的文件</p>
+    <title>typora+picgo错误：上传图片失败。错误信息：Failed to fetchxt</title>
+    <url>/2021/03/29/ckx3aptvi0019touddbdqfgve/</url>
+    <content><![CDATA[<p>错误提示如图：</p>
+<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//image-20210323144749430.png" alt="image-20210323144749430"></p>
+<p>经过几番上网查阅资料，原因确定为端口冲突导致。<span id="more"></span></p>
+<p>tpyora的端口是36677，这个貌似不能改，那就只能该picgo</p>
+<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//image-20210323144948450.png" alt="image-20210323144948450"></p>
+<p>接着，查看picGo的端口，这个是我已经改好的，出问题之前端口是36681。包括这个监听地址，也要保持和typora一致就好。</p>
+<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//image-20210323145050309.png" alt="image-20210323145050309"></p>
 ]]></content>
       <tags>
-        <tag>hexo</tag>
+        <tag>typora</tag>
+        <tag>picgo</tag>
       </tags>
   </entry>
   <entry>
     <title>使用Travis自动部署hexo到github</title>
-    <url>/2021/05/09/ckx1rbfuz001bd0udf9b01vw0/</url>
+    <url>/2021/05/09/ckx3aptvj001ctoudcu3r7zdo/</url>
     <content><![CDATA[<p>使用<code>hexo</code>而不使用<code>jekyll</code>在github上搭blog最大的问题就是，每次提交都需要先<code>hexo g</code>，然后再<code>push</code>生成的文件们，这样哪怕是改一个小的地方都需要重新编译全部blog，想想都蛋疼（虽然我还没有多少文章），所以决定使用<a href="https://travis-ci.org/">Travis</a>来自动持续集成提交到github以后的操作</p>
 <p>网上一搜有很多的教程，看了好多然后东拼西凑才最终成功，遂决定记录下来最终成功的这个方法，以免忘记</p>
 <span id="more"></span>
@@ -1671,8 +1665,31 @@
 ]]></content>
   </entry>
   <entry>
+    <title>如何修改hexo中主题的css</title>
+    <url>/2021/03/29/ckx3aptvl001ftoudg61n9wr5/</url>
+    <content><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><blockquote>
+<p>当我们需要对hexo的主题进行更深入的css和js修改的时候会发现一个优先级的问题，而且在浏览器中呈现的过程中这个优先级不好控制。本文解决这个问题</p>
+</blockquote>
+<p>最开始想到的解决办法是：</p>
+<p>既然主题是通过main.css导入各个分支的。（这个导入过程在浏览器那边显示的可能每次不一样）。那我直接在main.css最后加入修改的代码就可以保证我的代码最后执行覆盖前边的。结果还是想的太好而已。</p>
+<span id="more"></span>
+
+<h2 id="最后的解决办法"><a href="#最后的解决办法" class="headerlink" title="最后的解决办法"></a><strong>最后的解决办法</strong></h2><p>在相应的分支处，我们修改post的btn这个类的显示效果：</p>
+<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210329114021.png" alt="image-20210329114021231"></p>
+<p>具体做法：利用full x-path 把css保证传递到位，同时用  !important  给代码最高的优先权以保证优先执行。这个做法可能笨了一些，但是是有用的。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">body div main div div div section article div div div a &#123;</span><br><span class="line">  color: <span class="comment">#ff9a00 !important;</span></span><br><span class="line">  border-bottom: 2px solid <span class="comment">#ff9a00 !important;</span></span><br><span class="line">&#125;</span><br><span class="line">body div main div div div section article div div div &#123;</span><br><span class="line">  text-align: right !important;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="后扎"><a href="#后扎" class="headerlink" title="后扎"></a>后扎</h2><p>通过在电脑上设置可以搜索文件内文字之后，找到了真正的main.css</p>
+<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210329144017.png" alt="image-20210329144017894"></p>
+<p>也不对，前边那个是真的，这个是<code>hexo g</code>之后通过前边的形成的文件</p>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>NO.0----始</title>
-    <url>/2021/05/08/ckx1rbfv0001fd0ud8ot8hu4h/</url>
+    <url>/2021/05/08/ckx3aptvp001itoud1660dsdk/</url>
     <content><![CDATA[<h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>当我写这些文字的时候，心里已经做好了准备。这是一次决战，对我而言，这是一次分水岭。</p>
 <p>在战争时期，敌对双方需要一次 大决战来作出最后的胜负，胜负一决，不管是对哪一方，其就完成了自己的历史使命，就可以退出了。</p>
 <p>这一次，是我和我自己持续六年的战争的最后阶段了，进入决战，给自己一个交代。<span id="more"></span></p>
@@ -1687,7 +1704,56 @@
   </entry>
   <entry>
     <title></title>
-    <url>/2021/12/07/ckx1rbfv1001gd0ud1qfc9rch/</url>
+    <url>/2021/12/07/ckx3aptvq001ltoudg5s078gn/</url>
+    <content><![CDATA[<h1 id="预期管理"><a href="#预期管理" class="headerlink" title="预期管理"></a>预期管理</h1><h2 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h2><p>1、因素：伦到位；有色到位；沪到位</p>
+<p>2、实际中重点在对沪和有色的K线的细节分析上。多一分不行，少一分不行。</p>
+<h2 id="1117-01"><a href="#1117-01" class="headerlink" title="1117-01"></a>1117-01</h2><p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img/image-20211116234848639.png" alt="image-20211116234848639"></p>
+<h2 id="1117-02"><a href="#1117-02" class="headerlink" title="1117-02"></a>1117-02</h2><p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img/image-20211116235100595.png" alt="image-20211116235100595"></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+  </entry>
+  <entry>
+    <title>NO.2</title>
+    <url>/2021/05/08/ckx3aptvs001otoud45uthvj1/</url>
+    <content><![CDATA[<p>今天数据</p>
+<table>
+<thead>
+<tr>
+<th>日期</th>
+<th>平仓</th>
+<th>手续费</th>
+<th>惩罚</th>
+<th>次数*10</th>
+<th>累计平仓</th>
+<th>累计手续费</th>
+<th>累计实际权益</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2021年4月16日</td>
+<td>-80</td>
+<td>55</td>
+<td></td>
+<td>110</td>
+<td>-70</td>
+<td>187</td>
+<td>-108.5</td>
+</tr>
+</tbody></table>
+<p>状态：不好；</p>
+<p>耐心：正常：</p>
+<p>零错误：无错误<span id="more"></span></p>
+<p>今天状态不好，真的很自责，心里难过。早上起来自知状态不佳，就出去跑步了，午饭时间回来，只做了下午盘。不能这样的，尽可能排除其他事情对个人的影响。</p>
+<p>盘中做了的单子都没啥问题，只是行情太狗，感觉盘中的短线资金都是一跳就走人的主。这种行情就只能熬了，少亏吧。</p>
+<p>有一点要注意，对于仓位的把握上，kdj不顺的时候轻仓。一般夜盘开盘十几分钟机会多，仓位适当重一些。</p>
+<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210512175306.png" alt="image-20210512175306234"></p>
+]]></content>
+      <categories>
+        <category>日总结</category>
+      </categories>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2021/12/07/ckx3aptvt001qtoudb92b48pb/</url>
     <content><![CDATA[<h1 id="10-13"><a href="#10-13" class="headerlink" title="10.13"></a>10.13</h1><h1 id="10-18※"><a href="#10-18※" class="headerlink" title="10.18※"></a>10.18※</h1><blockquote>
 <p>这一天是很典型的节奏混乱&amp;连亏&amp;超亏&amp;笔数过多</p>
 <p>本质来讲，还是分析阶段就出了较大问题，开盘连续7笔事后来看方向性就错了，伦的方向性分析直接就错了。在我的分析系统里主要原则是“以伦定开+三因共振”，第一步就卡伦，卡一个伦的方向。特别是在波动性大的行情里，卡伦尤为关键。</p>
@@ -1843,17 +1909,8 @@
 <h1 id="1127"><a href="#1127" class="headerlink" title="1127"></a>1127</h1><h2 id="01被秒-没当下对价砍"><a href="#01被秒-没当下对价砍" class="headerlink" title="01被秒+没当下对价砍"></a>01被秒+没当下对价砍</h2><h1 id="1130没有可预期的空间"><a href="#1130没有可预期的空间" class="headerlink" title="1130没有可预期的空间"></a>1130没有可预期的空间</h1>]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/2021/12/07/ckx1rbfv2001jd0udd7y73pkc/</url>
-    <content><![CDATA[<h1 id="预期管理"><a href="#预期管理" class="headerlink" title="预期管理"></a>预期管理</h1><h2 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h2><p>1、因素：伦到位；有色到位；沪到位</p>
-<p>2、实际中重点在对沪和有色的K线的细节分析上。多一分不行，少一分不行。</p>
-<h2 id="1117-01"><a href="#1117-01" class="headerlink" title="1117-01"></a>1117-01</h2><p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img/image-20211116234848639.png" alt="image-20211116234848639"></p>
-<h2 id="1117-02"><a href="#1117-02" class="headerlink" title="1117-02"></a>1117-02</h2><p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img/image-20211116235100595.png" alt="image-20211116235100595"></p>
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
-  </entry>
-  <entry>
     <title>NO.1</title>
-    <url>/2021/04/19/ckx1rbfv3001ld0ud8lon2pii/</url>
+    <url>/2021/04/19/ckx3aptvu001ttoude4e46t3e/</url>
     <content><![CDATA[<p>今天数据</p>
 <table>
 <thead>
@@ -1893,48 +1950,8 @@
       </categories>
   </entry>
   <entry>
-    <title>NO.2</title>
-    <url>/2021/05/08/ckx1rbfv4001nd0udangj7cdd/</url>
-    <content><![CDATA[<p>今天数据</p>
-<table>
-<thead>
-<tr>
-<th>日期</th>
-<th>平仓</th>
-<th>手续费</th>
-<th>惩罚</th>
-<th>次数*10</th>
-<th>累计平仓</th>
-<th>累计手续费</th>
-<th>累计实际权益</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>2021年4月16日</td>
-<td>-80</td>
-<td>55</td>
-<td></td>
-<td>110</td>
-<td>-70</td>
-<td>187</td>
-<td>-108.5</td>
-</tr>
-</tbody></table>
-<p>状态：不好；</p>
-<p>耐心：正常：</p>
-<p>零错误：无错误<span id="more"></span></p>
-<p>今天状态不好，真的很自责，心里难过。早上起来自知状态不佳，就出去跑步了，午饭时间回来，只做了下午盘。不能这样的，尽可能排除其他事情对个人的影响。</p>
-<p>盘中做了的单子都没啥问题，只是行情太狗，感觉盘中的短线资金都是一跳就走人的主。这种行情就只能熬了，少亏吧。</p>
-<p>有一点要注意，对于仓位的把握上，kdj不顺的时候轻仓。一般夜盘开盘十几分钟机会多，仓位适当重一些。</p>
-<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210512175306.png" alt="image-20210512175306234"></p>
-]]></content>
-      <categories>
-        <category>日总结</category>
-      </categories>
-  </entry>
-  <entry>
     <title>NO.3</title>
-    <url>/2021/05/08/ckx1rbfv4001qd0udbxacckij/</url>
+    <url>/2021/05/08/ckx3aptvw001vtoudb84ce18d/</url>
     <content><![CDATA[<p>今天数据</p>
 <table>
 <thead>
@@ -1974,7 +1991,7 @@
   </entry>
   <entry>
     <title>NO.4</title>
-    <url>/2021/05/08/ckx1rbfv5001rd0ud396339le/</url>
+    <url>/2021/05/08/ckx3aptvx001xtoud53wwfw6x/</url>
     <content><![CDATA[<p>状态：正常；</p>
 <p>耐心：正常：</p>
 <p>零错误：有两笔错误<span id="more"></span></p>
@@ -2097,7 +2114,7 @@
   </entry>
   <entry>
     <title>8.1</title>
-    <url>/2021/08/10/ckx1rbfv6001ud0udfglq8eyb/</url>
+    <url>/2021/08/10/ckx3aptvy0020toud1xrmbe32/</url>
     <content><![CDATA[<h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>状态：佳，早上感觉头胀，就没做，一直睡到脑子清醒才做；<br>耐心：佳：<br>零错误：无；</p>
 <span id="more"></span>
 
@@ -2321,7 +2338,7 @@
   </entry>
   <entry>
     <title>N0.10</title>
-    <url>/2021/05/10/ckx1rbfv7001xd0udebtz3xez/</url>
+    <url>/2021/05/10/ckx3aptvz0023toud5a23dtay/</url>
     <content><![CDATA[<h3 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h3><p>状态：正常；<br>耐心：正常：<br>零错误：两处；</p>
 <span id="more"></span>
 
@@ -2363,7 +2380,7 @@
   </entry>
   <entry>
     <title>NO.11</title>
-    <url>/2021/05/11/ckx1rbfv80020d0uda9w6aujk/</url>
+    <url>/2021/05/11/ckx3aptw00026touddqotdibu/</url>
     <content><![CDATA[<h3 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h3><p>状态：正常；<br>耐心：一般：<br>零错误：四处；</p>
 <span id="more"></span>
 
@@ -2378,7 +2395,7 @@
   </entry>
   <entry>
     <title>NO.12</title>
-    <url>/2021/05/12/ckx1rbfv80023d0udhlw7foh0/</url>
+    <url>/2021/05/12/ckx3aptwb0029toud4gf1eafr/</url>
     <content><![CDATA[<h3 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h3><p>状态：一般；<br>耐心：一般：<br>零错误：两处；</p>
 <span id="more"></span>
 
@@ -2413,7 +2430,7 @@
   </entry>
   <entry>
     <title>NO.13</title>
-    <url>/2021/05/13/ckx1rbfv90026d0udct66f3al/</url>
+    <url>/2021/05/13/ckx3aptwe002ctoudb3m8hth6/</url>
     <content><![CDATA[<h3 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h3><p>状态：佳；<br>耐心：佳：<br>零错误：无；</p>
 <span id="more"></span>
 
@@ -2448,8 +2465,69 @@
       </categories>
   </entry>
   <entry>
+    <title>NO.14</title>
+    <url>/2021/05/14/ckx3aptwk002ftoudg5sg10zv/</url>
+    <content><![CDATA[<h3 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h3><p>状态：佳；<br>耐心：一般：<br>零错误：无；</p>
+<span id="more"></span>
+
+<h3 id="今日数据"><a href="#今日数据" class="headerlink" title="今日数据"></a>今日数据</h3><table>
+<thead>
+<tr>
+<th>日期</th>
+<th>平仓</th>
+<th>手续费</th>
+<th>惩罚</th>
+<th>累计平仓</th>
+<th>累计手续费</th>
+<th>累计实际权益</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>5月14日</td>
+<td>950</td>
+<td>140</td>
+<td></td>
+<td>4168</td>
+<td>1508</td>
+<td>3469</td>
+</tr>
+</tbody></table>
+<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210514175603.png" alt="image-20210514175603196"></p>
+<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210514175718.png" alt="image-20210514175718573"></p>
+<h3 id="后扎"><a href="#后扎" class="headerlink" title="后扎"></a>后扎</h3><p>实践中锤炼技能啊。</p>
+<p>就目前我的打法来说，在行情稳定的时候能够稳定收入。另一方面，在快速行情里，处理方法类似但不雷同，敏感度要更高，处理速度要快，介入点要求要更高。</p>
+]]></content>
+      <categories>
+        <category>日总结</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>NO.17</title>
+    <url>/2021/06/01/ckx3aptwm002itouddt4l61j3/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<p>夜盘打了打十一点后边的行情，没想到这么顺利。一段稳定的横盘，和有色同步的行情，做起来很顺利。我这个方法的赢利点就是在震荡里，如果发现走势不在震荡里，那就要停手，亏钱的概率是很大的。这一点要有深刻的认识，就我目前的单子来看，亏损大的都是在单边里亏的。</p>
+]]></content>
+      <categories>
+        <category>日总结</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>NO.25</title>
+    <url>/2021/06/11/ckx3aptwn002ktoud4qg65q94/</url>
+    <content><![CDATA[<h2 id="卡位和卡时机"><a href="#卡位和卡时机" class="headerlink" title="卡位和卡时机"></a>卡位和卡时机</h2><p>卡位，卡的是价位。</p>
+<p>卡时机，卡的是沪锌和有色和文华和伦锌的共振时机。</p>
+<span id="more"></span>
+
+<p>这一套方法换个角度来看也就是这两句话了。</p>
+]]></content>
+      <categories>
+        <category>日总结</category>
+      </categories>
+  </entry>
+  <entry>
     <title>NO.15</title>
-    <url>/2021/05/26/ckx1rbfva0028d0udcmis8ihx/</url>
+    <url>/2021/05/26/ckx3aptwo002ntoudbg978mem/</url>
     <content><![CDATA[<p>夜盘沪锌、有色、文华是三个节奏，应该讲是最近比较难做的行情，我也是连亏好几笔。这种异常行情出现的不多，应该多关注、分析、了解。盘中很难找到三者顺风的行情，有两个相对顺的位置挂单没有进去，另外轻仓尝试了有色到位和文华到位的行情也都是多以失败平仓。<br>这种行情能不亏或者少亏，以及少做就是一种能力了。就是一种主动发现风险、控制风险的能力。</p>
 <span id="more"></span>
 
@@ -2618,78 +2696,29 @@
       </tags>
   </entry>
   <entry>
-    <title>NO.14</title>
-    <url>/2021/05/14/ckx1rbfvf002bd0udgu1band8/</url>
-    <content><![CDATA[<h3 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h3><p>状态：佳；<br>耐心：一般：<br>零错误：无；</p>
+    <title>模板</title>
+    <url>/2021/06/19/ckx3aptwp002ptoud6zrx8wjy/</url>
+    <content><![CDATA[<p>还是太着急了，耐心不够。我常说，不到位置不介入，你想要的价格一定会给你，到了位置不要犹豫，除了问题及时处理。但是，我没很好的做到这些啊。</p>
+<p>着急了就会频繁开仓，机会哪能那么多，做的多错的多，就算赚钱的都做到了，亏钱的也会磨平利润。以急跌之后的行情来说：</p>
+<p>急跌过程中，一般是去找有色左侧重要的可靠的关键位置以及伦锌左侧的关键位置。如果急跌到这些位置，沪锌自身也到关键位置，那是可以介入试探的，新低止损。如果急跌过程中在一个不知名的位置反弹了，那是没法去介入的。</p>
+<p>接着，市场会在之前急跌之后反弹一下，形成一个低点和高点，此时，我就有了参考，等再次运行到低点的时候尝试去找共振的多单，等再次运行到高点的时候尝试去找共振的空单。在这两个点之间的行情不要参与。</p>
 <span id="more"></span>
 
-<h3 id="今日数据"><a href="#今日数据" class="headerlink" title="今日数据"></a>今日数据</h3><table>
-<thead>
-<tr>
-<th>日期</th>
-<th>平仓</th>
-<th>手续费</th>
-<th>惩罚</th>
-<th>累计平仓</th>
-<th>累计手续费</th>
-<th>累计实际权益</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>5月14日</td>
-<td>950</td>
-<td>140</td>
-<td></td>
-<td>4168</td>
-<td>1508</td>
-<td>3469</td>
-</tr>
-</tbody></table>
-<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210514175603.png" alt="image-20210514175603196"></p>
-<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210514175718.png" alt="image-20210514175718573"></p>
-<h3 id="后扎"><a href="#后扎" class="headerlink" title="后扎"></a>后扎</h3><p>实践中锤炼技能啊。</p>
-<p>就目前我的打法来说，在行情稳定的时候能够稳定收入。另一方面，在快速行情里，处理方法类似但不雷同，敏感度要更高，处理速度要快，介入点要求要更高。</p>
+<p>今晚把这个月的所有单子都过了一遍，直觉上给我一种想法：废单太多，就是严格意义上的单子不做的那种。两百五十八笔，只有十八笔是严格意义上完全符合的，当然还有一些严格意义上的机会是我没做进去的。这十八笔是必然会赚钱的。其他的也分情况：和严格意义上的要求是高度相似而不完全符合的，这部分我没有统计，明天再统计一下。真正意义上要排除的是完全和要求不一样的单子，比如板块要求多，实际上空的。这两种明天要重点统计一下。</p>
+<p>按严格意义和高度相似来看，机会也是不多的，一天完全没有那么多要做的，有时候一节里一单机会都没有。我现在要把那部分似是而非的单子剔除出去，这部分单子是癌症。</p>
+<p>再次更详细地过了一遍。是有点自己把自己搞复杂了，什么单边震荡的。这个方法最初的样子就是在重要区间位置去搏反弹。有色大结构的高低点构成的区间上去介入。有时候嵌套了一个明显的高低点区间的也是可以介入的。</p>
+<p>统计了一下，严格意义上的机会每天4单左右，有的时候甚至一个没有的。所以，即使从盘后来看，频率也不应该那么高的。</p>
 ]]></content>
       <categories>
         <category>日总结</category>
       </categories>
-  </entry>
-  <entry>
-    <title>NO.17</title>
-    <url>/2021/06/01/ckx1rbfvg002dd0ud92kdg1pe/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<p>夜盘打了打十一点后边的行情，没想到这么顺利。一段稳定的横盘，和有色同步的行情，做起来很顺利。我这个方法的赢利点就是在震荡里，如果发现走势不在震荡里，那就要停手，亏钱的概率是很大的。这一点要有深刻的认识，就我目前的单子来看，亏损大的都是在单边里亏的。</p>
-]]></content>
-      <categories>
-        <category>日总结</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>NO.28</title>
-    <url>/2021/06/16/ckx1rbfvh002fd0ud0rcs4gdt/</url>
-    <content><![CDATA[<p>有时候我们自己掌握了规律，却还去寻求圣杯。抱着珠宝找芝麻。这个时候，需要做的知识排除干扰，相信自己。</p>
-<span id="more"></span>]]></content>
-      <categories>
-        <category>日总结</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>NO.25</title>
-    <url>/2021/06/11/ckx1rbfvj002jd0ude8wx10zo/</url>
-    <content><![CDATA[<h2 id="卡位和卡时机"><a href="#卡位和卡时机" class="headerlink" title="卡位和卡时机"></a>卡位和卡时机</h2><p>卡位，卡的是价位。</p>
-<p>卡时机，卡的是沪锌和有色和文华和伦锌的共振时机。</p>
-<span id="more"></span>
-
-<p>这一套方法换个角度来看也就是这两句话了。</p>
-]]></content>
-      <categories>
-        <category>日总结</category>
-      </categories>
+      <tags>
+        <tag>重要总结</tag>
+      </tags>
   </entry>
   <entry>
     <title>NO.30</title>
-    <url>/2021/06/18/ckx1rbfvk002md0ud85ya61w6/</url>
+    <url>/2021/06/18/ckx3aptwq002stoud6yuqa26x/</url>
     <content><![CDATA[<p>盘前交易资格自我审核：</p>
 <p>警惕：一下都是用实打实的金钱亏出来的教训，不能不引起切实的重视。这些规定看似是限制，其实是一种真实的保护。</p>
 <ol>
@@ -2729,29 +2758,17 @@
       </tags>
   </entry>
   <entry>
-    <title>模板</title>
-    <url>/2021/06/19/ckx1rbfvl002qd0ud2vbdawpf/</url>
-    <content><![CDATA[<p>还是太着急了，耐心不够。我常说，不到位置不介入，你想要的价格一定会给你，到了位置不要犹豫，除了问题及时处理。但是，我没很好的做到这些啊。</p>
-<p>着急了就会频繁开仓，机会哪能那么多，做的多错的多，就算赚钱的都做到了，亏钱的也会磨平利润。以急跌之后的行情来说：</p>
-<p>急跌过程中，一般是去找有色左侧重要的可靠的关键位置以及伦锌左侧的关键位置。如果急跌到这些位置，沪锌自身也到关键位置，那是可以介入试探的，新低止损。如果急跌过程中在一个不知名的位置反弹了，那是没法去介入的。</p>
-<p>接着，市场会在之前急跌之后反弹一下，形成一个低点和高点，此时，我就有了参考，等再次运行到低点的时候尝试去找共振的多单，等再次运行到高点的时候尝试去找共振的空单。在这两个点之间的行情不要参与。</p>
-<span id="more"></span>
-
-<p>今晚把这个月的所有单子都过了一遍，直觉上给我一种想法：废单太多，就是严格意义上的单子不做的那种。两百五十八笔，只有十八笔是严格意义上完全符合的，当然还有一些严格意义上的机会是我没做进去的。这十八笔是必然会赚钱的。其他的也分情况：和严格意义上的要求是高度相似而不完全符合的，这部分我没有统计，明天再统计一下。真正意义上要排除的是完全和要求不一样的单子，比如板块要求多，实际上空的。这两种明天要重点统计一下。</p>
-<p>按严格意义和高度相似来看，机会也是不多的，一天完全没有那么多要做的，有时候一节里一单机会都没有。我现在要把那部分似是而非的单子剔除出去，这部分单子是癌症。</p>
-<p>再次更详细地过了一遍。是有点自己把自己搞复杂了，什么单边震荡的。这个方法最初的样子就是在重要区间位置去搏反弹。有色大结构的高低点构成的区间上去介入。有时候嵌套了一个明显的高低点区间的也是可以介入的。</p>
-<p>统计了一下，严格意义上的机会每天4单左右，有的时候甚至一个没有的。所以，即使从盘后来看，频率也不应该那么高的。</p>
-]]></content>
+    <title>NO.28</title>
+    <url>/2021/06/16/ckx3aptwq002vtoudcahz7yl2/</url>
+    <content><![CDATA[<p>有时候我们自己掌握了规律，却还去寻求圣杯。抱着珠宝找芝麻。这个时候，需要做的知识排除干扰，相信自己。</p>
+<span id="more"></span>]]></content>
       <categories>
         <category>日总结</category>
       </categories>
-      <tags>
-        <tag>重要总结</tag>
-      </tags>
   </entry>
   <entry>
     <title>NO.33</title>
-    <url>/2021/06/23/ckx1rbfvm002td0ud4fyb8ewz/</url>
+    <url>/2021/06/23/ckx3aptwr002ztoudg3tk4gqi/</url>
     <content><![CDATA[<h2 id="盘前交易资格自我审核："><a href="#盘前交易资格自我审核：" class="headerlink" title="盘前交易资格自我审核："></a>盘前交易资格自我审核：</h2><p>警惕：以下都是用实打实的金钱亏出来的教训，不能不引起切实的重视。这些规定看似是限制，其实是一种真实的保护。</p>
 <ol>
 <li>盘前吵架禁止交易当节。</li>
@@ -2777,7 +2794,7 @@
   </entry>
   <entry>
     <title>NO.41</title>
-    <url>/2021/07/03/ckx1rbfvn002wd0udc8qmenf6/</url>
+    <url>/2021/07/03/ckx3aptws0032toud2udp9d0s/</url>
     <content><![CDATA[<p>周五夜盘大盈，应该是七连赢了。很开心。</p>
 <p>我知道我终于可以成了。</p>
 <p>往后，继续加油吧。</p>
@@ -2788,7 +2805,7 @@
   </entry>
   <entry>
     <title>picgo设置新</title>
-    <url>/2021/07/03/ckx1rbfvo002yd0udfaug89pf/</url>
+    <url>/2021/07/03/ckx3aptwt0036toudg7a4fni1/</url>
     <content><![CDATA[<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img/image-20211111223153707.png" alt="image-20211111223153707"></p>
 ]]></content>
       <categories>
@@ -2800,7 +2817,7 @@
   </entry>
   <entry>
     <title>再战</title>
-    <url>/2021/05/25/ckx1rbfvp0031d0udbzhrd42j/</url>
+    <url>/2021/05/25/ckx3aptwu0038toud43st9fzh/</url>
     <content><![CDATA[<p>妹妹的婚礼结束了，前后半个月时间。整个婚礼过程很圆满，很开心。</p>
 <p>谁曾想，妈妈生病了。这一个月劳累的。</p>
 <p>好好挣钱吧。回归到战场了。</p>
@@ -2810,25 +2827,8 @@
       </categories>
   </entry>
   <entry>
-    <title>周总结5.1-5.9</title>
-    <url>/2021/05/09/ckx1rbfvq0035d0udakt7h7ba/</url>
-    <content><![CDATA[<p>整个五一假日都在等着假日结束，我这种小交易员自然是没有什么玩额度兴致的。</p>
-<p>这一周只有两天交易日。这两天的交易反应的问题比较集中：<span id="more"></span></p>
-<ol>
-<li>合理的预期管理。在有色和沪锌的介入点介入之后，如果有色有朝相反方向运动的苗头就要当下对价砍出来。这个时候是不能挂的，如果挂很大几率是被干的。切不能大亏，亏超三个点就是错误操作了。</li>
-<li>严格的介入点管理。只在符合的介入点介入，其他时候看就行了。</li>
-<li>手数的管理。目前手数不大，考虑这个可能有点多，先把之前的落实好。</li>
-<li>盘中机会的切入机会是毫秒级别的，要第一时间切入，那盘中就要认真，注意力高度集中在盘面上的。盘中不要看手机，手机搁外边。</li>
-</ol>
-<p>现在的情况是，只要落实好这些细节，就是可以赚钱的。</p>
-]]></content>
-      <categories>
-        <category>周总结</category>
-      </categories>
-  </entry>
-  <entry>
     <title>周总结5.10-5.15</title>
-    <url>/2021/05/15/ckx1rbfvr0039d0ud34k5dl81/</url>
+    <url>/2021/05/15/ckx3aptwu003btoud8665ewes/</url>
     <content><![CDATA[<p>这是一个完整的一周交易。从多个方面总结一下：</p>
 <h3 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h3><p>这一周整体状态还可以，耐心上有一定漏洞但是整体没大错，零错误上有一些小漏洞。暴露出的小问题都是固定的，接下来重点解决。</p>
 <span id="more"></span>
@@ -2849,8 +2849,25 @@
       </categories>
   </entry>
   <entry>
+    <title>周总结5.1-5.9</title>
+    <url>/2021/05/09/ckx3aptwv003ftoudcciqe9zs/</url>
+    <content><![CDATA[<p>整个五一假日都在等着假日结束，我这种小交易员自然是没有什么玩额度兴致的。</p>
+<p>这一周只有两天交易日。这两天的交易反应的问题比较集中：<span id="more"></span></p>
+<ol>
+<li>合理的预期管理。在有色和沪锌的介入点介入之后，如果有色有朝相反方向运动的苗头就要当下对价砍出来。这个时候是不能挂的，如果挂很大几率是被干的。切不能大亏，亏超三个点就是错误操作了。</li>
+<li>严格的介入点管理。只在符合的介入点介入，其他时候看就行了。</li>
+<li>手数的管理。目前手数不大，考虑这个可能有点多，先把之前的落实好。</li>
+<li>盘中机会的切入机会是毫秒级别的，要第一时间切入，那盘中就要认真，注意力高度集中在盘面上的。盘中不要看手机，手机搁外边。</li>
+</ol>
+<p>现在的情况是，只要落实好这些细节，就是可以赚钱的。</p>
+]]></content>
+      <categories>
+        <category>周总结</category>
+      </categories>
+  </entry>
+  <entry>
     <title>周总结5.24-5.29</title>
-    <url>/2021/05/29/ckx1rbfvs003cd0udbhde9inh/</url>
+    <url>/2021/05/29/ckx3aptww003itoud64q68wad/</url>
     <content><![CDATA[<p>上周妹妹婚礼结束，这周正经只做了两天实盘。这两天都做的不好。思考了一下问题所在，感觉是这样的：就像打游戏，以前打的副本都熟悉了，打法也都会，但是突然出现一个不怎么熟悉的副本，应对就会有点凌乱，结果也不好。这两天行情都是以前遇见的少的情形，这是客观因素；主观上，出现一些事后也看不懂的单子，属于盘中根据一个小的因素就开仓了，把短线拿成了小波段，小止损拿成了超亏。</p>
 <span id="more"></span>
 
@@ -2871,7 +2888,7 @@
   </entry>
   <entry>
     <title>如何正确地分析区间的真正的有效边界</title>
-    <url>/2021/06/23/ckx1rbfvt003gd0ud9b65395b/</url>
+    <url>/2021/06/23/ckx3aptwx003ntoudeoizd5mv/</url>
     <content><![CDATA[<p>正确分析震荡区间的真正的有效边界，这个命题真是太重要了。</p>
 <span id="more"></span>
 
@@ -2883,7 +2900,7 @@
   </entry>
   <entry>
     <title>模板</title>
-    <url>/2021/06/16/ckx1rbfvu003hd0ud2xuohhpo/</url>
+    <url>/2021/06/16/ckx3aptwy003ptoud9n8x09ru/</url>
     <content><![CDATA[<p>盘前交易资格自我审核：</p>
 <p>警惕：一下都是用实打实的金钱亏出来的教训，不能不引起切实的重视。这些规定看似是限制，其实是一种真实的保护。</p>
 <ol>
@@ -2905,7 +2922,7 @@
   </entry>
   <entry>
     <title>文华财经设置</title>
-    <url>/2021/04/27/ckx1rbfvv003kd0udaw9c3rz6/</url>
+    <url>/2021/04/27/ckx3aptwz003ttoud2d0k7gs7/</url>
     <content><![CDATA[<p>K线高低点的显示以及放量K线的变色显示</p>
 <span id="more"></span>
 
@@ -2929,8 +2946,23 @@
       </tags>
   </entry>
   <entry>
+    <title>出行注意事项</title>
+    <url>/2021/05/25/ckx3aptx0003utouddy2eeylo/</url>
+    <content><![CDATA[<h2 id="妈妈"><a href="#妈妈" class="headerlink" title="妈妈"></a>妈妈</h2><p>1、涉及坐车</p>
+<p>​    晕车药：口服的必须提前半小时服用。是必须。</p>
+<p>​    口罩：防风。</p>
+<p>​    帽子：防风、防冷</p>
+<span id="more"></span>
+
+<h2 id="爸爸"><a href="#爸爸" class="headerlink" title="爸爸"></a>爸爸</h2><h2 id="妹妹"><a href="#妹妹" class="headerlink" title="妹妹"></a>妹妹</h2><h2 id="兰兰"><a href="#兰兰" class="headerlink" title="兰兰"></a>兰兰</h2><h2 id="我"><a href="#我" class="headerlink" title="我"></a>我</h2><p>​    晕车药：口服的必须提前半小时服用。是必须。</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+  </entry>
+  <entry>
     <title>一些杂乱的生活感受</title>
-    <url>/2021/05/28/ckx1rbfvw003md0ud15ofek85/</url>
+    <url>/2021/05/28/ckx3aptx1003ytoud9sl25b4y/</url>
     <content><![CDATA[<p>2021年5月28日22:31:49<br>        以前课本里说，做一件事需要天时、地利、人和，否则在条件不具备的情况下贸然行事或逆事物发展的规律，最终是要吃苦头的。</p>
 <p>2021年6月6日10:04:19</p>
 <p>​        今天早上六点半就醒来了，心里很开心。这近四五年时间我没有在这个点如此清醒舒适地醒来了。昨晚是十点出头就上床睡觉了，没成想四五分钟可能就睡着了，一觉到天亮。身体休息好，个人感觉都好。<span id="more"></span></p>
@@ -2946,23 +2978,8 @@
       </categories>
   </entry>
   <entry>
-    <title>出行注意事项</title>
-    <url>/2021/05/25/ckx1rbfvy003pd0ud2i7afpg6/</url>
-    <content><![CDATA[<h2 id="妈妈"><a href="#妈妈" class="headerlink" title="妈妈"></a>妈妈</h2><p>1、涉及坐车</p>
-<p>​    晕车药：口服的必须提前半小时服用。是必须。</p>
-<p>​    口罩：防风。</p>
-<p>​    帽子：防风、防冷</p>
-<span id="more"></span>
-
-<h2 id="爸爸"><a href="#爸爸" class="headerlink" title="爸爸"></a>爸爸</h2><h2 id="妹妹"><a href="#妹妹" class="headerlink" title="妹妹"></a>妹妹</h2><h2 id="兰兰"><a href="#兰兰" class="headerlink" title="兰兰"></a>兰兰</h2><h2 id="我"><a href="#我" class="headerlink" title="我"></a>我</h2><p>​    晕车药：口服的必须提前半小时服用。是必须。</p>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-  </entry>
-  <entry>
     <title>人生前35年的个人发展方法论</title>
-    <url>/2021/12/08/ckx1rbfvz003sd0udfqut2kqy/</url>
+    <url>/2021/12/08/ckx3aptx20040toud1xc15u5k/</url>
     <content><![CDATA[<h2 id="人生前35年的个人发展方法论"><a href="#人生前35年的个人发展方法论" class="headerlink" title="人生前35年的个人发展方法论"></a>人生前35年的个人发展方法论</h2><p>原创 镇长本人 大树乡长  </p>
 <p>这一篇要付费，两个原因：</p>
 <p>\1. 法不轻传：小镇不仅总结自己前35年经历，还请教了十几位在各方面有所成就的朋友，有省市高考状元顺利走下来的，也有二本逆袭的，还有辞去公职快财富自由的。</p>
@@ -3174,7 +3191,7 @@
   </entry>
   <entry>
     <title>认识规律，尊重规律，严守规律</title>
-    <url>/2021/08/13/ckx1rbfw0003wd0ud1hktdbi4/</url>
+    <url>/2021/08/13/ckx3aptx30043toud5j2u39n3/</url>
     <content><![CDATA[<p>初高中的时候学习的哲学知识现在来看是精华中的精华。只可惜它如珍宝一样的东西，在那个年级里并不能深入理解和实践。</p>
 <p>规律，一切事物发展所会遵循的东西。一切事物，自然是涵盖一切，包括人的、非人的。认识规律的过程是理性的。</p>
 <span id="more"></span>]]></content>
@@ -3187,7 +3204,7 @@
   </entry>
   <entry>
     <title>恸</title>
-    <url>/2021/08/21/ckx1rbfw2003zd0ud041igo5a/</url>
+    <url>/2021/08/21/ckx3aptx40046toudge9y6rhw/</url>
     <content><![CDATA[<p>​    感觉好难过，难过到一定程度心是真的会疼的。</p>
 <span id="more"></span>]]></content>
       <categories>
@@ -3196,7 +3213,7 @@
   </entry>
   <entry>
     <title>惊梦</title>
-    <url>/2021/04/01/ckx1rbfw30043d0udbmlk8xws/</url>
+    <url>/2021/04/01/ckx3aptx6004atouddaog9bsj/</url>
     <content><![CDATA[<p>昨晚经历了四场梦，场场都是惊梦。</p>
 <p>晚上间隔三次惊醒，顾不上去开灯，慌张得摸了摸身边的女友，再二确认是她，还在身边，并不是如梦里一样。</p>
 <p>不想去回忆梦里具体的场景，让我夜半惊神的，都是一幕幕骇人。</p>
@@ -3213,7 +3230,7 @@
   </entry>
   <entry>
     <title>愚公移山</title>
-    <url>/2021/05/13/ckx1rbfw40045d0ude7ue2xqo/</url>
+    <url>/2021/05/13/ckx3aptx7004dtoud9cj8hsnq/</url>
     <content><![CDATA[<h1 id="《愚公移山》原文及赏析"><a href="#《愚公移山》原文及赏析" class="headerlink" title="《愚公移山》原文及赏析"></a><strong>《愚公移山》原文及赏析</strong></h1><p>　　<strong>【演讲词】</strong></p>
 <p>　　我们开了一个很好的大会。我们做了三件事：第一，决定了党的路线，这就是放手发动群众，壮大人民力量，在我党的领导下，打败日本侵略者，解放全国人民，建立一个新民主主义的中国。第二，通过了新的党章。第三，选举了党的领导机关——中央委员会。今后的任务就是领导全党实现党的路线。我们开了一个胜利的大会，一个团结的大会。代表们对三个报告发表了很好的意见。许多同志作了自我批评，从团结的目标出发，经过自我批评，达到了团结。这次大会是团结的模范，是自我批评的模范，又是党内民主的模范。<span id="more"></span></p>
 <p>　　大会闭幕以后，很多同志将要回到自己的工作岗位上去，将要分赴各个战场。同志们到各地去，要宣传大会的路线，并经过全党同志向人民作广泛的解释。</p>
@@ -3234,16 +3251,8 @@
       </categories>
   </entry>
   <entry>
-    <title>药方</title>
-    <url>/2021/06/06/ckx1rbfw60049d0ud1vlkbltp/</url>
-    <content><![CDATA[<h2 id="脑梗（语言受影响）中药药方"><a href="#脑梗（语言受影响）中药药方" class="headerlink" title="脑梗（语言受影响）中药药方"></a>脑梗（语言受影响）中药药方</h2><h2 id="失眠中药药方"><a href="#失眠中药药方" class="headerlink" title="失眠中药药方"></a>失眠中药药方</h2><span id="more"></span>]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-  </entry>
-  <entry>
     <title>观《扫黑风暴》</title>
-    <url>/2021/08/13/ckx1rbfw6004dd0ud2vkcaixf/</url>
+    <url>/2021/08/13/ckx3aptx8004htoud4r53b99z/</url>
     <content><![CDATA[<p>这两天有个剧很火，《扫黑风暴》，追着看了。剧情的冲击力很大。</p>
 <p>前几年国家一直在搞扫黑除恶净化社会风气。我们一般可能感受不到国家都付出了哪些个努力，以及那些个黑恶势力有多么的张狂。这个剧能给大家一个科普。</p>
 <p>黑恶势力是经济发展到一定阶段在某些特定环境下的畸形的产物，它们追求暴力追求特权，自然而然会腐化干部染指经济项目。像墨西哥的毒枭产业已经深入渗透到政商两界，而其政府已经没有自我矫正的能力；想德法意的黑手党也是深入政商界，日内的山口组等也是一样。</p>
@@ -3255,7 +3264,7 @@
   </entry>
   <entry>
     <title>迪士尼攻略</title>
-    <url>/2021/05/25/ckx1rbfw8004hd0udefa6g3bi/</url>
+    <url>/2021/05/25/ckx3aptx9004ltoud3ca013bt/</url>
     <content><![CDATA[<h1 id="行前准备"><a href="#行前准备" class="headerlink" title="行前准备"></a>行前准备</h1><p>1、随申码，需要申请上海随申码（随申办里）<br>2、预约，受疫情影响，现在迪士尼限流，需要提前准备预约码，申领步骤： 手机打开<a href="https://shdr.cn/df">https://shdr.cn/df</a> 获取预约码。排队入园的时候需要扫码进入。<a href="http://sh.bendibao.com/tour/202058/222837.shtm">预约流程点击</a><br>3，门票迪士尼门票，入园刷身份证兑换门票<span id="more"></span><br>4，迪士尼app，下载迪士尼度假区app，获取预约等候卡，节约排队时间。关于预约等候卡的使用，入园后，凭身份证兑换门票，在 app中绑定门票号后，即可获取预约等候卡，目前下午的项目不获取预约卡是无法排队游玩的</p>
 <p>5、游玩雷鸣山漂流的游客需要准备好雨衣和鞋套，不然衣服鞋子肯定会被淋湿。项目入口有售卖雨衣，10元/个，鞋套没有卖，要自己准备好。</p>
 <p>6、自带一个水杯。</p>
@@ -3277,8 +3286,16 @@
       </categories>
   </entry>
   <entry>
+    <title>药方</title>
+    <url>/2021/06/06/ckx3aptxa004otoud0q2dbuqf/</url>
+    <content><![CDATA[<h2 id="脑梗（语言受影响）中药药方"><a href="#脑梗（语言受影响）中药药方" class="headerlink" title="脑梗（语言受影响）中药药方"></a>脑梗（语言受影响）中药药方</h2><h2 id="失眠中药药方"><a href="#失眠中药药方" class="headerlink" title="失眠中药药方"></a>失眠中药药方</h2><span id="more"></span>]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+  </entry>
+  <entry>
     <title>革命人永远年轻+</title>
-    <url>/2021/05/15/ckx1rbfw9004kd0ud7gfpgdnt/</url>
+    <url>/2021/05/15/ckx3aptxb004rtoudcva57kuw/</url>
     <content><![CDATA[<p>革命人永远是年轻，</p>
 <p>他好比大松树冬夏常青，</p>
 <p>他不怕风吹雨打 ，</p>
@@ -3301,7 +3318,7 @@
   </entry>
   <entry>
     <title>饭菜</title>
-    <url>/2021/05/28/ckx1rbfwa004nd0ud0mfq8jtt/</url>
+    <url>/2021/05/28/ckx3aptxb004wtoud5uxcgsns/</url>
     <content><![CDATA[<h2 id="炒菜"><a href="#炒菜" class="headerlink" title="炒菜"></a>炒菜</h2><h3 id="香酥鸡柳"><a href="#香酥鸡柳" class="headerlink" title="香酥鸡柳"></a>香酥鸡柳</h3><p>食材准备</p>
 <p>做法</p>
 <h3 id="灵魂炒蛋"><a href="#灵魂炒蛋" class="headerlink" title="灵魂炒蛋"></a>灵魂炒蛋</h3><p>食材准备</p>
@@ -3314,7 +3331,7 @@
   </entry>
   <entry>
     <title>【电影】神之一手--鬼手</title>
-    <url>/2021/04/19/ckx1rbfwb004qd0ud68elebcs/</url>
+    <url>/2021/04/19/ckx3aptxc004ytoud275d0g25/</url>
     <content><![CDATA[<p>这部电影给我很大的触动。</p>
 <p>电影讲述了一个天赋异禀的棋手男孩复仇的故事。<span id="more"></span></p>
 <p>起初，在能力欠佳的时候，男孩遇到一个独臂男，独臂男对男孩进行了残酷的训练。5秒速记棋谱、更快得反应速度，每下一局在寺庙的院子里落一块石头，直到石头堆满院子，男孩胜独臂男。男孩的棋艺到位了。接着训无盘下法，一间木屋，男孩被关在里边。木屋门口是一个石刻的棋盘，独臂男在木屋外和男孩对弈。这训练的是专注和心志。一场接一场的对弈，在绝望的边缘，男孩最终没有放弃，他战胜了自己的心魔。最终，男孩胜了独臂男。现在，可以下山了。</p>
@@ -3334,7 +3351,7 @@
   </entry>
   <entry>
     <title>交易的种子花开繁盛</title>
-    <url>/2021/05/28/ckx1rbfwc004td0ud56c021nn/</url>
+    <url>/2021/05/28/ckx3aptxd0050toud3p44dxbr/</url>
     <content><![CDATA[<p>本文摘录自沪上十二少的公众号，收录以便查用。</p>
  <span id="more"></span>
 
@@ -3370,7 +3387,7 @@
   </entry>
   <entry>
     <title>交易的进阶到底是靠“内求”还是“高手指点”？</title>
-    <url>/2021/05/09/ckx1rbfwd004xd0ud3c6c3aag/</url>
+    <url>/2021/05/09/ckx3aptxe0054toud07b60ae4/</url>
     <content><![CDATA[<p>本文是收录的沪上十二少的文章</p>
 <p>我收到一个圈子里的提问，这个问题我觉得很多交易员都会遇到。</p>
 <span id="more"></span>
