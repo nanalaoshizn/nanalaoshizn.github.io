@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Hello World</title>
-    <url>/2022/01/28/ckyyhh0xk0001jcue4nzyc9np/</url>
+    <url>/2022/01/28/ckyyi4yvw00012ouecxcxdxcg/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -20,7 +20,7 @@
   </entry>
   <entry>
     <title>wolai教程</title>
-    <url>/2021/12/18/ckyyhh0xn0003jcueajui0id6/</url>
+    <url>/2021/12/18/ckyyi4yvz00032oueh5whb7bd/</url>
     <content><![CDATA[<h2 id="序"><a href="#序" class="headerlink" title="序"></a>序</h2><p>阅读内容，你能获知</p>
 <ul>
 <li>我对一些软件的瞎评论（个人看法）</li>
@@ -101,7 +101,7 @@
   </entry>
   <entry>
     <title>弹力带训练</title>
-    <url>/2021/12/11/ckyyhh0xp0005jcuefqscgeie/</url>
+    <url>/2021/12/11/ckyyi4yw100052ouehc3xestn/</url>
     <content><![CDATA[<h2 id="弹力带背部训练"><a href="#弹力带背部训练" class="headerlink" title="弹力带背部训练"></a>弹力带背部训练</h2><h3 id="动作一"><a href="#动作一" class="headerlink" title="动作一"></a>动作一</h3><p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img/image-20211211232411212.png" alt="image-20211211232411212"></p>
 <p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img/image-20211211232419852.png" alt="image-20211211232419852"></p>
 <span id="more"></span>
@@ -118,7 +118,7 @@
   </entry>
   <entry>
     <title>文华财经公式——多头排列和空头排列</title>
-    <url>/2021/12/11/ckyyhh0xt0009jcuece1l8azq/</url>
+    <url>/2021/12/11/ckyyi4yw300092oue92gk7xh5/</url>
     <content><![CDATA[<p>MA5:MA(CLOSE,5);<br>MA10:MA(CLOSE,10);<br>MA20:MA(CLOSE,20);<br>//MA4:MA(CLOSE,N4);<br>//MA5:MA(CLOSE,N5);<br>//MA6:MA(CLOSE,N6);</p>
 <p>//价格多头排列，5周期10周期线用红色填充<br>FILLRGN(MA10&gt;MA20&amp;&amp;MA5&gt;MA10,MA5,MA10,COLORRED);<br>//空头<br>FILLRGN(MA10&lt;MA20&amp;&amp;MA5&lt;MA10,MA5,MA10, COLORGREEN);</p>
 <p>双均线交叉变色</p>
@@ -137,18 +137,8 @@
       </tags>
   </entry>
   <entry>
-    <title>python中文指南</title>
-    <url>/2021/03/28/ckyyhh0xu000bjcuebew53tn8/</url>
-    <content><![CDATA[<h1 id="Python中文指南"><a href="#Python中文指南" class="headerlink" title="Python中文指南"></a>Python中文指南</h1><p><a href="http://python.iswbm.com/en/latest/">http://python.iswbm.com/en/latest/</a></p>
-<h1 id="PyCharm-中文指南"><a href="#PyCharm-中文指南" class="headerlink" title="PyCharm 中文指南"></a>PyCharm 中文指南</h1><p><a href="http://pycharm.iswbm.com/zh_CN/latest/">http://pycharm.iswbm.com/zh_CN/latest/</a></p>
-]]></content>
-      <tags>
-        <tag>python中文指南</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>03序列</title>
-    <url>/2022/01/28/ckyyhh0xv000djcue3a4s3gav/</url>
+    <url>/2022/01/28/ckyyi4yw4000b2oue8glm05h8/</url>
     <content><![CDATA[<h1 id="列表List"><a href="#列表List" class="headerlink" title="列表List"></a>列表List</h1><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="range"><a href="#range" class="headerlink" title="range()"></a>range()</h3><p>可创建一个整数列表，一般用在 for 循环中。</p>
 <p>返回：返回的是一个可迭代对象（类型是对象），而不是列表类型， 所以打印的时候不会打印列表，<span id="more"></span></p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">range</span>(start, stop,[step])</span><br></pre></td></tr></table></figure>
@@ -399,8 +389,18 @@
       </tags>
   </entry>
   <entry>
+    <title>python中文指南</title>
+    <url>/2021/03/28/ckyyi4yw5000d2ouecrid90qe/</url>
+    <content><![CDATA[<h1 id="Python中文指南"><a href="#Python中文指南" class="headerlink" title="Python中文指南"></a>Python中文指南</h1><p><a href="http://python.iswbm.com/en/latest/">http://python.iswbm.com/en/latest/</a></p>
+<h1 id="PyCharm-中文指南"><a href="#PyCharm-中文指南" class="headerlink" title="PyCharm 中文指南"></a>PyCharm 中文指南</h1><p><a href="http://pycharm.iswbm.com/zh_CN/latest/">http://pycharm.iswbm.com/zh_CN/latest/</a></p>
+]]></content>
+      <tags>
+        <tag>python中文指南</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo部署到github</title>
-    <url>/2022/01/28/ckyyhh0xx000gjcuege7ddtdi/</url>
+    <url>/2022/01/28/ckyyi4yw7000g2ouediqx0t7y/</url>
     <content><![CDATA[<p>本文是转载自别人的详细教程：</p>
 <h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p>首先下载稳定版</p>
 <p><a href="https://link.zhihu.com/?target=https://nodejs.org/dist/v9.11.1/node-v9.11.1-x64.msi">Node.jsnodejs.org</a></p>
@@ -612,7 +612,7 @@
   </entry>
   <entry>
     <title>pycharm主题配置</title>
-    <url>/2021/03/29/ckyyhh0xy000hjcueaax757go/</url>
+    <url>/2021/03/29/ckyyi4yw7000h2oue1jz4a47g/</url>
     <content><![CDATA[<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210330215553.png" alt="image-20210330215553470"></p>
 <p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210330215659.png" alt="image-20210330215659136"></p>
 <p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210330215722.png" alt="image-20210330215722154"></p>
@@ -623,7 +623,7 @@
   </entry>
   <entry>
     <title>pycharm快捷键</title>
-    <url>/2021/03/29/ckyyhh0xz000ljcueernn8gu2/</url>
+    <url>/2021/03/29/ckyyi4yw8000l2oue0rrhf8p1/</url>
     <content><![CDATA[<p><strong>最重要的快捷键</strong></p>
 <ol>
 <li>ctrl+shift+A:万能命令行</li>
@@ -747,7 +747,7 @@
   </entry>
   <entry>
     <title>python中的序列</title>
-    <url>/2021/03/28/ckyyhh0y0000njcue8m0sfiy2/</url>
+    <url>/2021/03/28/ckyyi4yw9000n2oue9u1cgf7p/</url>
     <content><![CDATA[<h1 id="列表List"><a href="#列表List" class="headerlink" title="列表List"></a>列表List</h1><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="range"><a href="#range" class="headerlink" title="range()"></a>range()</h3><p>可创建一个整数列表，一般用在 for 循环中。</p>
 <p>返回：返回的是一个可迭代对象（类型是对象），而不是列表类型， 所以打印的时候不会打印列表，<span id="more"></span></p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">range</span>(start, stop,[step])</span><br></pre></td></tr></table></figure>
@@ -993,7 +993,7 @@
   </entry>
   <entry>
     <title>typora常用快捷键收集</title>
-    <url>/2021/03/29/ckyyhh0y1000rjcue590f71h1/</url>
+    <url>/2021/03/29/ckyyi4ywa000r2oue08630ogz/</url>
     <content><![CDATA[<h1 id="Typora常用的快捷键"><a href="#Typora常用的快捷键" class="headerlink" title="Typora常用的快捷键"></a>Typora常用的快捷键</h1><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>您可以使用快捷键快速插入或修改样式或执行Typora支持的其他操作。</p>
 <p>您可以在菜单栏的每个菜单项的右侧找到快捷键。<span id="more"></span></p>
 <h2 id="经常使用的快捷键"><a href="#经常使用的快捷键" class="headerlink" title="经常使用的快捷键"></a>经常使用的快捷键</h2><h3 id="自动完成"><a href="#自动完成" class="headerlink" title="自动完成"></a>自动完成</h3><p>在macOS上，您可以<code>Esc</code>按键打开内嵌数学的内联预览，表情符号的自动完成等。</p>
@@ -1395,7 +1395,7 @@
   </entry>
   <entry>
     <title>python内置函数next()</title>
-    <url>/2021/03/29/ckyyhh0y2000ujcuegl33gyde/</url>
+    <url>/2021/03/29/ckyyi4ywa000u2oue9ut944m7/</url>
     <content><![CDATA[<p>next（）</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">def next(iterator, default=None): # real signature unknown; restored from __doc__</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    next(iterator[, default])</span><br><span class="line">    </span><br><span class="line">    Return the next item from the iterator. If default is given and the iterator</span><br><span class="line">    is exhausted, it is returned instead of raising StopIteration.</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    pass</span><br></pre></td></tr></table></figure>
 
@@ -1414,7 +1414,7 @@
   </entry>
   <entry>
     <title>python内置函数enumerate</title>
-    <url>/2021/03/29/ckyyhh0y4000xjcuebu2t90io/</url>
+    <url>/2021/03/29/ckyyi4ywc000x2oue7mhv30br/</url>
     <content><![CDATA[<p>enumerate()说明<br>enumerate()是python的内置函数<br>enumerate在字典上是枚举、列举的意思<br>对于一个可迭代的（iterable）/可遍历的对象（如列表、字符串），enumerate将其组成一个索引序列，利用<strong>它可以同时获得索引和值</strong><br>enumerate多用于在for循环中得到计数<span id="more"></span><br>例如对于一个seq，得到：</p>
 <p>(0, seq[0]), (1, seq[1]), (2, seq[2])</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(0, seq[0]), (1, seq[1]), (2, seq[2])</span><br></pre></td></tr></table></figure>
@@ -1441,8 +1441,37 @@
       </tags>
   </entry>
   <entry>
+    <title>彻底解决使用matplotlib绘图的时候图标上的中文显示不正常</title>
+    <url>/2021/05/08/ckyyi4ywd000z2ouefb4k8cdj/</url>
+    <content><![CDATA[<p>本文解决在使用matplotlib绘图的时候图标上的中文显示不正常的情况，彻底解决的。</p>
+<span id="more"></span>
+
+<h1 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h1><p>在使用matplotlib绘图的时候图标上的中文显示不正常</p>
+<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210324221647.png" alt="image-20210324221647496"></p>
+<h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p>没有给matplotlib指定一个它能知道的字体。matplotlib本身是支持中文的，只是都是以拼音标注的。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 查询当前系统所有字体</span><br><span class="line">from matplotlib.font_manager import FontManager</span><br><span class="line">import subprocess</span><br><span class="line"></span><br><span class="line">mpl_fonts = set(f.name for f in FontManager().ttflist)</span><br><span class="line"></span><br><span class="line">print(&#x27;all font list get from matplotlib.font_manager:&#x27;)</span><br><span class="line">for f in sorted(mpl_fonts):</span><br><span class="line">    print(&#x27;\t&#x27; + f)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210324221904.png" alt="image-20210324221904874"></p>
+<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>在开头加入两行代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import csv</span><br><span class="line">from matplotlib import pyplot as plt</span><br><span class="line"># 新加入的两行代码</span><br><span class="line">import matplotlib</span><br><span class="line">matplotlib.rc(&quot;font&quot;,family=&#x27;youyuan&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p>再跑一遍：</p>
+<img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210324222103.png" alt="image-20210324222103306" style="zoom:50%;" />
+
+<p>发现了新问题，前边的办法可以解决中文的显示问题，但是在axis存在负值的时候，负号显示不出来。</p>
+<p>经过一番查询，目前较为好的解决办法是在文档前边加入这两句，同时解决这两个问题。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 中文和负号的正常显示</span><br><span class="line">plt.rcParams[&#x27;font.sans-serif&#x27;] = [u&#x27;SimHei&#x27;]</span><br><span class="line">plt.rcParams[&#x27;axes.unicode_minus&#x27;] = False</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>matplotlib</category>
+      </categories>
+      <tags>
+        <tag>plt</tag>
+        <tag>plt异常</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>利用国内镜像源安装——升级pygame</title>
-    <url>/2021/03/29/ckyyhh0y5000zjcue3q18db06/</url>
+    <url>/2021/03/29/ckyyi4ywd00102oueduxt3z69/</url>
     <content><![CDATA[<p>当下最快最便捷的安装方法：利用pip命令就可以直接安装。</p>
 <ul>
 <li><p>前提：首先确保你有pip。</p>
@@ -1482,37 +1511,8 @@
       </tags>
   </entry>
   <entry>
-    <title>彻底解决使用matplotlib绘图的时候图标上的中文显示不正常</title>
-    <url>/2021/05/08/ckyyhh0y50010jcue98ls8j4t/</url>
-    <content><![CDATA[<p>本文解决在使用matplotlib绘图的时候图标上的中文显示不正常的情况，彻底解决的。</p>
-<span id="more"></span>
-
-<h1 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h1><p>在使用matplotlib绘图的时候图标上的中文显示不正常</p>
-<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210324221647.png" alt="image-20210324221647496"></p>
-<h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p>没有给matplotlib指定一个它能知道的字体。matplotlib本身是支持中文的，只是都是以拼音标注的。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 查询当前系统所有字体</span><br><span class="line">from matplotlib.font_manager import FontManager</span><br><span class="line">import subprocess</span><br><span class="line"></span><br><span class="line">mpl_fonts = set(f.name for f in FontManager().ttflist)</span><br><span class="line"></span><br><span class="line">print(&#x27;all font list get from matplotlib.font_manager:&#x27;)</span><br><span class="line">for f in sorted(mpl_fonts):</span><br><span class="line">    print(&#x27;\t&#x27; + f)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210324221904.png" alt="image-20210324221904874"></p>
-<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>在开头加入两行代码</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import csv</span><br><span class="line">from matplotlib import pyplot as plt</span><br><span class="line"># 新加入的两行代码</span><br><span class="line">import matplotlib</span><br><span class="line">matplotlib.rc(&quot;font&quot;,family=&#x27;youyuan&#x27;)</span><br></pre></td></tr></table></figure>
-
-<p>再跑一遍：</p>
-<img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//20210324222103.png" alt="image-20210324222103306" style="zoom:50%;" />
-
-<p>发现了新问题，前边的办法可以解决中文的显示问题，但是在axis存在负值的时候，负号显示不出来。</p>
-<p>经过一番查询，目前较为好的解决办法是在文档前边加入这两句，同时解决这两个问题。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 中文和负号的正常显示</span><br><span class="line">plt.rcParams[&#x27;font.sans-serif&#x27;] = [u&#x27;SimHei&#x27;]</span><br><span class="line">plt.rcParams[&#x27;axes.unicode_minus&#x27;] = False</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>matplotlib</category>
-      </categories>
-      <tags>
-        <tag>plt</tag>
-        <tag>plt异常</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>细说Python的lambda函数</title>
-    <url>/2021/05/08/ckyyhh0y60013jcue0a879lbz/</url>
+    <url>/2021/05/08/ckyyi4ywe00132oue1nnwa8np/</url>
     <content><![CDATA[<p>本文详细说明了在python中使用lambda函数的原因极其便捷性和一定的限制性。</p>
 <span id="more"></span>
 
@@ -1588,7 +1588,7 @@
   </entry>
   <entry>
     <title>解决国内gitclone慢的问题</title>
-    <url>/2021/03/29/ckyyhh0ya0016jcue6n6jarmu/</url>
+    <url>/2021/03/29/ckyyi4ywe00152ouefi6a60gd/</url>
     <content><![CDATA[<p>本文利用国内的克隆网站进行克隆加速</p>
 <span id="more"></span>
 
@@ -1615,7 +1615,7 @@
   </entry>
   <entry>
     <title>Typora+PicGo+Github/Gitee搭建免费稳定的图床</title>
-    <url>/2021/03/29/ckyyhh0yi0018jcued6pdc495/</url>
+    <url>/2021/03/29/ckyyi4ywf00172oue3oca097v/</url>
     <content><![CDATA[<p>整个过程有点麻烦。参考这两个文章：</p>
 <ul>
 <li><a href="https://blog.csdn.net/m0_37903882/article/details/105417479">https://blog.csdn.net/m0_37903882/article/details/105417479</a></li>
@@ -1634,8 +1634,18 @@
       </tags>
   </entry>
   <entry>
+    <title>hexo常见报错</title>
+    <url>/2021/03/29/ckyyi4ywg00192oue481zccy4/</url>
+    <content><![CDATA[<p>本来想自己总结一下：结果发现大神总结的更全面，留存：</p>
+<p><a href="https://www.dazhuanlan.com/2020/01/06/5e12e0294f848/">https://www.dazhuanlan.com/2020/01/06/5e12e0294f848/</a></p>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>解决国内gitclone慢的问题</title>
-    <url>/2021/03/29/ckyyhh0yj0019jcuef529f7b9/</url>
+    <url>/2021/03/29/ckyyi4ywg001b2oueffli0dm3/</url>
     <content><![CDATA[<h1 id="hexo换主题乱码问题的解决"><a href="#hexo换主题乱码问题的解决" class="headerlink" title="hexo换主题乱码问题的解决"></a>hexo换主题乱码问题的解决</h1><h2 id="问题的表现"><a href="#问题的表现" class="headerlink" title="问题的表现"></a>问题的表现</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% extends &#x27;_layout.swig&#x27; %&#125; &#123;% import &#x27;_macro/post.swig&#x27; as post_template %&#125;....................</span><br></pre></td></tr></table></figure>
 
 
@@ -1653,18 +1663,8 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo常见报错</title>
-    <url>/2021/03/29/ckyyhh0ym001cjcuec5y71wu9/</url>
-    <content><![CDATA[<p>本来想自己总结一下：结果发现大神总结的更全面，留存：</p>
-<p><a href="https://www.dazhuanlan.com/2020/01/06/5e12e0294f848/">https://www.dazhuanlan.com/2020/01/06/5e12e0294f848/</a></p>
-]]></content>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>typora+picgo错误：上传图片失败。错误信息：Failed to fetchxt</title>
-    <url>/2021/03/29/ckyyhh0yn001djcue71kfhv28/</url>
+    <url>/2021/03/29/ckyyi4ywh001e2oue17j85t1s/</url>
     <content><![CDATA[<p>错误提示如图：</p>
 <p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img//image-20210323144749430.png" alt="image-20210323144749430"></p>
 <p>经过几番上网查阅资料，原因确定为端口冲突导致。<span id="more"></span></p>
@@ -1680,7 +1680,7 @@
   </entry>
   <entry>
     <title>使用Travis自动部署hexo到github</title>
-    <url>/2021/05/09/ckyyhh0yn001gjcuebt4y53nc/</url>
+    <url>/2021/05/09/ckyyi4ywh001h2oue2wpfamgs/</url>
     <content><![CDATA[<p>使用<code>hexo</code>而不使用<code>jekyll</code>在github上搭blog最大的问题就是，每次提交都需要先<code>hexo g</code>，然后再<code>push</code>生成的文件们，这样哪怕是改一个小的地方都需要重新编译全部blog，想想都蛋疼（虽然我还没有多少文章），所以决定使用<a href="https://travis-ci.org/">Travis</a>来自动持续集成提交到github以后的操作</p>
 <p>网上一搜有很多的教程，看了好多然后东拼西凑才最终成功，遂决定记录下来最终成功的这个方法，以免忘记</p>
 <span id="more"></span>
@@ -1773,7 +1773,7 @@
   </entry>
   <entry>
     <title>如何修改hexo中主题的css</title>
-    <url>/2021/03/29/ckyyhh0yo001ijcue1fi82smq/</url>
+    <url>/2021/03/29/ckyyi4ywi001k2oue2bqhgjwv/</url>
     <content><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><blockquote>
 <p>当我们需要对hexo的主题进行更深入的css和js修改的时候会发现一个优先级的问题，而且在浏览器中呈现的过程中这个优先级不好控制。本文解决这个问题</p>
 </blockquote>
@@ -1796,7 +1796,7 @@
   </entry>
   <entry>
     <title>NO.0----始</title>
-    <url>/2022/01/28/ckyyhh0yo001ljcueasmf4na3/</url>
+    <url>/2022/01/28/ckyyi4ywi001m2oue1bzzbnlv/</url>
     <content><![CDATA[<h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>当我写这些文字的时候，心里已经做好了准备。这是一次决战，对我而言，这是一次分水岭。</p>
 <p>在战争时期，敌对双方需要一次 大决战来作出最后的胜负，胜负一决，不管是对哪一方，其就完成了自己的历史使命，就可以退出了。</p>
 <p>这一次，是我和我自己持续六年的战争的最后阶段了，进入决战，给自己一个交代。<span id="more"></span></p>
@@ -1811,7 +1811,7 @@
   </entry>
   <entry>
     <title></title>
-    <url>/2022/01/28/ckyyhh0yp001ojcuegxob162p/</url>
+    <url>/2022/01/28/ckyyi4ywj001p2oueficl1623/</url>
     <content><![CDATA[<h1 id="10-13"><a href="#10-13" class="headerlink" title="10.13"></a>10.13</h1><h1 id="10-18※"><a href="#10-18※" class="headerlink" title="10.18※"></a>10.18※</h1><blockquote>
 <p>这一天是很典型的节奏混乱&amp;连亏&amp;超亏&amp;笔数过多</p>
 <p>本质来讲，还是分析阶段就出了较大问题，开盘连续7笔事后来看方向性就错了，伦的方向性分析直接就错了。在我的分析系统里主要原则是“以伦定开+三因共振”，第一步就卡伦，卡一个伦的方向。特别是在波动性大的行情里，卡伦尤为关键。</p>
@@ -1968,7 +1968,7 @@
   </entry>
   <entry>
     <title></title>
-    <url>/2022/01/28/ckyyhh0yq001rjcuegs2u29bv/</url>
+    <url>/2022/01/28/ckyyi4ywk001r2oue2x2mgwz0/</url>
     <content><![CDATA[<h1 id="预期管理"><a href="#预期管理" class="headerlink" title="预期管理"></a>预期管理</h1><h2 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h2><p>1、因素：伦到位；有色到位；沪到位</p>
 <p>2、实际中重点在对沪和有色的K线的细节分析上。多一分不行，少一分不行。</p>
 <h2 id="1117-01"><a href="#1117-01" class="headerlink" title="1117-01"></a>1117-01</h2><p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img/image-20211116234848639.png" alt="image-20211116234848639"></p>
@@ -1977,7 +1977,7 @@
   </entry>
   <entry>
     <title>NO.1</title>
-    <url>/2021/04/19/ckyyhh0yq001tjcue6bty7gy6/</url>
+    <url>/2021/04/19/ckyyi4ywk001t2ouedfsffnnb/</url>
     <content><![CDATA[<p>今天数据</p>
 <table>
 <thead>
@@ -2018,7 +2018,7 @@
   </entry>
   <entry>
     <title>NO.2</title>
-    <url>/2022/01/28/ckyyhh0yq001vjcue67wu0pzb/</url>
+    <url>/2022/01/28/ckyyi4ywl001v2oue0eq26nz6/</url>
     <content><![CDATA[<p>今天数据</p>
 <table>
 <thead>
@@ -2058,7 +2058,7 @@
   </entry>
   <entry>
     <title>NO.3</title>
-    <url>/2022/01/28/ckyyhh0ys001yjcue11ezfd99/</url>
+    <url>/2022/01/28/ckyyi4ywm001y2oue41svhyuo/</url>
     <content><![CDATA[<p>今天数据</p>
 <table>
 <thead>
@@ -2098,7 +2098,7 @@
   </entry>
   <entry>
     <title>NO.4</title>
-    <url>/2022/01/28/ckyyhh0yt0020jcue8pifhvfx/</url>
+    <url>/2022/01/28/ckyyi4ywn00202oue75ie9mdk/</url>
     <content><![CDATA[<p>状态：正常；</p>
 <p>耐心：正常：</p>
 <p>零错误：有两笔错误<span id="more"></span></p>
@@ -2221,7 +2221,7 @@
   </entry>
   <entry>
     <title>8.1</title>
-    <url>/2021/08/10/ckyyhh0yt0023jcue77x5af3f/</url>
+    <url>/2021/08/10/ckyyi4ywo00232ouef6311fwp/</url>
     <content><![CDATA[<h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>状态：佳，早上感觉头胀，就没做，一直睡到脑子清醒才做；<br>耐心：佳：<br>零错误：无；</p>
 <span id="more"></span>
 
@@ -2445,7 +2445,7 @@
   </entry>
   <entry>
     <title>N0.10</title>
-    <url>/2021/05/10/ckyyhh0yu0026jcue16xi3boq/</url>
+    <url>/2021/05/10/ckyyi4ywo00262oue3lcf45oq/</url>
     <content><![CDATA[<h3 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h3><p>状态：正常；<br>耐心：正常：<br>零错误：两处；</p>
 <span id="more"></span>
 
@@ -2487,7 +2487,7 @@
   </entry>
   <entry>
     <title>NO.11</title>
-    <url>/2021/05/11/ckyyhh0yu0029jcue2fcsaml2/</url>
+    <url>/2021/05/11/ckyyi4ywp00292oueh4u0fg4y/</url>
     <content><![CDATA[<h3 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h3><p>状态：正常；<br>耐心：一般：<br>零错误：四处；</p>
 <span id="more"></span>
 
@@ -2502,7 +2502,7 @@
   </entry>
   <entry>
     <title>NO.12</title>
-    <url>/2021/05/12/ckyyhh0yv002cjcueavq95ktm/</url>
+    <url>/2021/05/12/ckyyi4ywp002c2ouee9gx2zf7/</url>
     <content><![CDATA[<h3 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h3><p>状态：一般；<br>耐心：一般：<br>零错误：两处；</p>
 <span id="more"></span>
 
@@ -2537,7 +2537,7 @@
   </entry>
   <entry>
     <title>NO.13</title>
-    <url>/2021/05/13/ckyyhh0yv002ejcuec5ok0cua/</url>
+    <url>/2021/05/13/ckyyi4ywq002e2oue1w1k02gc/</url>
     <content><![CDATA[<h3 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h3><p>状态：佳；<br>耐心：佳：<br>零错误：无；</p>
 <span id="more"></span>
 
@@ -2573,7 +2573,7 @@
   </entry>
   <entry>
     <title>NO.14</title>
-    <url>/2021/05/14/ckyyhh0yw002ijcue2n77ba2k/</url>
+    <url>/2021/05/14/ckyyi4ywq002i2oue0hwab3sb/</url>
     <content><![CDATA[<h3 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h3><p>状态：佳；<br>耐心：一般：<br>零错误：无；</p>
 <span id="more"></span>
 
@@ -2610,7 +2610,7 @@
   </entry>
   <entry>
     <title>NO.15</title>
-    <url>/2021/05/26/ckyyhh0yx002kjcue2lzcbph4/</url>
+    <url>/2021/05/26/ckyyi4ywr002k2oue3217czbf/</url>
     <content><![CDATA[<p>夜盘沪锌、有色、文华是三个节奏，应该讲是最近比较难做的行情，我也是连亏好几笔。这种异常行情出现的不多，应该多关注、分析、了解。盘中很难找到三者顺风的行情，有两个相对顺的位置挂单没有进去，另外轻仓尝试了有色到位和文华到位的行情也都是多以失败平仓。<br>这种行情能不亏或者少亏，以及少做就是一种能力了。就是一种主动发现风险、控制风险的能力。</p>
 <span id="more"></span>
 
@@ -2780,7 +2780,7 @@
   </entry>
   <entry>
     <title>NO.17</title>
-    <url>/2021/06/01/ckyyhh0yx002njcue454x9u8u/</url>
+    <url>/2021/06/01/ckyyi4yws002n2oue5ovrchj0/</url>
     <content><![CDATA[<span id="more"></span>
 
 <p>夜盘打了打十一点后边的行情，没想到这么顺利。一段稳定的横盘，和有色同步的行情，做起来很顺利。我这个方法的赢利点就是在震荡里，如果发现走势不在震荡里，那就要停手，亏钱的概率是很大的。这一点要有深刻的认识，就我目前的单子来看，亏损大的都是在单边里亏的。</p>
@@ -2791,7 +2791,7 @@
   </entry>
   <entry>
     <title>NO.25</title>
-    <url>/2021/06/11/ckyyhh0yz002qjcue0cuk94it/</url>
+    <url>/2021/06/11/ckyyi4ywt002q2ouehd94gpsq/</url>
     <content><![CDATA[<h2 id="卡位和卡时机"><a href="#卡位和卡时机" class="headerlink" title="卡位和卡时机"></a>卡位和卡时机</h2><p>卡位，卡的是价位。</p>
 <p>卡时机，卡的是沪锌和有色和文华和伦锌的共振时机。</p>
 <span id="more"></span>
@@ -2804,7 +2804,7 @@
   </entry>
   <entry>
     <title>NO.28</title>
-    <url>/2021/06/16/ckyyhh0yz002tjcued1i97ekt/</url>
+    <url>/2021/06/16/ckyyi4ywt002t2oue8cer5gwk/</url>
     <content><![CDATA[<p>有时候我们自己掌握了规律，却还去寻求圣杯。抱着珠宝找芝麻。这个时候，需要做的知识排除干扰，相信自己。</p>
 <span id="more"></span>]]></content>
       <categories>
@@ -2813,7 +2813,7 @@
   </entry>
   <entry>
     <title>NO.30</title>
-    <url>/2021/06/18/ckyyhh0z0002wjcuebjpy1dsm/</url>
+    <url>/2021/06/18/ckyyi4ywu002w2oue78o34tis/</url>
     <content><![CDATA[<p>盘前交易资格自我审核：</p>
 <p>警惕：一下都是用实打实的金钱亏出来的教训，不能不引起切实的重视。这些规定看似是限制，其实是一种真实的保护。</p>
 <ol>
@@ -2854,7 +2854,7 @@
   </entry>
   <entry>
     <title>模板</title>
-    <url>/2021/06/19/ckyyhh0z1002zjcueaadkf9xi/</url>
+    <url>/2021/06/19/ckyyi4ywv002z2ouef63p86n6/</url>
     <content><![CDATA[<p>还是太着急了，耐心不够。我常说，不到位置不介入，你想要的价格一定会给你，到了位置不要犹豫，除了问题及时处理。但是，我没很好的做到这些啊。</p>
 <p>着急了就会频繁开仓，机会哪能那么多，做的多错的多，就算赚钱的都做到了，亏钱的也会磨平利润。以急跌之后的行情来说：</p>
 <p>急跌过程中，一般是去找有色左侧重要的可靠的关键位置以及伦锌左侧的关键位置。如果急跌到这些位置，沪锌自身也到关键位置，那是可以介入试探的，新低止损。如果急跌过程中在一个不知名的位置反弹了，那是没法去介入的。</p>
@@ -2875,7 +2875,7 @@
   </entry>
   <entry>
     <title>NO.33</title>
-    <url>/2021/06/23/ckyyhh0z10031jcueam6rc6ws/</url>
+    <url>/2021/06/23/ckyyi4ywv00312oueco7xgck6/</url>
     <content><![CDATA[<h2 id="盘前交易资格自我审核："><a href="#盘前交易资格自我审核：" class="headerlink" title="盘前交易资格自我审核："></a>盘前交易资格自我审核：</h2><p>警惕：以下都是用实打实的金钱亏出来的教训，不能不引起切实的重视。这些规定看似是限制，其实是一种真实的保护。</p>
 <ol>
 <li>盘前吵架禁止交易当节。</li>
@@ -2901,7 +2901,7 @@
   </entry>
   <entry>
     <title>NO.41</title>
-    <url>/2021/07/03/ckyyhh0z20034jcue7wiz9zal/</url>
+    <url>/2021/07/03/ckyyi4yww00342oueb8l6bdml/</url>
     <content><![CDATA[<p>周五夜盘大盈，应该是七连赢了。很开心。</p>
 <p>我知道我终于可以成了。</p>
 <p>往后，继续加油吧。</p>
@@ -2912,7 +2912,7 @@
   </entry>
   <entry>
     <title>picgo设置新</title>
-    <url>/2021/07/03/ckyyhh0z20036jcue5aml4px0/</url>
+    <url>/2021/07/03/ckyyi4ywx00372ouedv2yhq02/</url>
     <content><![CDATA[<p><img src="https://gitee.com/lanhuakai/pic_stock/raw/master/img/image-20211111223153707.png" alt="image-20211111223153707"></p>
 ]]></content>
       <categories>
@@ -2924,7 +2924,7 @@
   </entry>
   <entry>
     <title>再战</title>
-    <url>/2021/05/25/ckyyhh0z30039jcueattj0zut/</url>
+    <url>/2021/05/25/ckyyi4ywx003b2oue4m281ejc/</url>
     <content><![CDATA[<p>妹妹的婚礼结束了，前后半个月时间。整个婚礼过程很圆满，很开心。</p>
 <p>谁曾想，妈妈生病了。这一个月劳累的。</p>
 <p>好好挣钱吧。回归到战场了。</p>
@@ -2935,7 +2935,7 @@
   </entry>
   <entry>
     <title>周总结5.1-5.9</title>
-    <url>/2021/05/09/ckyyhh0z4003cjcuegjjz5xu1/</url>
+    <url>/2021/05/09/ckyyi4ywy003d2ouehj0c5mpi/</url>
     <content><![CDATA[<p>整个五一假日都在等着假日结束，我这种小交易员自然是没有什么玩额度兴致的。</p>
 <p>这一周只有两天交易日。这两天的交易反应的问题比较集中：<span id="more"></span></p>
 <ol>
@@ -2952,7 +2952,7 @@
   </entry>
   <entry>
     <title>周总结5.10-5.15</title>
-    <url>/2021/05/15/ckyyhh0z4003fjcueg33remt8/</url>
+    <url>/2021/05/15/ckyyi4ywy003f2oue080i8j9b/</url>
     <content><![CDATA[<p>这是一个完整的一周交易。从多个方面总结一下：</p>
 <h3 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h3><p>这一周整体状态还可以，耐心上有一定漏洞但是整体没大错，零错误上有一些小漏洞。暴露出的小问题都是固定的，接下来重点解决。</p>
 <span id="more"></span>
@@ -2974,7 +2974,7 @@
   </entry>
   <entry>
     <title>周总结5.24-5.29</title>
-    <url>/2021/05/29/ckyyhh0z5003kjcuebektbrds/</url>
+    <url>/2021/05/29/ckyyi4ywz003j2ouecnr3dpu2/</url>
     <content><![CDATA[<p>上周妹妹婚礼结束，这周正经只做了两天实盘。这两天都做的不好。思考了一下问题所在，感觉是这样的：就像打游戏，以前打的副本都熟悉了，打法也都会，但是突然出现一个不怎么熟悉的副本，应对就会有点凌乱，结果也不好。这两天行情都是以前遇见的少的情形，这是客观因素；主观上，出现一些事后也看不懂的单子，属于盘中根据一个小的因素就开仓了，把短线拿成了小波段，小止损拿成了超亏。</p>
 <span id="more"></span>
 
@@ -2995,7 +2995,7 @@
   </entry>
   <entry>
     <title>如何正确地分析区间的真正的有效边界</title>
-    <url>/2021/06/23/ckyyhh0z5003mjcuebo1p9gcn/</url>
+    <url>/2021/06/23/ckyyi4yx0003l2oue1nfd3tno/</url>
     <content><![CDATA[<p>正确分析震荡区间的真正的有效边界，这个命题真是太重要了。</p>
 <span id="more"></span>
 
@@ -3007,7 +3007,7 @@
   </entry>
   <entry>
     <title>文华财经设置</title>
-    <url>/2021/04/27/ckyyhh0z6003pjcue4kpjdy3z/</url>
+    <url>/2021/04/27/ckyyi4yx0003o2oueghek751j/</url>
     <content><![CDATA[<p>K线高低点的显示以及放量K线的变色显示</p>
 <span id="more"></span>
 
@@ -3032,7 +3032,7 @@
   </entry>
   <entry>
     <title>模板</title>
-    <url>/2022/01/28/ckyyhh0z7003sjcue5vrgd90i/</url>
+    <url>/2022/01/28/ckyyi4yx1003r2oue1k54g7wk/</url>
     <content><![CDATA[<p>盘前交易资格自我审核：</p>
 <p>警惕：一下都是用实打实的金钱亏出来的教训，不能不引起切实的重视。这些规定看似是限制，其实是一种真实的保护。</p>
 <ol>
@@ -3054,7 +3054,7 @@
   </entry>
   <entry>
     <title>一些杂乱的生活感受</title>
-    <url>/2021/05/28/ckyyhh0z8003vjcue6drjb74o/</url>
+    <url>/2021/05/28/ckyyi4yx2003u2ouecnig7101/</url>
     <content><![CDATA[<p>2021年5月28日22:31:49<br>        以前课本里说，做一件事需要天时、地利、人和，否则在条件不具备的情况下贸然行事或逆事物发展的规律，最终是要吃苦头的。</p>
 <p>2021年6月6日10:04:19</p>
 <p>​        今天早上六点半就醒来了，心里很开心。这近四五年时间我没有在这个点如此清醒舒适地醒来了。昨晚是十点出头就上床睡觉了，没成想四五分钟可能就睡着了，一觉到天亮。身体休息好，个人感觉都好。<span id="more"></span></p>
@@ -3074,23 +3074,8 @@
       </categories>
   </entry>
   <entry>
-    <title>出行注意事项</title>
-    <url>/2021/05/25/ckyyhh0z9003zjcuehny416pi/</url>
-    <content><![CDATA[<h2 id="妈妈"><a href="#妈妈" class="headerlink" title="妈妈"></a>妈妈</h2><p>1、涉及坐车</p>
-<p>​    晕车药：口服的必须提前半小时服用。是必须。</p>
-<p>​    口罩：防风。</p>
-<p>​    帽子：防风、防冷</p>
-<span id="more"></span>
-
-<h2 id="爸爸"><a href="#爸爸" class="headerlink" title="爸爸"></a>爸爸</h2><h2 id="妹妹"><a href="#妹妹" class="headerlink" title="妹妹"></a>妹妹</h2><h2 id="兰兰"><a href="#兰兰" class="headerlink" title="兰兰"></a>兰兰</h2><h2 id="我"><a href="#我" class="headerlink" title="我"></a>我</h2><p>​    晕车药：口服的必须提前半小时服用。是必须。</p>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-  </entry>
-  <entry>
     <title>人生前35年的个人发展方法论</title>
-    <url>/2021/12/08/ckyyhh0z90041jcueeda9aqom/</url>
+    <url>/2021/12/08/ckyyi4yx3003y2ouecxpx865s/</url>
     <content><![CDATA[<h2 id="人生前35年的个人发展方法论"><a href="#人生前35年的个人发展方法论" class="headerlink" title="人生前35年的个人发展方法论"></a>人生前35年的个人发展方法论</h2><p>原创 镇长本人 大树乡长  </p>
 <p>这一篇要付费，两个原因：</p>
 <p>\1. 法不轻传：小镇不仅总结自己前35年经历，还请教了十几位在各方面有所成就的朋友，有省市高考状元顺利走下来的，也有二本逆袭的，还有辞去公职快财富自由的。</p>
@@ -3301,8 +3286,23 @@
       </tags>
   </entry>
   <entry>
+    <title>出行注意事项</title>
+    <url>/2021/05/25/ckyyi4yx400412oue5p1414j6/</url>
+    <content><![CDATA[<h2 id="妈妈"><a href="#妈妈" class="headerlink" title="妈妈"></a>妈妈</h2><p>1、涉及坐车</p>
+<p>​    晕车药：口服的必须提前半小时服用。是必须。</p>
+<p>​    口罩：防风。</p>
+<p>​    帽子：防风、防冷</p>
+<span id="more"></span>
+
+<h2 id="爸爸"><a href="#爸爸" class="headerlink" title="爸爸"></a>爸爸</h2><h2 id="妹妹"><a href="#妹妹" class="headerlink" title="妹妹"></a>妹妹</h2><h2 id="兰兰"><a href="#兰兰" class="headerlink" title="兰兰"></a>兰兰</h2><h2 id="我"><a href="#我" class="headerlink" title="我"></a>我</h2><p>​    晕车药：口服的必须提前半小时服用。是必须。</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+  </entry>
+  <entry>
     <title>认识规律，尊重规律，严守规律</title>
-    <url>/2021/08/13/ckyyhh0za0043jcue4ivhhx16/</url>
+    <url>/2021/08/13/ckyyi4yx400432oue9s6k1qeb/</url>
     <content><![CDATA[<p>初高中的时候学习的哲学知识现在来看是精华中的精华。只可惜它如珍宝一样的东西，在那个年级里并不能深入理解和实践。</p>
 <p>规律，一切事物发展所会遵循的东西。一切事物，自然是涵盖一切，包括人的、非人的。认识规律的过程是理性的。</p>
 <span id="more"></span>]]></content>
@@ -3315,7 +3315,7 @@
   </entry>
   <entry>
     <title>恸</title>
-    <url>/2021/08/21/ckyyhh0zb0046jcue156j8s8x/</url>
+    <url>/2021/08/21/ckyyi4yx500462ouee83u1fqi/</url>
     <content><![CDATA[<p>​    感觉好难过，难过到一定程度心是真的会疼的。</p>
 <span id="more"></span>]]></content>
       <categories>
@@ -3324,7 +3324,7 @@
   </entry>
   <entry>
     <title>惊梦</title>
-    <url>/2021/04/01/ckyyhh0zb0049jcuecztt35wt/</url>
+    <url>/2021/04/01/ckyyi4yx600492oueennq3xew/</url>
     <content><![CDATA[<p>昨晚经历了四场梦，场场都是惊梦。</p>
 <p>晚上间隔三次惊醒，顾不上去开灯，慌张得摸了摸身边的女友，再二确认是她，还在身边，并不是如梦里一样。</p>
 <p>不想去回忆梦里具体的场景，让我夜半惊神的，都是一幕幕骇人。</p>
@@ -3341,7 +3341,7 @@
   </entry>
   <entry>
     <title>愚公移山</title>
-    <url>/2021/05/13/ckyyhh0zc004djcue3glh4ans/</url>
+    <url>/2021/05/13/ckyyi4yx6004d2oue9c8lh5af/</url>
     <content><![CDATA[<h1 id="《愚公移山》原文及赏析"><a href="#《愚公移山》原文及赏析" class="headerlink" title="《愚公移山》原文及赏析"></a><strong>《愚公移山》原文及赏析</strong></h1><p>　　<strong>【演讲词】</strong></p>
 <p>　　我们开了一个很好的大会。我们做了三件事：第一，决定了党的路线，这就是放手发动群众，壮大人民力量，在我党的领导下，打败日本侵略者，解放全国人民，建立一个新民主主义的中国。第二，通过了新的党章。第三，选举了党的领导机关——中央委员会。今后的任务就是领导全党实现党的路线。我们开了一个胜利的大会，一个团结的大会。代表们对三个报告发表了很好的意见。许多同志作了自我批评，从团结的目标出发，经过自我批评，达到了团结。这次大会是团结的模范，是自我批评的模范，又是党内民主的模范。<span id="more"></span></p>
 <p>　　大会闭幕以后，很多同志将要回到自己的工作岗位上去，将要分赴各个战场。同志们到各地去，要宣传大会的路线，并经过全党同志向人民作广泛的解释。</p>
@@ -3363,7 +3363,7 @@
   </entry>
   <entry>
     <title>药方</title>
-    <url>/2021/06/06/ckyyhh0zd004fjcue01y69bzv/</url>
+    <url>/2021/06/06/ckyyi4yx7004f2oue0vmb4p1d/</url>
     <content><![CDATA[<h2 id="脑梗（语言受影响）中药药方"><a href="#脑梗（语言受影响）中药药方" class="headerlink" title="脑梗（语言受影响）中药药方"></a>脑梗（语言受影响）中药药方</h2><h2 id="失眠中药药方"><a href="#失眠中药药方" class="headerlink" title="失眠中药药方"></a>失眠中药药方</h2><span id="more"></span>]]></content>
       <categories>
         <category>生活</category>
@@ -3371,7 +3371,7 @@
   </entry>
   <entry>
     <title>观《扫黑风暴》</title>
-    <url>/2021/08/13/ckyyhh0zd004jjcue5pwsguac/</url>
+    <url>/2021/08/13/ckyyi4yx7004j2ouedx7e3n0p/</url>
     <content><![CDATA[<p>这两天有个剧很火，《扫黑风暴》，追着看了。剧情的冲击力很大。</p>
 <p>前几年国家一直在搞扫黑除恶净化社会风气。我们一般可能感受不到国家都付出了哪些个努力，以及那些个黑恶势力有多么的张狂。这个剧能给大家一个科普。</p>
 <p>黑恶势力是经济发展到一定阶段在某些特定环境下的畸形的产物，它们追求暴力追求特权，自然而然会腐化干部染指经济项目。像墨西哥的毒枭产业已经深入渗透到政商两界，而其政府已经没有自我矫正的能力；想德法意的黑手党也是深入政商界，日内的山口组等也是一样。</p>
@@ -3383,7 +3383,7 @@
   </entry>
   <entry>
     <title>迪士尼攻略</title>
-    <url>/2021/05/25/ckyyhh0ze004ljcue27yxcpi9/</url>
+    <url>/2021/05/25/ckyyi4yx8004l2oue19aedcgt/</url>
     <content><![CDATA[<h1 id="行前准备"><a href="#行前准备" class="headerlink" title="行前准备"></a>行前准备</h1><p>1、随申码，需要申请上海随申码（随申办里）<br>2、预约，受疫情影响，现在迪士尼限流，需要提前准备预约码，申领步骤： 手机打开<a href="https://shdr.cn/df">https://shdr.cn/df</a> 获取预约码。排队入园的时候需要扫码进入。<a href="http://sh.bendibao.com/tour/202058/222837.shtm">预约流程点击</a><br>3，门票迪士尼门票，入园刷身份证兑换门票<span id="more"></span><br>4，迪士尼app，下载迪士尼度假区app，获取预约等候卡，节约排队时间。关于预约等候卡的使用，入园后，凭身份证兑换门票，在 app中绑定门票号后，即可获取预约等候卡，目前下午的项目不获取预约卡是无法排队游玩的</p>
 <p>5、游玩雷鸣山漂流的游客需要准备好雨衣和鞋套，不然衣服鞋子肯定会被淋湿。项目入口有售卖雨衣，10元/个，鞋套没有卖，要自己准备好。</p>
 <p>6、自带一个水杯。</p>
@@ -3406,7 +3406,7 @@
   </entry>
   <entry>
     <title>革命人永远年轻+</title>
-    <url>/2021/05/15/ckyyhh0ze004njcue43fx2307/</url>
+    <url>/2021/05/15/ckyyi4yx8004n2oue6k1agjr7/</url>
     <content><![CDATA[<p>革命人永远是年轻，</p>
 <p>他好比大松树冬夏常青，</p>
 <p>他不怕风吹雨打 ，</p>
@@ -3428,21 +3428,8 @@
       </categories>
   </entry>
   <entry>
-    <title>饭菜</title>
-    <url>/2021/05/28/ckyyhh0zf004sjcued0ytbyhf/</url>
-    <content><![CDATA[<h2 id="炒菜"><a href="#炒菜" class="headerlink" title="炒菜"></a>炒菜</h2><h3 id="香酥鸡柳"><a href="#香酥鸡柳" class="headerlink" title="香酥鸡柳"></a>香酥鸡柳</h3><p>食材准备</p>
-<p>做法</p>
-<h3 id="灵魂炒蛋"><a href="#灵魂炒蛋" class="headerlink" title="灵魂炒蛋"></a>灵魂炒蛋</h3><p>食材准备</p>
-<p>做法</p>
-<h3 id="荷塘小炒"><a href="#荷塘小炒" class="headerlink" title="荷塘小炒"></a>荷塘小炒</h3><p>食材准备</p>
-<p>做法</p>
-<h3 id="小炒黄牛肉"><a href="#小炒黄牛肉" class="headerlink" title="小炒黄牛肉"></a>小炒黄牛肉</h3><h2 id="腌制品"><a href="#腌制品" class="headerlink" title="腌制品"></a>腌制品</h2><h3 id="糖蒜"><a href="#糖蒜" class="headerlink" title="糖蒜"></a>糖蒜</h3><p>食材准备</p>
-<p>做法</p>
-<span id="more"></span>]]></content>
-  </entry>
-  <entry>
     <title>【电影】神之一手--鬼手</title>
-    <url>/2021/04/19/ckyyhh0zg004vjcuebmd2d3ta/</url>
+    <url>/2021/04/19/ckyyi4yx9004s2oue534mh7n2/</url>
     <content><![CDATA[<p>这部电影给我很大的触动。</p>
 <p>电影讲述了一个天赋异禀的棋手男孩复仇的故事。<span id="more"></span></p>
 <p>起初，在能力欠佳的时候，男孩遇到一个独臂男，独臂男对男孩进行了残酷的训练。5秒速记棋谱、更快得反应速度，每下一局在寺庙的院子里落一块石头，直到石头堆满院子，男孩胜独臂男。男孩的棋艺到位了。接着训无盘下法，一间木屋，男孩被关在里边。木屋门口是一个石刻的棋盘，独臂男在木屋外和男孩对弈。这训练的是专注和心志。一场接一场的对弈，在绝望的边缘，男孩最终没有放弃，他战胜了自己的心魔。最终，男孩胜了独臂男。现在，可以下山了。</p>
@@ -3462,7 +3449,7 @@
   </entry>
   <entry>
     <title>交易的种子花开繁盛</title>
-    <url>/2021/05/28/ckyyhh0zg004zjcue3yhz4ncr/</url>
+    <url>/2021/05/28/ckyyi4yxa004v2oue7fcjdri9/</url>
     <content><![CDATA[<p>本文摘录自沪上十二少的公众号，收录以便查用。</p>
  <span id="more"></span>
 
@@ -3497,8 +3484,21 @@
       </tags>
   </entry>
   <entry>
+    <title>饭菜</title>
+    <url>/2021/05/28/ckyyi4yxa004z2oue5vwvddrr/</url>
+    <content><![CDATA[<h2 id="炒菜"><a href="#炒菜" class="headerlink" title="炒菜"></a>炒菜</h2><h3 id="香酥鸡柳"><a href="#香酥鸡柳" class="headerlink" title="香酥鸡柳"></a>香酥鸡柳</h3><p>食材准备</p>
+<p>做法</p>
+<h3 id="灵魂炒蛋"><a href="#灵魂炒蛋" class="headerlink" title="灵魂炒蛋"></a>灵魂炒蛋</h3><p>食材准备</p>
+<p>做法</p>
+<h3 id="荷塘小炒"><a href="#荷塘小炒" class="headerlink" title="荷塘小炒"></a>荷塘小炒</h3><p>食材准备</p>
+<p>做法</p>
+<h3 id="小炒黄牛肉"><a href="#小炒黄牛肉" class="headerlink" title="小炒黄牛肉"></a>小炒黄牛肉</h3><h2 id="腌制品"><a href="#腌制品" class="headerlink" title="腌制品"></a>腌制品</h2><h3 id="糖蒜"><a href="#糖蒜" class="headerlink" title="糖蒜"></a>糖蒜</h3><p>食材准备</p>
+<p>做法</p>
+<span id="more"></span>]]></content>
+  </entry>
+  <entry>
     <title>交易的进阶到底是靠“内求”还是“高手指点”？</title>
-    <url>/2021/05/09/ckyyhh0zh0051jcuecq2y4c5x/</url>
+    <url>/2021/05/09/ckyyi4yxb00522oueh1hw64ge/</url>
     <content><![CDATA[<p>本文是收录的沪上十二少的文章</p>
 <p>我收到一个圈子里的提问，这个问题我觉得很多交易员都会遇到。</p>
 <span id="more"></span>
